@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "signal.schema.json",
+  "title": "Signal",
+  "type": "object",
+  "required": ["ts_utc", "signal_type", "variant"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "signal_type": {
+      "type": "string",
+      "enum": ["EXHAUSTION", "EXHAUSTION_ACTIVE", "ENTRY_VALID", "INVALIDATION", "EXIT"]
+    },
+    "variant": {"type": "string"},
+    "price": {"type": ["number", "null"]},
+    "rsi_daily": {"type": ["number", "null"]},
+    "ema200": {"type": ["number", "null"]},
+    "pullback_pct": {"type": ["number", "null"]},
+    "catalyst_weight": {"type": ["integer", "null"], "enum": [-1, 0, 1]},
+    "meta_json": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

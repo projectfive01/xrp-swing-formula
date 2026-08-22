@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "analytics_run.schema.json",
+  "title": "AnalyticsRun",
+  "type": "object",
+  "required": ["ts_utc", "run_type", "summary"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "run_type": {"type": "string"},
+    "summary": {"type": "string"},
+    "detail_json": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finding.schema.json",
+  "title": "Finding",
+  "type": "object",
+  "required": ["ts_utc", "finding_type", "title"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "finding_type": {
+      "type": "string",
+      "enum": ["OUTLIER_TRADE", "OUTLIER_VARIANT", "COFORMATION", "WARNING", "INFO"]
+    },
+    "severity": {"type": ["string", "null"]},
+    "title": {"type": "string", "minLength": 1},
+    "detail": {"type": ["string", "null"]},
+    "related_variant": {"type": ["string", "null"]},
+    "related_trade_id": {"type": ["string", "integer", "null"]},
+    "acknowledged": {"type": ["integer", "boolean", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

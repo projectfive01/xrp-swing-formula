@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "market_snapshot.schema.json",
+  "title": "MarketSnapshot",
+  "type": "object",
+  "required": ["ts_utc", "asset", "price"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "asset": {"type": "string"},
+    "price": {"type": "number", "exclusiveMinimum": 0},
+    "rsi_daily": {"type": ["number", "null"]},
+    "ema200": {"type": ["number", "null"]},
+    "atr_pct": {"type": ["number", "null"]},
+    "volume": {"type": ["number", "null"]},
+    "xrp_btc": {"type": ["number", "null"]},
+    "local_high_approx": {"type": ["number", "null"]},
+    "source": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
