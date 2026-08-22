@@ -1,0 +1,48 @@
+{
+  "variants": [
+    {
+      "code": "BASE",
+      "description": "20%/10d RSI75 pb10% hold10 — frozen baseline",
+      "ret_thresh": 0.2,
+      "lookback": 10,
+      "rsi_thresh": 75,
+      "pb_thresh": 0.1,
+      "hold_days": 10,
+      "frozen": true,
+      "active_lab": true
+    },
+    {
+      "code": "PB8",
+      "description": "Baseline with pb>=8% (lab)",
+      "ret_thresh": 0.2,
+      "lookback": 10,
+      "rsi_thresh": 75,
+      "pb_thresh": 0.08,
+      "hold_days": 10,
+      "frozen": true,
+      "active_lab": true
+    },
+    {
+      "code": "HOLD7",
+      "description": "Baseline with hold 7d (lab)",
+      "ret_thresh": 0.2,
+      "lookback": 10,
+      "rsi_thresh": 75,
+      "pb_thresh": 0.1,
+      "hold_days": 7,
+      "frozen": true,
+      "active_lab": true
+    },
+    {
+      "code": "LOOSE",
+      "description": "15%/10d RSI70 pb10% hold10 (lab)",
+      "ret_thresh": 0.15,
+      "lookback": 10,
+      "rsi_thresh": 70,
+      "pb_thresh": 0.1,
+      "hold_days": 10,
+      "frozen": true,
+      "active_lab": true
+    }
+  ]
+}

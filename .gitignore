@@ -1,0 +1,8 @@
+*.db
+__pycache__/
+.DS_Store
+node_modules/
+.env
+*.log
+data/candles/
+.pytest_cache/
