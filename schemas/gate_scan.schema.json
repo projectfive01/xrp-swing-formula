@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate_scan.schema.json",
+  "title": "GateScan",
+  "type": "object",
+  "required": ["ts_utc", "price", "progress_pct", "action"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "price": {"type": "number", "exclusiveMinimum": 0},
+    "local_high": {"type": ["number", "null"]},
+    "pullback_pct": {"type": ["number", "null"]},
+    "dist_to_200d_pct": {"type": ["number", "null"]},
+    "rsi_daily": {"type": ["number", "null"]},
+    "ema200": {"type": ["number", "null"]},
+    "gate_exhaustion": {"type": ["integer", "null"], "enum": [0, 1]},
+    "gate_pullback": {"type": ["integer", "null"], "enum": [0, 1]},
+    "gate_200d_zone": {"type": ["integer", "null"], "enum": [0, 1]},
+    "gate_not_chase": {"type": ["integer", "null"], "enum": [0, 1]},
+    "gate_regime_ok": {"type": ["integer", "null"], "enum": [0, 1]},
+    "progress_pct": {"type": "number", "minimum": 0, "maximum": 100},
+    "action": {"type": "string", "enum": ["HOLD", "BUY", "INVALID"]},
+    "catalyst_weight": {"type": ["integer", "null"], "enum": [-1, 0, 1]},
+    "missing": {"type": ["array", "null"], "items": {"type": "string"}},
+    "notes": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

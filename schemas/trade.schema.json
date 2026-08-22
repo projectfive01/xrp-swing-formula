@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trade.schema.json",
+  "title": "Trade",
+  "type": "object",
+  "required": ["variant", "entry_ts", "entry_px", "status"],
+  "properties": {
+    "id": {"type": ["string", "null"]},
+    "variant": {"type": "string", "enum": ["BASE", "PB8", "HOLD7", "LOOSE"]},
+    "exhaust_ts": {"type": ["string", "null"]},
+    "entry_ts": {"type": "string", "minLength": 1},
+    "exit_ts": {"type": ["string", "null"]},
+    "entry_px": {"type": "number", "exclusiveMinimum": 0},
+    "exit_px": {"type": ["number", "null"]},
+    "stop_px": {"type": ["number", "null"]},
+    "size_usd": {"type": ["number", "null"]},
+    "ret": {"type": ["number", "null"]},
+    "mae": {"type": ["number", "null"]},
+    "mfe": {"type": ["number", "null"]},
+    "hold_days": {"type": ["integer", "null"]},
+    "catalyst_weight": {"type": ["integer", "null"], "enum": [-1, 0, 1]},
+    "status": {"type": "string", "enum": ["OPEN", "CLOSED", "STOPPED"]},
+    "notes": {"type": ["string", "null"]},
+    "source": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

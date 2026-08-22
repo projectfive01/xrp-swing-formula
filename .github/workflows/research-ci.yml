@@ -1,0 +1,35 @@
+name: research-ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate-store:
+    name: Validate research store
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jsonschema
+        run: pip install jsonschema
+
+      - name: Run JSON Schema + BASE freeze validation
+        run: python3 scripts/validate_store.py
+
+      - name: Required path smoke check
+        run: |
+          test -f data/variants.json
+          test -f data/trades.jsonl
+          test -f docs/PAPER_TRADING_PROTOCOL.md
+          test -f labs/formula_probability_lab.html || true
+          test -f labs/formula_brain_flow.html || true
+          echo Smoke paths OK
