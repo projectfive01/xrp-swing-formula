@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>XRP Formula Probability Lab</title>
+<style>
+:root{--bg:#0f1419;--panel:#1a2332;--border:#2d3a4f;--text:#e7ecf3;--muted:#8b9bb4;--accent:#3b82f6}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:960px;margin-inline:auto}
+h1{font-size:1.25rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px}
+label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>div{flex:1;min-width:120px}
+button{border:none;border-radius:8px;padding:10px 14px;font-weight:600;cursor:pointer;background:var(--accent);color:#fff;margin-top:10px;margin-right:8px}
+button.secondary{background:#334155}#hist{width:100%;height:220px;background:#0c1017;border-radius:8px;border:1px solid var(--border)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}.stat{background:var(--bg);border-radius:8px;padding:10px;border:1px solid var(--border)}
+.stat .k{font-size:.75rem;color:var(--muted)}.stat .v{font-size:1.1rem;font-weight:700}
+.legend{font-size:.8rem;color:var(--muted);margin-top:6px}.warn{color:#f59e0b;font-size:.85rem}
+.plain b{color:var(--text)}
+</style>
+</head>
+<body>
+<h1>XRP Formula Probability Lab</h1>
+<div class="sub">Frozen BASE rules only. Bootstrap from 6 historical swing outcomes. Not proof of edge.</div>
+<div class="card">
+<strong>Plain English</strong>
+<div class="legend">
+<div><b>Path</b> — one imaginary sequence of future trades</div>
+<div><b>Wealth multiple</b> — how much $1 becomes (1.2x = +20%)</div>
+<div><b>Bootstrap</b> — randomly reusing past results to invent what-if futures</div>
+<div><b>Hybrid equity</b> — results after ~1% risk sizing</div>
+<div><b>Theoretical</b> — gray bars: simple coin-flip model for comparison</div>
+</div>
+</div>
+<div class="card">
+<div class="row">
+<div><label>Mode</label><select id="mode"><option value="equity">Hybrid equity returns</option><option value="price">Raw price returns</option></select></div>
+<div><label>Future trades per path</label><input type="number" id="nTrades" value="12" min="1" max="50"/></div>
+<div><label>Monte Carlo paths</label><input type="number" id="nPaths" value="2000" min="100" max="20000" step="100"/></div>
+</div>
+<button id="run">Run simulation</button><button class="secondary" id="reset">Reset</button>
+<p class="warn">Small sample (n=6). Resamples history — does not prove edge.</p>
+</div>
+<div class="card"><div class="stats">
+<div class="stat"><div class="k">Status</div><div class="v" id="status">Ready</div></div>
+<div class="stat"><div class="k">Paths done</div><div class="v" id="done">0</div></div>
+<div class="stat"><div class="k">Median wealth</div><div class="v" id="medW">—</div></div>
+<div class="stat"><div class="k">P(profit)</div><div class="v" id="pProfit">—</div></div>
+<div class="stat"><div class="k">5th pct wealth</div><div class="v" id="p5">—</div></div>
+</div></div>
+<div class="card"><strong>Terminal wealth histogram</strong><svg id="hist" viewBox="0 0 800 220" preserveAspectRatio="none"></svg></div>
+<script>
+const PRICE=[0.0558,1.0904,0.7087,0.0167,0.0379,0.1799];
+const EQUITY=[0.0047,0.1090,0.0591,0.0014,0.0032,0.0150];
+const $=id=>document.getElementById(id);
+function fmtX(x){return x.toFixed(2)+'x'} function fmtPct(x){return (x*100).toFixed(1)+'%'}
+function bootstrap(rets,nTrades,nPaths){const wealth=[];for(let i=0;i<nPaths;i++){let w=1;for(let t=0;t<nTrades;t++)w*=(1+rets[(Math.random()*rets.length)|0]);wealth.push(w)}return wealth}
+function percentile(s,p){const i=(s.length-1)*p,lo=Math.floor(i),hi=Math.ceil(i);return lo===hi?s[lo]:s[lo]*(hi-i)+s[hi]*(i-lo)}
+function drawHist(values){const svg=$('hist');if(!values.length){svg.innerHTML='';return}const bins=24,lo=Math.min(...values),hi=Math.max(...values),span=Math.max(hi-lo,1e-9);const counts=Array(bins).fill(0);for(const v of values){let i=Math.floor(((v-lo)/span)*bins);if(i===bins)i--;counts[i]++}const maxC=Math.max(...counts,1),W=800,H=220,pad=24,barW=(W-pad*2)/bins;let html='';for(let i=0;i<bins;i++){const h=(counts[i]/maxC)*(H-pad*2);html+=`<rect x="${pad+i*barW}" y="${H-pad-h}" width="${barW*0.85}" height="${h}" fill="#3b82f6"/>`}html+=`<line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="#2d3a4f"/>`;html+=`<text x="${pad}" y="${H-6}" fill="#8b9bb4" font-size="11">${fmtX(lo)}</text>`;html+=`<text x="${W-pad}" y="${H-6}" fill="#8b9bb4" font-size="11" text-anchor="end">${fmtX(hi)}</text>`;svg.innerHTML=html}
+$('run').onclick=()=>{const rets=$('mode').value==='price'?PRICE:EQUITY;const nTrades=+$('nTrades').value||12;const nPaths=+$('nPaths').value||2000;$('status').textContent='Running…';const wealth=bootstrap(rets,nTrades,nPaths);const sorted=[...wealth].sort((a,b)=>a-b);$('done').textContent=String(nPaths);$('medW').textContent=fmtX(percentile(sorted,0.5));$('p5').textContent=fmtX(percentile(sorted,0.05));$('pProfit').textContent=fmtPct(wealth.filter(w=>w>1).length/wealth.length);drawHist(wealth);$('status').textContent='Done'};
+$('reset').onclick=()=>{$('status').textContent='Ready';$('done').textContent='0';$('medW').textContent='—';$('p5').textContent='—';$('pProfit').textContent='—';drawHist([])};
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>XRP Formula Brain — Information Flow</title>
+<style>
+:root { --bg:#0b0f14; --panel:#141b24; --line:#2a3647; --text:#e8eef7; --muted:#8b9bb4; --blue:#3b82f6; --cyan:#22d3ee; }
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:980px;margin-inline:auto}
+h1{font-size:1.2rem;margin:0 0 4px} .sub{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.node{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;position:relative;overflow:hidden}
+.node h3{margin:0 0 6px;font-size:.95rem} .node p{margin:0;font-size:.8rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.7rem;padding:2px 7px;border-radius:999px;background:#1e293b;color:#93c5fd;margin-bottom:6px}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.2rem;min-height:28px}
+.pulse{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(59,130,246,.12),transparent);transform:translateX(-100%)}
+.node.active .pulse{animation:sweep 1.4s ease-in-out}
+@keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.node.active{border-color:var(--blue);box-shadow:0 0 0 1px rgba(59,130,246,.35)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+button{border:none;border-radius:8px;padding:8px 12px;font-weight:600;cursor:pointer;background:var(--blue);color:#fff}
+button.secondary{background:#334155}
+@media(min-width:800px){.flow{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}}
+.status{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.85rem;margin-top:10px}
+.plain{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:.85rem;color:var(--muted)}
+.plain b{color:var(--text)} .path-list{font-size:.8rem;color:var(--muted);margin-top:8px} .path-list span{color:var(--cyan)}
+</style>
+</head>
+<body>
+<h1>XRP Formula Brain — Information Flow</h1>
+<div class="sub">Visual model of where data goes. Rules frozen. Animation = one information pulse through the system.</div>
+<div class="controls">
+<button id="pulseMarket">Pulse: new market data</button>
+<button id="pulseBuy" class="secondary">Pulse: BUY signal</button>
+<button id="pulseClose" class="secondary">Pulse: trade close</button>
+<button id="pulseScan" class="secondary">Pulse: daily analytics</button>
+<button id="reset" class="secondary">Reset</button>
+</div>
+<div class="status" id="status">Idle — press a pulse to watch information move.</div>
+<div class="flow" style="margin-top:12px">
+<div class="node" id="n-market"><div class="pulse"></div><div class="tag">INPUT</div><h3>Market data</h3><p>Price, RSI, 200-day, ATR, volume, XRP/BTC → market_snapshots.</p></div>
+<div class="arrow">→</div>
+<div class="node" id="n-gates"><div class="pulse"></div><div class="tag">BRAIN CORE</div><h3>Gate engine</h3><p>Exhaustion · Pullback · 200d zone · Not-chase · Regime → progress % HOLD/BUY.</p></div>
+<div class="arrow">→</div>
+<div class="node" id="n-action"><div class="pulse"></div><div class="tag">DECISION</div><h3>Action + load bar</h3><p>HOLD or BUY. Logged in gate_scans.</p></div>
+</div>
+<div class="row3">
+<div class="node" id="n-signals"><div class="pulse"></div><div class="tag">EVENT LOG</div><h3>Signals</h3><p>EXHAUSTION · ENTRY_VALID · EXIT → signals.jsonl</p></div>
+<div class="node" id="n-paper"><div class="pulse"></div><div class="tag">PAPER / LIVE</div><h3>Trade book</h3><p>Open/close paper trades. trades.jsonl grows the sample.</p></div>
+<div class="node" id="n-lab"><div class="pulse"></div><div class="tag">LAB ONLY</div><h3>Variants</h3><p>BASE + PB8 / HOLD7 / LOOSE — not auto-promoted.</p></div>
+</div>
+<div class="row3">
+<div class="node" id="n-analytics"><div class="pulse"></div><div class="tag">SCANNER</div><h3>Analytics jobs</h3><p>Expectancy, hit rate, MAE by variant.</p></div>
+<div class="node" id="n-findings"><div class="pulse"></div><div class="tag">JUDGE</div><h3>Outliers & co-formations</h3><p>findings.jsonl audit trail.</p></div>
+<div class="node" id="n-bootstrap"><div class="pulse"></div><div class="tag">INTUITION</div><h3>Bootstrap lab</h3><p>Resamples closed trades into what-if paths.</p></div>
+</div>
+<div class="path-list" id="path">Flow path: —</div>
+<div class="plain"><b>Plain English:</b> Market → gates → wait or buy → paper trade → closed trade = evidence → analytics find outliers/co-formations → bootstrap shows uncertainty. Nothing silently changes the formula.</div>
+<script>
+const status=document.getElementById('status'), pathEl=document.getElementById('path');
+function clearActive(){document.querySelectorAll('.node').forEach(n=>n.classList.remove('active'))}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
+async function runPath(ids,label,note){clearActive();pathEl.innerHTML='Flow path: <span>'+label+'</span>';status.textContent=note;for(const id of ids){const el=document.getElementById(id);if(!el)continue;el.classList.add('active');const p=el.querySelector('.pulse');p.style.animation='none';void p.offsetWidth;p.style.animation='';await sleep(700)}}
+document.getElementById('pulseMarket').onclick=()=>runPath(['n-market','n-gates','n-action'],'Market → Gates → Action','New scan. HOLD unless all gates green.');
+document.getElementById('pulseBuy').onclick=()=>runPath(['n-market','n-gates','n-action','n-signals','n-paper','n-lab'],'BUY → Paper trade','Progress 100%. Paper ENTRY logged.');
+document.getElementById('pulseClose').onclick=()=>runPath(['n-paper','n-analytics','n-findings','n-bootstrap'],'Close → Analytics → Bootstrap','Closed trade becomes new evidence.');
+document.getElementById('pulseScan').onclick=()=>runPath(['n-market','n-analytics','n-findings'],'Daily analytics','Research scan without a new trade.');
+document.getElementById('reset').onclick=()=>{clearActive();pathEl.textContent='Flow path: —';status.textContent='Idle — press a pulse to watch information move.';};
+</script>
+</body>
+</html>
