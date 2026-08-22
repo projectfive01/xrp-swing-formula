@@ -1,4 +1,17 @@
-# Paper Trading Protocol (BASE + lab variants)
+# Paper Trading Protocol
+
+## Core Unit Rules (applies to XRP Swing + SOL Day)
+
+| Parameter              | Value                          |
+|------------------------|--------------------------------|
+| **Unit Size**          | Fixed **$2,000** notional      |
+| **Max Loss**           | **1R**                         |
+| **Take Profit 1**      | **3R** (scale out partial)     |
+| **Take Profit 2**      | **5R** (final target)          |
+
+These unit rules are now the standard for all paper (and future live) trades in this research system.
+
+---
 
 ## Purpose
 Live ongoing paper trades give the formula **new out-of-sample information** for analytics and bootstrap.
@@ -7,33 +20,42 @@ Rules stay frozen. Paper fills are logged the same way as live would be.
 ## When a paper trade opens
 Trigger: gate_scan action flips to **BUY** (progress 100%) for a variant.
 
-Record in trades.jsonl:
-- variant (BASE / PB8 / HOLD7 / LOOSE)
-- exhaust_ts, entry_ts, entry_px, stop_px (200d * 0.98)
-- size_usd from hybrid sizing (optional; can log "full paper unit")
-- catalyst_weight at entry
-- status: OPEN
-- notes: "PAPER"
+**Position sizing (new standard):**
+- Always use **1 unit = $2,000** notional
+- Calculate R from entry price to stop price
+- Risk is fixed at 1R per unit
+
+Record in `trades.jsonl`:
+- `variant` (BASE / PB8 / HOLD7 / LOOSE)
+- `unit_size_usd`: 2000
+- `entry_ts`, `entry_px`, `stop_px`
+- `r_value` (dollar distance of 1R)
+- `tp1_px` (3R), `tp2_px` (5R)
+- `status`: OPEN
+- `notes`: "PAPER"
 
 ## While open
-- Each gate scan can note unrealized MAE/MFE
-- Do not change entry rules mid-trade
+- Track unrealized P&L in R-multiples
+- Update MAE / MFE in R terms
+- Do **not** change entry rules or stop mid-trade
 
-## When it closes
-Exit on:
-1. Hold days reached (BASE=10, HOLD7=7), or
-2. Daily close under 200d stop
+## Exit Rules
+A paper trade closes when **any** of the following occurs:
 
-Update same trade:
-- exit_ts, exit_px, ret, mae, mfe, hold_days, status: CLOSED
+1. **Stop hit** → -1R (max loss)
+2. **TP1 (3R)** → scale out (e.g. 50%)
+3. **TP2 (5R)** → close remaining
+4. Time-based exit (BASE = 10 trading days) if neither TP nor stop has been hit
+5. Daily close under the 200-day regime filter
 
 ## After close
-1. Append analytics expectancy refresh
-2. Outlier check (2 sigma)
-3. Co-formation score if logged at entry
-4. Bootstrap lab bag grows on next rebuild of empirical arrays
+1. Log final R-multiple achieved
+2. Append analytics / expectancy refresh
+3. Outlier check (2 sigma)
+4. Bootstrap lab bag grows
 
 ## Discipline
 - Only paper signals that match frozen gates
-- No moving stop for convenience
-- Lab variants papered in parallel only when their own gate would fire
+- Fixed $2,000 units — no equity-percentage sizing
+- Never risk more than 1R per unit
+- Lab variants are papered in parallel only when their own gate fires
