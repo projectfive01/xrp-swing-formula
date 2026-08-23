@@ -15,31 +15,32 @@ These rules are locked for both XRP Swing and SOL Day.
 
 ## Current Status
 
-- Scaffold created
+- **BASE formula FROZEN** (2026-08-23)
 - Shared unit model applied
-- Initial one-pager written (`docs/FORMULA_ONEPAGER.md`)
-- **Rules not yet frozen**
+- Primary TF: 15-minute, long-only v1
+- Paper-first discipline identical to XRP BASE
+- Live gate scan + paper watch can now be extended to SOL Day
 
-## Planned Structure
+See `docs/FORMULA_ONEPAGER.md` for the exact frozen gates.
+
+## Structure
 
 ```
 sol-day/
 ├── README.md
 ├── docs/
-│   ├── FORMULA_ONEPAGER.md
-│   └── PAPER_TRADING_PROTOCOL.md   (can inherit from root)
-├── data/                           # separate research store later
-├── schemas/
-└── scripts/                         # day scanner + paper trader
+│   └── FORMULA_ONEPAGER.md     # FROZEN BASE rules
+├── data/                       # to be populated with scans & paper trades
+├── schemas/                    # optional day-specific schemas later
+└── scripts/                    # day scanner (future)
 ```
 
-## Next Steps to Freeze a BASE Day Formula
+## Next Steps (post-freeze)
 
-1. Decide primary timeframe (5m / 15m)
-2. Define exact entry gates (trend + momentum + trigger)
-3. Define how 1R stop is calculated (structure vs ATR)
-4. Paper trade the rules for 20–30 trades
-5. Run walk-forward validation
-6. Freeze the BASE day version
+1. Extend live gate scan to also evaluate SOL Day readiness (same cadence as XRP)
+2. Arm SOL paper_watch when first 100% load-bar appears
+3. Paper 20–30 trades
+4. Walk-forward + bootstrap validation
+5. Only then consider lab variants (shorts, 5m, looser RSI)
 
-Once frozen, SOL day trades will be managed by the same `scripts/paper_trader.py` engine using $2,000 units / 1R / 3R / 5R.
+All SOL day trades are managed by the same `scripts/paper_trader.py` engine.
