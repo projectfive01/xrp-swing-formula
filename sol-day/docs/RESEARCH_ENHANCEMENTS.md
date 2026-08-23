@@ -52,6 +52,26 @@ Do **not** use fixed 3R/5R as the main exit method on high-quality runners. The 
 - Then manage as a runner under the priced-in exit rules
 - One trade at a time
 
+## 6. ATR-Based Position Sizing (LOCKED)
+
+**Core Principle**: Risk a fixed dollar amount per trade. Position size is determined by the actual 1R distance.
+
+### Formula
+```
+Position Size (SOL) = Risk Amount (USD) / 1R Distance (USD)
+```
+
+Where:
+- **1R Distance** = |Entry Price – Structural Stop|
+- **Risk Amount** = Chosen fixed risk (e.g. $50–$100 while paper trading, or a % of account later)
+
+### ATR Guardrails on Stop Distance
+- If Structural Stop < 0.6 × ATR(14 5m) → Reject setup (too tight)
+- If Structural Stop > 2.0 × ATR(14 5m) → Reduce size or skip (too wide / poor location)
+
+### Paper Trading Note
+While paper trading we continue logging the $2,000 notional unit for consistency with the shared engine, while also recording what the ATR-based size would have been.
+
 ## Summary of Impact
 
 | Finding                        | Effect on Formula                          |
@@ -61,5 +81,6 @@ Do **not** use fixed 3R/5R as the main exit method on high-quality runners. The 
 | Prefer first FVG after ChoCh   | Improves entry location                    |
 | Opposite ChoCh as primary exit | Captures full runner potential             |
 | Strict selectivity             | Aligns with 3–4 high-quality setups goal   |
+| ATR-based position sizing      | Keeps dollar risk consistent across volatility |
 
 These rules are now active for all future paper trading and automation logic.
