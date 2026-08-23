@@ -17,15 +17,31 @@ Every setup is scored 0–10 on:
 
 This single filter is the highest-leverage improvement. It removed the weaker Aug 20–21 continuation (Score 6) while keeping the strong Aug 19 long (9) and Aug 22 short (10).
 
-## 2. FVG Size Must Be Meaningful
+## 2. Dynamic ATR Multipliers (LOCKED)
 
-Use ATR(14) on the 5-minute (Wilder smoothing).
+ATR reference = ATR(14) on the 5-minute (Wilder smoothing).
 
-- Strong FVG: ≥ 1.0 × ATR → 2 points
-- Acceptable: ≥ 0.6 × ATR → 1 point
-- Weak: < 0.6 × ATR → 0 points
+### Volatility Regime Detection
+```
+Volatility Ratio = Current ATR(14) / ATR(14) from ~3 days ago
+```
+
+| Regime   | Volatility Ratio | FVG Strong | FVG Acceptable | Min Stop | Max Stop |
+|----------------------------|------------|----------------|----------|----------|
+| Low      | < 0.85              | 0.85× ATR  | 0.50× ATR      | 0.50×    | 1.8×     |
+| Normal   | 0.85 – 1.20         | 1.00× ATR  | 0.60× ATR      | 0.60×    | 2.0×     |
+| High     | > 1.20              | 1.20× ATR  | 0.75× ATR      | 0.75×    | 2.3×     |
+
+### FVG Quality Scoring (uses the regime thresholds above)
+- Strong FVG (≥ regime Strong threshold) → 2 points
+- Acceptable FVG (≥ regime Acceptable threshold) → 1 point
+- Weak FVG (below Acceptable) → 0 points
 
 Prefer the **first clean FVG** after the ChoCh. Late or already-mitigated FVGs are lower quality.
+
+### Stop Distance Guardrails (uses the regime Min/Max)
+- If Structural Stop < regime Min → Reject setup (too tight)
+- If Structural Stop > regime Max → Reduce size or skip (too wide)
 
 ## 3. Selectivity Over Frequency
 
@@ -65,10 +81,6 @@ Where:
 - **1R Distance** = |Entry Price – Structural Stop|
 - **Risk Amount** = Chosen fixed risk (e.g. $50–$100 while paper trading, or a % of account later)
 
-### ATR Guardrails on Stop Distance
-- If Structural Stop < 0.6 × ATR(14 5m) → Reject setup (too tight)
-- If Structural Stop > 2.0 × ATR(14 5m) → Reduce size or skip (too wide / poor location)
-
 ### Paper Trading Note
 While paper trading we continue logging the $2,000 notional unit for consistency with the shared engine, while also recording what the ATR-based size would have been.
 
@@ -77,7 +89,7 @@ While paper trading we continue logging the $2,000 notional unit for consistency
 | Finding                        | Effect on Formula                          |
 |--------------------------------|--------------------------------------------|
 | Quality Score ≥ 8              | Strongly reduces overtrading               |
-| ATR-based FVG size             | Removes weak, low-edge inefficiencies      |
+| Dynamic ATR multipliers        | Adapts FVG and stop rules to volatility    |
 | Prefer first FVG after ChoCh   | Improves entry location                    |
 | Opposite ChoCh as primary exit | Captures full runner potential             |
 | Strict selectivity             | Aligns with 3–4 high-quality setups goal   |
