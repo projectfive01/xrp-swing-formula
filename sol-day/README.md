@@ -1,33 +1,45 @@
 # SOL Day Trading Research
 
-Day trading research system for SOL, using the same unit framework as XRP swing trades.
+Day trading research system for SOL, using the **exact same unit framework** as XRP swing trades.
 
-## Standard Unit Rules (shared with XRP Swing)
+## Standard Unit Rules (shared)
 
-| Parameter         | Value                    |
-|-------------------|--------------------------|
-| **Unit Size**     | Fixed **$2,000** notional |
-| **Max Loss**      | **1R**                   |
-| **Take Profit 1** | **3R** (scale out)       |
-| **Take Profit 2** | **5R**                   |
+| Parameter         | Value                      |
+|-------------------|----------------------------|
+| **Unit Size**     | Fixed **$2,000** notional  |
+| **Max Loss**      | **1R**                     |
+| **Take Profit 1** | **3R** (scale out)         |
+| **Take Profit 2** | **5R**                     |
 
-## Status
+These rules are locked for both XRP Swing and SOL Day.
 
-Scaffold only. Rules are not yet frozen.
+## Current Status
 
-Planned components (mirroring XRP structure):
+- Scaffold created
+- Shared unit model applied
+- Initial one-pager written (`docs/FORMULA_ONEPAGER.md`)
+- **Rules not yet frozen**
 
-- Frozen day-trading formula (to be defined)
-- Research store (`data/`)
-- Paper trading protocol
-- Gate scanner + daily runner
-- JSON Schema validation
+## Planned Structure
 
-## Next Steps
+```
+sol-day/
+├── README.md
+├── docs/
+│   ├── FORMULA_ONEPAGER.md
+│   └── PAPER_TRADING_PROTOCOL.md   (can inherit from root)
+├── data/                           # separate research store later
+├── schemas/
+└── scripts/                         # day scanner + paper trader
+```
 
-1. Define the core SOL day-trading setup (session, indicators, entry/exit logic)
-2. Freeze the BASE day rules
-3. Add paper trading + walk-forward validation
-4. Connect to live daily/intraday data feed
+## Next Steps to Freeze a BASE Day Formula
 
-All SOL day trades will use the identical **$2,000 unit / 1R risk / 3R–5R targets** model.
+1. Decide primary timeframe (5m / 15m)
+2. Define exact entry gates (trend + momentum + trigger)
+3. Define how 1R stop is calculated (structure vs ATR)
+4. Paper trade the rules for 20–30 trades
+5. Run walk-forward validation
+6. Freeze the BASE day version
+
+Once frozen, SOL day trades will be managed by the same `scripts/paper_trader.py` engine using $2,000 units / 1R / 3R / 5R.
