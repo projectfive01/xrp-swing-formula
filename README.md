@@ -1,80 +1,100 @@
-# XRP Swing Formula Research + SOL Day Trading
+# Multi-Front Trading & Investing System
 
-Frozen **BASE** swing rules for XRP + frozen **BASE** day rules for SOL, plus a research store, paper-trading protocol, probability lab, formula brain flow, JSON Schema validation, and CI.
+Three distinct fronts under one research discipline:
 
-> Not financial advice. Small historical sample (n=6 XRP). Paper first.
+| Front | Timeframe | Edge |
+|-------|-----------|------|
+| **SOL Day** | Intraday | Structure + Quality Score |
+| **XRP Swing** | Multi-day | Exhaustion → Pullback → 200d zone |
+| **Front Run Invest** | Weeks–months | Real activity + beta vs BTC |
 
-## Standard Unit Rules (XRP Swing + SOL Day)
+> Not financial advice. Paper first. Small samples.
 
-| Parameter         | Value                    |
-|-------------------|--------------------------|
-| **Unit Size**     | Fixed **$2,000** notional |
-| **Max Loss**      | **1R**                   |
-| **Take Profit 1** | **3R** (scale out)       |
-| **Take Profit 2** | **5R**                   |
+See **[GAMEPLAN.md](GAMEPLAN.md)** for the full operating plan.
 
-These unit rules apply to both XRP swing trades and SOL day trades.
+---
 
-## BASE formula (frozen) — XRP Swing
+## Shared Unit Rules (Trading Fronts Only)
 
-1. **Exhaustion:** >=20% rise in <=10 days **and** daily RSI >= 75
-2. **Entry:** first >=10% pullback from local high that still holds the 200-day area
-3. **Exit / Targets:**
-   - Stop = 1R
-   - TP1 = 3R
-   - TP2 = 5R
-   - Time fallback: ~7-10 trading days **or** daily close under 200-day
-4. **Size:** Fixed $2,000 unit (1R risk)
-5. **Catalyst:** weight only (-1 / 0 / +1) — never opens a trade alone
+| Parameter | Value |
+|-----------|-------|
+| **Unit Size** | Fixed **$2,000** notional (paper baseline) |
+| **Max Loss** | **1R** |
+| **Risk Model** | Structural stop defines 1R |
 
-**Action:** HOLD until load-bar progress = 100% (all gates green).
+Front Run Invest uses **% of capital** sizing instead of tight 1R stops.
 
-## BASE formula (frozen) — SOL Day
+---
 
-- **TF:** 15-minute, long-only v1
-- **Gates:** Trend (close > 20-EMA + VWAP) → Pullback to EMA/VWAP → Momentum/Trigger (RSI(7) cross or break) → Not chasing (RSI < 75) → Structural/ATR stop defines 1R
-- **Targets:** 3R / 5R + time fallback
-- Full details: `sol-day/docs/FORMULA_ONEPAGER.md`
+## 1. XRP Swing (BASE Frozen)
 
-**Action:** Same load-bar discipline. Paper only until 100%.
+1. **Exhaustion:** ≥20% rise in ≤10 days **and** daily RSI ≥ 75
+2. **Entry:** first ≥10% pullback from local high that still holds the 200-day area
+3. **Exit:** 1R stop / 3R + 5R targets / time or structure invalidation
+4. **Action:** HOLD until load-bar = 100%
+
+Details: `docs/FORMULA_ONEPAGER.md`
+
+---
+
+## 2. SOL Day
+
+### Original BASE (Frozen)
+15m EMA + VWAP + RSI gates, long-only, 3R/5R targets.  
+See `sol-day/docs/FORMULA_ONEPAGER.md`.
+
+### Research Enhancements (Active Development)
+- Quality Score 0–10 → only take ≥ 8
+- ChoCh + FVG emphasis
+- Dynamic ATR regime thresholds
+- Runner management (Opposite ChoCh primary exit)
+- ATR-based sizing + anti-martingale / Kelly path
+
+See `sol-day/docs/RESEARCH_ENHANCEMENTS.md` and `sol-day/docs/ATR_AND_FVG_THRESHOLDS.md`.
+
+**Policy:** Original BASE stays frozen for continuity. New work follows the Research Enhancements path and promotes only with evidence.
+
+---
+
+## 3. Front Run Invest (New)
+
+Longer-term research & positioning:
+
+- Bitcoin as the anchor
+- Higher-beta names with real activity (fees, volume, OI) while market is quiet
+- Thesis-based sizing (0.5–3% of invest capital per name)
+- Exit on thesis break, not day-trading stops
+
+Details: `front-run-invest/docs/FORMULA_ONEPAGER.md`
+
+---
 
 ## Layout
 
 ```
-docs/                 Protocols + one-pager
-data/                 Research store (jsonl + variants)
-labs/                 Interactive HTML tools
-schemas/              JSON Schema contracts
-scripts/              validate_store.py + paper_trader.py
-sol-day/              SOL day trading research (BASE frozen)
-.github/workflows/    CI
+GAMEPLAN.md                 Overall three-front plan
+docs/                       XRP protocols + one-pager
+data/                       Research store (jsonl)
+sol-day/                    SOL Day research + enhancements
+front-run-invest/           Longer-term investing front
+labs/                       Interactive tools
+schemas/                    JSON Schema contracts
+scripts/                    paper_trader.py + validation
 ```
 
-## Quick start
+---
+
+## Quick Start
 
 ```bash
 python3 scripts/validate_store.py
 ```
 
-Open in browser:
-- `labs/formula_brain_flow.html` — information flow
-- `labs/formula_probability_lab.html` — bootstrap histogram lab
+---
 
-## Lab variants (not auto-promoted)
+## Status
 
-**XRP:** BASE / PB8 / HOLD7 / LOOSE  
-**SOL:** BASE (frozen) — shorts / 5m / looser RSI later
-
-Progression: n>=10 closed out-of-sample, median > 0, co-formations, human review.
-
-## Status (seeded)
-
-- 6 historical XRP BASE trades backfilled
-- First live XRP gate scan: HOLD (~50%; need $1.28-$1.35 zone)
-- SOL Day BASE formula frozen 2026-08-23
-- Unit model: fixed $2,000 / 1R / 3R / 5R
-- Findings: HIGH warning on small n (XRP)
-
-## CI
-
-On push/PR to main: validate JSONL + BASE freeze + path smoke checks.
+- XRP Swing BASE frozen, paper process active
+- SOL Day original BASE frozen; Research Enhancements documented and in use for new development
+- Front Run Invest framework added 2026-08-23
+- Shared research discipline across all three fronts
