@@ -1,27 +1,41 @@
 # SOL Day Trading Research
 
-Day trading research system for SOL, using the **exact same unit framework** as XRP swing trades.
+Intraday system for SOL under the shared research discipline.
 
-## Standard Unit Rules (shared)
+## Two Layers
 
-| Parameter         | Value                      |
-|-------------------|----------------------------|
-| **Unit Size**     | Fixed **$2,000** notional  |
-| **Max Loss**      | **1R**                     |
-| **Take Profit 1** | **3R** (scale out)         |
-| **Take Profit 2** | **5R**                     |
+### 1. Original BASE (Frozen)
+- 15-minute, long-only
+- EMA + VWAP + RSI gates
+- 1R / 3R / 5R framework
+- See `docs/FORMULA_ONEPAGER.md`
 
-These rules are locked for both XRP Swing and SOL Day.
+### 2. Research Enhancements (Active)
+Documented in:
+- `docs/RESEARCH_ENHANCEMENTS.md`
+- `docs/ATR_AND_FVG_THRESHOLDS.md`
 
-## Current Status
+Key additions:
+- Quality Score 0–10 (only take ≥ 8)
+- ChoCh + FVG emphasis
+- Dynamic ATR regime thresholds
+- Runner management with Opposite ChoCh as primary exit
+- ATR-based position sizing
+- Path to anti-martingale / Kelly sizing
 
-- **BASE formula FROZEN** (2026-08-23)
-- Shared unit model applied
-- Primary TF: 15-minute, long-only v1
-- Paper-first discipline identical to XRP BASE
-- Live gate scan + paper watch can now be extended to SOL Day
+**Policy:** Original BASE stays frozen for paper continuity. New development and live decision-making follow the Research Enhancements rules. Promotion of any new BASE requires evidence.
 
-See `docs/FORMULA_ONEPAGER.md` for the exact frozen gates.
+---
+
+## Shared Unit Rules (with XRP Swing)
+
+| Parameter | Value |
+|-----------|-------|
+| **Unit Size** | Fixed **$2,000** notional (paper baseline) |
+| **Max Loss** | **1R** |
+| **Risk Definition** | Structural stop |
+
+---
 
 ## Structure
 
@@ -29,18 +43,20 @@ See `docs/FORMULA_ONEPAGER.md` for the exact frozen gates.
 sol-day/
 ├── README.md
 ├── docs/
-│   └── FORMULA_ONEPAGER.md     # FROZEN BASE rules
-├── data/                       # to be populated with scans & paper trades
-├── schemas/                    # optional day-specific schemas later
-└── scripts/                    # day scanner (future)
+│   ├── FORMULA_ONEPAGER.md          # Original BASE (frozen)
+│   ├── RESEARCH_ENHANCEMENTS.md    # Quality Score, ATR regimes, exits
+│   └── ATR_AND_FVG_THRESHOLDS.md   # Wilder ATR + FVG size rules
+└── (future) data/, scripts/
 ```
 
-## Next Steps (post-freeze)
+---
 
-1. Extend live gate scan to also evaluate SOL Day readiness (same cadence as XRP)
-2. Arm SOL paper_watch when first 100% load-bar appears
-3. Paper 20–30 trades
-4. Walk-forward + bootstrap validation
-5. Only then consider lab variants (shorts, 5m, looser RSI)
+## Operating Notes
 
-All SOL day trades are managed by the same `scripts/paper_trader.py` engine.
+- Automation: session-restricted hourly scan with Quality Score + levels
+- Only act on Quality ≥ 8 under the enhanced rules
+- Journal every closed trade (R-multiple, exit reason, Quality Score)
+- One trade at a time
+- Move to break-even at +1R, then manage as runner
+
+See root `GAMEPLAN.md` for how SOL Day sits alongside XRP Swing and Front Run Invest.
