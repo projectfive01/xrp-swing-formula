@@ -2,7 +2,9 @@
 
 **Last updated:** 2026-08-23
 
-This repository now supports **three distinct fronts**. They share philosophy (defined risk, selectivity, journal feedback) but use different rules and timeframes.
+This repository supports **three distinct fronts** plus an automated backtest pipeline. They share philosophy (defined risk, selectivity, journal feedback) but use different rules and timeframes.
+
+**Target:** Ready for real capital in ~30 days (build → backtest → paper → small live).
 
 ---
 
@@ -10,9 +12,9 @@ This repository now supports **three distinct fronts**. They share philosophy (d
 
 | Front | Timeframe | Core Edge | Status |
 |-------|-----------|-----------|--------|
-| **SOL Day** | Intraday | Structure (ChoCh + FVG) + Quality Score ≥ 8 | Research-enhanced, moving from original EMA BASE |
+| **SOL Day** | Intraday | Structure (ChoCh + FVG) + Quality Score ≥ 8 | Research-enhanced |
 | **XRP Swing** | Multi-day | Exhaustion → Pullback → 200d zone | BASE frozen |
-| **Front Run Invest** | Weeks–months | Real activity + beta vs BTC while market is quiet | New |
+| **Front Run Invest** | Weeks–months | Real activity + beta vs BTC while market is quiet | Framework live |
 
 ---
 
@@ -26,69 +28,97 @@ This repository now supports **three distinct fronts**. They share philosophy (d
 
 ---
 
-## SOL Day (Current Direction)
+## 30-Day Path to Capital
 
-**Original frozen BASE** (still in `sol-day/docs/FORMULA_ONEPAGER.md`):  
-15m EMA + VWAP + RSI gates, long-only, 3R/5R targets.
+| Phase | Days | Focus |
+|-------|------|-------|
+| Foundation | 1–7 | Lock rules, journals, checklists, data sources |
+| Build & Backtest | 8–16 | Detectors, simulator, first honest metrics |
+| Paper Trading | 17–25 | Live paper under real conditions |
+| Go-Live Prep | 26–30 | Risk limits, size, final go/no-go |
 
-**Research Enhancements** (see `sol-day/docs/RESEARCH_ENHANCEMENTS.md`):  
-- Quality Score 0–10 (only take ≥ 8)
-- ChoCh + FVG emphasis
-- Dynamic ATR regime thresholds
-- Runner management with Opposite ChoCh as primary exit
-- ATR-based position sizing + anti-martingale / Kelly path
+Details live in the backtest README and operating checklists.
 
-**Decision:** Keep the original BASE frozen for paper continuity. New development follows the Research Enhancements path. Promote only after sufficient paper evidence.
+---
+
+## Backtest Pipeline
+
+Location: `backtest/`
+
+```
+Data → Detector → Quality/Gates → State Machine → Metrics → Store
+```
+
+Current skeleton includes:
+- `config/sol_day.yaml`
+- `core/` (types, ATR, regime)
+- `detectors/sol_day.py` (stub)
+- `simulation/state_machine.py` (aligned with live logic)
+- `analytics/metrics.py`
+- `runners/run_sol_day.py`
+- `store/` for JSONL results
+
+Implementation priority:
+1. Data loader + normalizer
+2. Finish SOL Day detector (ChoCh + FVG + Quality Score)
+3. Wire simulator end-to-end
+4. Produce first performance report by Quality Score
+5. Add XRP Swing module
+
+---
+
+## SOL Day
+
+**Original frozen BASE** — `sol-day/docs/FORMULA_ONEPAGER.md`  
+**Research Enhancements** — `sol-day/docs/RESEARCH_ENHANCEMENTS.md` + ATR thresholds
+
+Policy: Original BASE stays frozen. New work follows Research Enhancements. Promote only with evidence.
 
 ---
 
 ## XRP Swing
 
-- BASE formula remains frozen
-- Load-bar / gate scan system active
-- Shared $2,000 unit / 1R model
-- Continue paper discipline and research store logging
+- BASE frozen
+- Gate scan / load-bar active
+- Shared 1R unit model
+- Continue research store logging
 
 ---
 
-## Front Run Invest (New)
+## Front Run Invest
 
-Longer-term research & positioning system:
-
-- Bitcoin as the anchor
-- Higher-beta names that already show real activity (fees, volume, OI) while the market is quiet
-- Thesis-based sizing (not tight 1R day stops)
-- Weekly/bi-weekly review cadence
-- Beta / alpha analysis as supporting tools
-
-Structure to be added under `front-run-invest/`.
+- Bitcoin as anchor
+- Higher-beta names with real activity while market is quiet
+- Thesis-based sizing (not tight day stops)
+- See `front-run-invest/docs/FORMULA_ONEPAGER.md`
 
 ---
 
 ## Operating Rhythm
 
 **Daily**
-- SOL Day: session automation + Quality Score checks (NY window)
-- XRP Swing: gate scan review
-- Journal any closed trades
+- SOL Day session checks (Quality Score path)
+- XRP Swing gate review
+- Journal closed trades
 
 **Weekly**
-- Review R-multiples and Quality Score performance
-- Front Run Invest thesis + activity review
-- Update research notes
+- R-multiple + Quality Score review
+- Front Run thesis/activity review
+- Backtest report if rules changed
 
-**Monthly / Milestone**
-- Assess whether SOL Research Enhancements are ready for promotion
-- Kelly review once 30+ high-quality trades exist
+**Milestone**
+- 30+ high-quality closed trades before trusting Kelly sizing
+- Explicit go/no-go before real capital
 
 ---
 
 ## Priority Order
 
-1. Keep XRP Swing and original SOL BASE paper process clean
-2. Run SOL Day under Research Enhancements rules (Quality Score, ATR regimes, runner exits)
-3. Stand up Front Run Invest research log and begin tracking candidates
-4. Harden automation (state machine, logging, sizing) only after paper results support it
+1. Journals + daily checklist
+2. SOL Day backtest path producing real numbers
+3. Paper trade both trading fronts under strict rules
+4. Front Run research log with 5–8 names
+5. Small real capital only after paper evidence
 
 ---
 
@@ -97,4 +127,5 @@ Structure to be added under `front-run-invest/`.
 - Do not apply day-trading stops to investment positions
 - Do not turn investment theses into short-term trades
 - Do not increase size to recover losses
-- Only take SOL Day setups with Quality Score ≥ 8 under the enhanced rules
+- Only take SOL Day setups with Quality Score ≥ 8 under enhanced rules
+- No real capital until paper process is boring and metrics are acceptable
