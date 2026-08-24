@@ -1,0 +1,45 @@
+# SOL Day backtest parameters
+# Enhanced path (Quality Score + ATR regimes)
+
+symbol: SOLUSDT
+timeframe: 5m
+quality_min: 8
+
+atr:
+  period: 14
+  method: wilder
+  lookback_days_for_regime: 3
+
+regimes:
+  low:
+    ratio_max: 0.85
+    fvg_strong: 0.85
+    fvg_accept: 0.50
+    stop_min: 0.50
+    stop_max: 1.80
+  normal:
+    ratio_min: 0.85
+    ratio_max: 1.20
+    fvg_strong: 1.00
+    fvg_accept: 0.60
+    stop_min: 0.60
+    stop_max: 2.00
+  high:
+    ratio_min: 1.20
+    fvg_strong: 1.20
+    fvg_accept: 0.75
+    stop_min: 0.75
+    stop_max: 2.30
+
+risk:
+  base_risk_usd: 80
+  model: one_r
+
+session:
+  timezone: America/Chicago
+  start: "08:00"
+  end: "13:00"
+
+costs:
+  fee_bps: 4
+  slippage_bps: 2
