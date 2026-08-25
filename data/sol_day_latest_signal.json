@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": null,
+  "ts_utc": "2026-08-25T17:01:07Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": null,
+  "atr_14": 0.6414,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "No active setup. Updated by SOL Day v3 Market Watch automation."
+  "notes": "No clear Structure Bias + ChoCh same direction with first FVG >=0.6xATR(14) and realistic fill. Price consolidating ~98.18 after drop from ~103. 15m ATR=0.64."
 }
