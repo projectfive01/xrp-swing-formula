@@ -1,19 +1,9 @@
 #!/usr/bin/env python3
 """
-Binance Spot WebSocket helpers (stdlib + optional websocket-client).
+Binance Spot WebSocket helpers.
 
-Public streams (no key):
-  - kline_{interval}
-  - trade / miniTicker
-
-User data stream (signed listenKey via REST):
-  - executionReport, outboundAccountPosition
-
-Prefers the `websocket-client` package if installed; falls back to a
-minimal asyncio implementation using only the stdlib where possible.
-
-Env:
-  BINANCE_ENV=testnet|mainnet
+Env BINANCE_ENV:
+  us | mainnet | demo | testnet
 """
 
 from __future__ import annotations
@@ -22,15 +12,25 @@ import json
 import os
 import threading
 import time
-from typing import Any, Callable, Optional
+from typing import Callable, Optional
 
 
 def _ws_bases(env: str | None = None) -> tuple[str, str]:
-    env = (env or os.environ.get("BINANCE_ENV", "testnet")).lower()
+    env = (env or os.environ.get("BINANCE_ENV", "us")).lower()
+    if env in ("us", "binanceus", "binance.us"):
+        return (
+            "wss://stream.binance.us:9443",
+            "https://api.binance.us",
+        )
     if env == "mainnet":
         return (
             "wss://stream.binance.com:9443",
             "https://api.binance.com",
+        )
+    if env == "demo":
+        return (
+            "wss://demo-stream.binance.com:9443",
+            "https://demo-api.binance.com",
         )
     return (
         "wss://stream.testnet.binance.vision",
@@ -92,7 +92,6 @@ def _dispatch_public(msg: dict, cb: StreamCallbacks) -> None:
                 }
             )
     else:
-        # combined stream bookTicker has no "e" sometimes
         if "b" in msg and "a" in msg and "s" in msg and cb.on_book_ticker:
             cb.on_book_ticker(
                 {
@@ -105,13 +104,6 @@ def _dispatch_public(msg: dict, cb: StreamCallbacks) -> None:
 
 
 class BinancePublicStream:
-    """
-    Threaded public multiplex stream.
-
-    streams example:
-      ["solusdt@kline_15m", "solusdt@trade", "solusdt@miniTicker"]
-    """
-
     def __init__(
         self,
         streams: list[str],
@@ -120,7 +112,7 @@ class BinancePublicStream:
     ):
         self.streams = [s.lower() for s in streams]
         self.cb = callbacks or StreamCallbacks()
-        self.env = (env or os.environ.get("BINANCE_ENV", "testnet")).lower()
+        self.env = (env or os.environ.get("BINANCE_ENV", "us")).lower()
         self._ws_base, _ = _ws_bases(self.env)
         self._stop = threading.Event()
         self._thread: threading.Thread | None = None
@@ -140,7 +132,6 @@ class BinancePublicStream:
             if "stream" in data and "data" in data:
                 data = data["data"]
             _dispatch_public(data, self.cb)
-            # track last price from trade or kline
             if data.get("e") == "trade":
                 self.last_price = float(data.get("p", 0))
             elif data.get("e") == "kline":
@@ -178,7 +169,7 @@ class BinancePublicStream:
                     self.cb.on_error(e)
             if self._stop.is_set():
                 break
-            time.sleep(3)  # reconnect backoff
+            time.sleep(3)
 
     def start(self) -> None:
         if self._thread and self._thread.is_alive():
@@ -187,9 +178,7 @@ class BinancePublicStream:
         try:
             import websocket  # noqa: F401
         except ImportError as e:
-            raise RuntimeError(
-                "Install websocket-client: pip install websocket-client"
-            ) from e
+            raise RuntimeError("pip install websocket-client") from e
         self._thread = threading.Thread(target=self._run_websocket_client, daemon=True)
         self._thread.start()
 
@@ -203,14 +192,9 @@ class BinancePublicStream:
 
 
 class BinanceUserStream:
-    """
-    User data stream using listenKey from REST.
-    Requires API keys in env. Keepalive every ~30 min.
-    """
-
     def __init__(self, callbacks: StreamCallbacks | None = None, env: str | None = None):
         self.cb = callbacks or StreamCallbacks()
-        self.env = (env or os.environ.get("BINANCE_ENV", "testnet")).lower()
+        self.env = (env or os.environ.get("BINANCE_ENV", "us")).lower()
         self._ws_base, self._rest_base = _ws_bases(self.env)
         self._stop = threading.Event()
         self._thread: threading.Thread | None = None
@@ -255,7 +239,7 @@ class BinanceUserStream:
 
     def _keepalive_loop(self) -> None:
         while not self._stop.is_set():
-            for _ in range(30 * 60):  # 30 minutes
+            for _ in range(30 * 60):
                 if self._stop.is_set():
                     return
                 time.sleep(1)
@@ -284,9 +268,8 @@ class BinanceUserStream:
                 self._ws = websocket.WebSocketApp(
                     url,
                     on_message=self._on_message,
-                    on_error=lambda ws, e: self.cb.on_error and self.cb.on_error(
-                        e if isinstance(e, Exception) else Exception(str(e))
-                    ),
+                    on_error=lambda ws, e: self.cb.on_error
+                    and self.cb.on_error(e if isinstance(e, Exception) else Exception(str(e))),
                     on_open=lambda ws: self.cb.on_connected and self.cb.on_connected(),
                 )
                 self._ws.run_forever(ping_interval=20, ping_timeout=10)

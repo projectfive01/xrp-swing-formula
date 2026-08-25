@@ -5,7 +5,11 @@ Minimal Binance Spot REST client (stdlib only).
 Auth via env:
   BINANCE_API_KEY
   BINANCE_API_SECRET
-  BINANCE_ENV = mainnet | demo | testnet  (default mainnet for funded accounts)
+  BINANCE_ENV = us | mainnet | demo | testnet
+    us      = Binance.US  (api.binance.us)  ← your setup
+    mainnet = international Binance
+    demo    = demo-api.binance.com
+    testnet = testnet.binance.vision
 
 Never logs secrets.
 """
@@ -39,8 +43,11 @@ class BinanceSpot:
     ):
         self.api_key = api_key or os.environ.get("BINANCE_API_KEY", "")
         self.api_secret = api_secret or os.environ.get("BINANCE_API_SECRET", "")
-        env = (env or os.environ.get("BINANCE_ENV", "mainnet")).lower()
-        if env == "demo":
+        env = (env or os.environ.get("BINANCE_ENV", "us")).lower()
+        if env in ("us", "binanceus", "binance.us"):
+            self.base = "https://api.binance.us"
+            env = "us"
+        elif env == "demo":
             self.base = "https://demo-api.binance.com"
         elif env == "testnet":
             self.base = "https://testnet.binance.vision"
