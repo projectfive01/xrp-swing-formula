@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SOL Day v3 — Autonomous Paper Runner
+SOL Day v3 — Autonomous Runner (paper default, optional live)
 
 Self-contained loop:
   1. Respect kill switch + daily loss limit
@@ -8,27 +8,29 @@ Self-contained loop:
   3. Detect Structure + ChoCh + first FVG ≥ 0.6×ATR (locked formula)
   4. Write local signal file
   5. Open paper trade when READY (one at a time)
-  6. Manage open trade on every loop (stop / 3R / 4R)
+  6. If --live and BINANCE_LIVE=1: also place LIMIT + STOP on Binance
+  7. Manage open trade on every loop (stop / 3R / 4R)
 
 Usage:
   python scripts/sol_day_autonomous_runner.py
   python scripts/sol_day_autonomous_runner.py --once
   python scripts/sol_day_autonomous_runner.py --poll 60
+  BINANCE_LIVE=1 python scripts/sol_day_autonomous_runner.py --live   # testnet/mainnet per .env
 
 Kill switch:
-  echo OFF > data/KILL_SWITCH.txt   # normal
-  echo ON  > data/KILL_SWITCH.txt   # halt new entries + flatten intent
-
-This is PAPER only. No exchange orders are placed.
+  echo OFF > data/KILL_SWITCH.txt
+  echo ON  > data/KILL_SWITCH.txt
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
+import sys
 import time
 import uuid
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import urlopen, Request
 from urllib.error import URLError
@@ -36,9 +38,25 @@ from urllib.error import URLError
 import numpy as np
 
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO))
 CFG_PATH = REPO / "backtest" / "config" / "sol_day_runtime.yaml"
 
-# Minimal YAML subset parser (no PyYAML required)
+# runtime flag set in main()
+LIVE_MODE = False
+
+
+def load_dotenv() -> None:
+    env_path = REPO / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
 def load_cfg() -> dict:
     defaults = {
         "symbol": "SOLUSDT",
@@ -61,7 +79,6 @@ def load_cfg() -> dict:
     if not CFG_PATH.exists():
         return defaults
     text = CFG_PATH.read_text()
-    # very small parser for our flat + one nested paths block
     cfg = dict(defaults)
     section = None
     for raw in text.splitlines():
@@ -178,14 +195,12 @@ def find_swings(high, low, left=2, right=2):
 
 
 def detect_setup(klines, fvg_min_mult: float) -> dict | None:
-    """Return best recent READY setup or None. Locked v3 rules."""
     highs = np.array([float(c[2]) for c in klines])
     lows = np.array([float(c[3]) for c in klines])
     closes = np.array([float(c[4]) for c in klines])
     atr = calc_atr(highs, lows, closes)
     swing_highs, swing_lows = find_swings(highs, lows)
 
-    # Build FVGs
     fvgs = []
     for i in range(2, len(closes)):
         if highs[i - 2] < lows[i]:
@@ -209,7 +224,6 @@ def detect_setup(klines, fvg_min_mult: float) -> dict | None:
                 }
             )
 
-    # Scan recent bars for ChoCh + first FVG
     recent_sh, recent_sl = [], []
     last_choch_bull = last_choch_bear = -999
     candidates = []
@@ -237,13 +251,11 @@ def detect_setup(klines, fvg_min_mult: float) -> dict | None:
                             a = atr[f["idx"]] if not np.isnan(atr[f["idx"]]) else 0.5
                             if f["size"] < fvg_min_mult * a:
                                 continue
-                            # require some retrace opportunity (fill or near)
                             filled = False
                             for j in range(f["idx"] + 1, min(f["idx"] + 20, len(closes))):
                                 if lows[j] <= f["top"] and highs[j] >= f["bot"]:
                                     filled = True
                                     break
-                            # also accept if price is currently inside/near zone
                             if not filled and lows[-1] <= f["top"] * 1.002 and highs[-1] >= f["bot"] * 0.998:
                                 filled = True
                             if not filled:
@@ -313,7 +325,6 @@ def detect_setup(klines, fvg_min_mult: float) -> dict | None:
 
     if not candidates:
         return None
-    # prefer most recent FVG
     candidates.sort(key=lambda x: x["fvg_idx"], reverse=True)
     return candidates[0]
 
@@ -415,7 +426,7 @@ def manage_open(cfg: dict, price: float) -> None:
             close_trade(cfg, t, price, "tp3", 3.0)
         else:
             still.append(t)
-            print(f"  OPEN {t['id'][:8]} {t['direction']} unreal={ur:.2f}R")
+            print(f"  OPEN {t['id'][:8]} {t['direction']} unreal={ur:.2f}R mode={t.get('mode', 'paper')}")
     save_json(open_path, still)
 
 
@@ -439,6 +450,7 @@ def close_trade(cfg: dict, trade: dict, price: float, reason: str, pr: float) ->
 
 
 def try_open(cfg: dict, sig: dict, price: float) -> None:
+    global LIVE_MODE
     if kill_on(cfg):
         print("  Kill switch ON — no new entries")
         return
@@ -448,7 +460,7 @@ def try_open(cfg: dict, sig: dict, price: float) -> None:
         return
     open_path = p("open_trades", cfg)
     if load_json(open_path, []):
-        return  # already in a trade
+        return
     if (sig.get("status") or "").upper() != "READY":
         return
     direction = sig.get("direction")
@@ -470,9 +482,35 @@ def try_open(cfg: dict, sig: dict, price: float) -> None:
     else:
         tp3, tp4 = entry - 3 * r_value, entry - 4 * r_value
 
+    live_meta = None
+    mode = "paper"
+    if LIVE_MODE:
+        try:
+            from execution.live_executor import place_entry_with_stop
+
+            live_meta = place_entry_with_stop(
+                symbol=cfg["symbol"],
+                direction=direction,
+                entry=entry,
+                stop=stop,
+                risk_usd=risk_usd,
+                live=True,
+            )
+            mode = "live"
+            if live_meta.get("qty"):
+                size_sol = float(live_meta["qty"])
+            print(f"  ★ LIVE orders placed env={live_meta.get('env')} qty={size_sol}")
+            if live_meta.get("stop_error"):
+                print(f"  ! stop order warning: {live_meta['stop_error']}")
+        except Exception as e:
+            print(f"  LIVE order failed — falling back to paper only: {e}")
+            live_meta = {"error": str(e)}
+            mode = "paper"
+
     trade = {
         "id": str(uuid.uuid4()),
         "status": "OPEN",
+        "mode": mode,
         "direction": direction,
         "formula_version": "v3",
         "entry_ts": now_iso(),
@@ -493,17 +531,18 @@ def try_open(cfg: dict, sig: dict, price: float) -> None:
         "unrealized_r": 0.0,
         "exit_reason": None,
         "signal_ts": sig.get("ts_utc"),
-        "notes": "autonomous_paper",
+        "notes": f"autonomous_{mode}",
+        "live_meta": live_meta,
         "created_at": now_iso(),
         "updated_at": now_iso(),
         "mark_price_at_open": price,
     }
     save_json(open_path, [trade])
-    print(f"  ★ OPENED paper {direction} entry={entry} stop={stop} size={size_sol:.4f} SOL risk=${risk_usd}")
+    print(f"  ★ OPENED {mode} {direction} entry={entry} stop={stop} size={size_sol:.4f} SOL risk=${risk_usd}")
 
 
 def loop_once(cfg: dict) -> None:
-    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] cycle")
+    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] cycle live={LIVE_MODE}")
     if kill_on(cfg):
         print("  KILL SWITCH ON")
     try:
@@ -529,15 +568,29 @@ def loop_once(cfg: dict) -> None:
 
 
 def main() -> None:
+    global LIVE_MODE
+    load_dotenv()
     parser = argparse.ArgumentParser()
     parser.add_argument("--once", action="store_true")
-    parser.add_argument("--poll", type=int, default=None, help="Override poll seconds")
+    parser.add_argument("--poll", type=int, default=None)
+    parser.add_argument(
+        "--live",
+        action="store_true",
+        help="Place real Binance orders (requires BINANCE_LIVE=1 and API keys)",
+    )
     args = parser.parse_args()
+    LIVE_MODE = bool(args.live)
+    if LIVE_MODE and os.environ.get("BINANCE_LIVE", "0") != "1":
+        print("ERROR: --live requires BINANCE_LIVE=1 in environment / .env")
+        sys.exit(1)
+
     cfg = load_cfg()
     poll = args.poll or int(cfg.get("poll_seconds", 120))
-    print("SOL Day autonomous paper runner")
-    print(f"  poll={poll}s unit=${cfg['equity_unit_usd']} kelly={cfg['kelly_fraction']}")
+    print("SOL Day autonomous runner")
+    print(f"  mode={'LIVE' if LIVE_MODE else 'PAPER'} poll={poll}s unit=${cfg['equity_unit_usd']}")
     print(f"  kill_switch={p('kill_switch', cfg)}")
+    if LIVE_MODE:
+        print(f"  BINANCE_ENV={os.environ.get('BINANCE_ENV', 'testnet')}")
 
     while True:
         loop_once(cfg)
