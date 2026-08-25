@@ -1,0 +1,35 @@
+# SOL Day v3 — Autonomous paper runtime config
+# Edit these; restart the runner after changes.
+
+symbol: SOLUSDT
+timeframe: 15m
+poll_seconds: 120
+
+# Risk (locked)
+equity_unit_usd: 1000
+kelly_fraction: 0.045          # Quarter-Kelly
+max_risk_pct: 0.05
+daily_loss_limit_pct: 0.08     # halt new entries after -8% of unit
+
+# Formula
+fvg_min_atr_multiple: 0.60
+min_rr: 3.0
+prefer_rr: 4.0
+signal_fresh_minutes: 90
+one_trade_at_a_time: true
+
+# Session preference (America/Chicago) — not a hard gate for detection,
+# but runner can optionally only open during this window
+session:
+  timezone: America/Chicago
+  open_only_during_session: false
+  start: "08:00"
+  end: "15:00"
+
+# Paths (relative to repo root)
+paths:
+  kill_switch: data/KILL_SWITCH.txt
+  open_trades: data/sol_day_open_trades.json
+  closed_trades: data/sol_day_paper_trades.jsonl
+  latest_signal: data/sol_day_latest_signal.json
+  daily_state: data/sol_day_daily_state.json
