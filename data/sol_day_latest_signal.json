@@ -1,0 +1,15 @@
+{
+  "status": "WAIT",
+  "ts_utc": null,
+  "symbol": "SOLUSDT",
+  "formula_version": "v3",
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": null,
+  "risk_usd_quarter_kelly": 45,
+  "equity_unit_usd": 1000,
+  "notes": "No active setup. Updated by SOL Day v3 Market Watch automation."
+}

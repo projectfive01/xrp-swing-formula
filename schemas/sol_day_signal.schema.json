@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sol_day_signal.schema.json",
+  "title": "SOL Day v3 Signal",
+  "type": "object",
+  "required": ["status", "ts_utc", "symbol", "formula_version"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["READY", "WAIT"]
+    },
+    "ts_utc": {"type": ["string", "null"]},
+    "symbol": {"type": "string"},
+    "formula_version": {"type": "string"},
+    "direction": {
+      "type": ["string", "null"],
+      "enum": ["long", "short", null]
+    },
+    "entry_zone": {
+      "type": ["object", "null"],
+      "properties": {
+        "low": {"type": "number"},
+        "high": {"type": "number"},
+        "mid": {"type": "number"}
+      }
+    },
+    "stop": {"type": ["number", "null"]},
+    "target_3r": {"type": ["number", "null"]},
+    "target_4r": {"type": ["number", "null"]},
+    "atr_14": {"type": ["number", "null"]},
+    "risk_usd_quarter_kelly": {"type": ["number", "null"]},
+    "equity_unit_usd": {"type": ["number", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
