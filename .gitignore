@@ -6,3 +6,5 @@ node_modules/
 *.log
 data/candles/
 .pytest_cache/
+*.pem
+secrets/
