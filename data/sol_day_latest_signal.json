@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-25T18:05:00Z",
+  "ts_utc": "2026-08-25T19:03:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.4764,
+  "atr_14": 0.3529,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "No clear Structure Bias + ChoCh same direction with first FVG >=0.6xATR(14) and realistic fill available. Price ~98.19 consolidating after drop from ~103. Significant FVGs older/filled. 15m ATR=0.48."
+  "notes": "No clear Structure Bias + ChoCh same direction with first FVG >=0.6xATR(14) and realistic fill. Price ~98.55 consolidating 97.5-98.8 after drop from ~103 to ~96.3. Recent FVGs small/filled or older. 15m ATR=0.35."
 }
