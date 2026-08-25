@@ -5,9 +5,9 @@ Minimal Binance Spot REST client (stdlib only).
 Auth via env:
   BINANCE_API_KEY
   BINANCE_API_SECRET
-  BINANCE_ENV = testnet | mainnet  (default testnet)
+  BINANCE_ENV = mainnet | demo | testnet  (default mainnet for funded accounts)
 
-Never logs secrets. Raises on non-2xx with body text.
+Never logs secrets.
 """
 
 from __future__ import annotations
@@ -39,11 +39,14 @@ class BinanceSpot:
     ):
         self.api_key = api_key or os.environ.get("BINANCE_API_KEY", "")
         self.api_secret = api_secret or os.environ.get("BINANCE_API_SECRET", "")
-        env = (env or os.environ.get("BINANCE_ENV", "testnet")).lower()
-        if env == "mainnet":
-            self.base = "https://api.binance.com"
-        else:
+        env = (env or os.environ.get("BINANCE_ENV", "mainnet")).lower()
+        if env == "demo":
+            self.base = "https://demo-api.binance.com"
+        elif env == "testnet":
             self.base = "https://testnet.binance.vision"
+        else:
+            self.base = "https://api.binance.com"
+            env = "mainnet"
         self.env = env
 
     def _sign(self, params: dict) -> str:
@@ -91,7 +94,6 @@ class BinanceSpot:
         except URLError as e:
             raise BinanceError(0, str(e)) from e
 
-    # ---- public ----
     def ping(self) -> dict:
         return self._request("GET", "/api/v3/ping")
 
@@ -103,14 +105,18 @@ class BinanceSpot:
         data = self._request("GET", "/api/v3/exchangeInfo", {"symbol": symbol})
         return data["symbols"][0]
 
-    # ---- signed ----
     def account(self) -> dict:
         return self._request("GET", "/api/v3/account", signed=True)
 
     def create_order(self, **params) -> dict:
         return self._request("POST", "/api/v3/order", params, signed=True)
 
-    def cancel_order(self, symbol: str, order_id: int | None = None, orig_client_order_id: str | None = None) -> dict:
+    def cancel_order(
+        self,
+        symbol: str,
+        order_id: int | None = None,
+        orig_client_order_id: str | None = None,
+    ) -> dict:
         p: dict = {"symbol": symbol}
         if order_id is not None:
             p["orderId"] = order_id
@@ -131,7 +137,9 @@ class BinanceSpot:
 def round_step(qty: float, step: float) -> float:
     if step <= 0:
         return qty
-    precision = max(0, len(str(step).rstrip("0").split(".")[-1]) if "." in str(step) else 0)
+    precision = max(
+        0, len(str(step).rstrip("0").split(".")[-1]) if "." in str(step) else 0
+    )
     return float(f"{qty - (qty % step):.{precision}f}")
 
 

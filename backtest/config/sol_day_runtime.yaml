@@ -1,15 +1,15 @@
-# SOL Day v3 — Autonomous paper runtime config
-# Edit these; restart the runner after changes.
+# SOL Day v3 — Runtime config
+# PHASE: micro-unit live ($96 → grow to $1000). No withdrawals until $1000.
 
 symbol: SOLUSDT
 timeframe: 15m
 poll_seconds: 120
 
-# Risk (locked)
-equity_unit_usd: 1000
-kelly_fraction: 0.045          # Quarter-Kelly
-max_risk_pct: 0.05
-daily_loss_limit_pct: 0.08     # halt new entries after -8% of unit
+# Risk — micro unit phase
+equity_unit_usd: 96
+kelly_fraction: 0.045          # Quarter-Kelly → ~$4.32 risk / trade
+max_risk_pct: 0.05             # hard cap ~$4.80
+daily_loss_limit_pct: 0.08     # halt after ~-$7.68 day
 
 # Formula
 fvg_min_atr_multiple: 0.60
@@ -18,15 +18,13 @@ prefer_rr: 4.0
 signal_fresh_minutes: 90
 one_trade_at_a_time: true
 
-# Session preference (America/Chicago) — not a hard gate for detection,
-# but runner can optionally only open during this window
+# Session preference (America/Chicago)
 session:
   timezone: America/Chicago
   open_only_during_session: false
   start: "08:00"
   end: "15:00"
 
-# Paths (relative to repo root)
 paths:
   kill_switch: data/KILL_SWITCH.txt
   open_trades: data/sol_day_open_trades.json
