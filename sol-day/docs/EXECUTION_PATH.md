@@ -1,30 +1,43 @@
-# SOL Day — Execution Path (Paper → Live)
+# SOL Day — Execution Path (Autonomous Paper → Live)
 
-## Current stack (emotion-free)
+## Active stack
 
-1. **Grok Automation** `SOL Day v3 Market Watch`  
-   Hourly scan → writes `data/sol_day_latest_signal.json`
+1. **Grok Automation** `SOL Day v3 Market Watch` (hourly, session window)  
+   Cloud scan → writes GitHub `data/sol_day_latest_signal.json` for phone bot.
 
-2. **Phone bot** `SOL Day Executor` (prompt in PHONE_BOT_PROMPT.md)  
-   You open it and ask “check” → it reads the signal and gives exact order text
+2. **Autonomous paper runner** `scripts/sol_day_autonomous_runner.py`  
+   Always-on local/VPS loop (default every 2 min):
+   - Fetches Binance klines
+   - Runs locked v3 formula (ChoCh + first FVG ≥ 0.6×ATR)
+   - Opens/manages **paper** trades
+   - Enforces kill switch + daily −8% loss halt
 
-3. **Optional computer watcher** `scripts/sol_day_signal_watcher.py`  
-   Polls the signal file and auto-logs paper trades to `data/sol_day_paper_trades.jsonl`
+3. **Phone bot** `SOL Day Executor`  
+   Instant “check” → reads GitHub signal.
 
-## Paper practice (now)
-- Let the automation + phone bot run.
-- When READY, either:
-  - Manually place the paper order on the exchange UI using the bot’s numbers, **or**
-  - Run the watcher on your computer:  
-    `python scripts/sol_day_signal_watcher.py --live-url`
-- Log every result. Recalculate Kelly after ~30 closed trades.
+4. **Paper tracker CLI** `scripts/sol_day_paper_tracker.py`  
+   Manual open/close/stats if needed.
 
-## Live (later)
-Only after paper results match the backtest edge directionally:
-- Add Binance API keys to a restricted environment (IP allowlist, no withdrawal).
-- Extend the watcher with a `live` flag that places the sized limit order.
-- Keep daily loss limit at ~8% of the unit and hard stop at 1R.
+## Start autonomy (paper)
+
+```bash
+cd xrp-swing-formula
+python scripts/sol_day_autonomous_runner.py
+```
+
+Kill switch:
+```bash
+echo ON  > data/KILL_SWITCH.txt
+echo OFF > data/KILL_SWITCH.txt
+```
+
+See `sol-day/docs/AUTONOMOUS.md` for full details.
+
+## Live (later only)
+After 20–30 closed paper trades with stats that match the backtest directionally:
+- Restricted Binance API key (no withdrawal, IP allowlist)
+- Live flag on a separate execution module
+- Same 1R stop, Quarter-Kelly, daily loss limit
 
 ## Monthly reset
-Always restart the active trading unit at $1000.  
-Extract anything above your soft target into XRP swing reserve / living costs / long-term.
+Restart active unit at $1000. Extract excess to XRP reserve / bills / long-term.
