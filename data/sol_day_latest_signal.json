@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-26T15:08:00Z",
+  "ts_utc": "2026-08-26T16:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.6143,
+  "atr_14": 0.67,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~95.56. 15m ATR(14)=0.61 (thresh 0.37). Bearish structure after 97.83 high → new lows 95.03. Recent BEAR FVG 95.72-96.15 (size 0.43) post-breakdown, but price still below FVG (no retrace/fill yet). No bullish ChoCh. Hard reqs not fully met with realistic fill → WAIT."
+  "notes": "Price ~96.00-96.14 (Coinbase/Binance equiv). 15m ATR(14)~0.67 (0.6x thresh~0.40). Bearish structure from ~97.87 high → LL 94.99. Bounce to 96.29 then pullback; no clear bullish ChoCh (no break of significant swing high). No qualifying first FVG after ChoCh with realistic fill available. Hard reqs not met → WAIT."
 }
