@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-26T16:10:00Z",
+  "ts_utc": "2026-08-26T17:08:31Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.67,
+  "atr_14": 0.605,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~96.00-96.14 (Coinbase/Binance equiv). 15m ATR(14)~0.67 (0.6x thresh~0.40). Bearish structure from ~97.87 high → LL 94.99. Bounce to 96.29 then pullback; no clear bullish ChoCh (no break of significant swing high). No qualifying first FVG after ChoCh with realistic fill available. Hard reqs not met → WAIT."
+  "notes": "Price ~96.03-96.15 (Coinbase SOL-USD proxy). 15m ATR(14)~0.605 (0.6x=0.363). Bearish structure bias from 97.87 HH → LL 94.99. Bounce lacks clear bullish ChoCh (no BOS of key swing high). No qualifying first FVG (≥0.6 ATR) after ChoCh with realistic fill available on 15m/5m. Hard reqs not met → WAIT."
 }
