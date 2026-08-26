@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-25T20:03:00Z",
+  "ts_utc": "2026-08-26T13:21:45Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.4437,
+  "atr_14": 0.5214,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "No clear Structure Bias + ChoCh same direction with first FVG >=0.6xATR(14) and realistic fill. Price ~97.92 consolidating after drop to 97.55 from 98.77. Recent 15m ATR=0.44; bear FVG ~97.96-98.29 (size 0.33) partially filled but structure remains choppy/range-bound. Prefer WAIT."
+  "notes": "No clear Structure Bias + ChoCh same direction with first FVG >=0.6xATR(14) and realistic fill. Price ~96.32 after drop from 97.83 high to 96.12 low. Recent 15m ATR=0.52; significant FVGs during rally (bull 0.43/0.72) already filled/passed; post-ChoCh bear FVG ~0.27 <0.31 threshold. Structure choppy/range after large moves. Prefer WAIT."
 }
