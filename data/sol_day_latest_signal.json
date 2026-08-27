@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-27T16:21:22Z",
+  "ts_utc": "2026-08-27T17:10:01Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.784,
+  "atr_14": 1.036,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price 107.64 (Binance.US). 15m ATR(14)=0.784 (0.6x≈0.470). Structure Bias: bullish (HH/HL). Bullish ChoCh at 13:45 UTC broke 104.87 → close 106.07. First FVGs after ChoCh: 14:00 size 0.40 (ratio 0.55) and 14:45 size 0.42 (ratio 0.50) — both < 0.6×ATR. No qualifying FVG. → WAIT."
+  "notes": "Price 109.37 (Binance.US). 15m ATR(14)=1.036 (0.6x≈0.622). Structure Bias: bullish (HH/HL from ~100 to 109). Recent bull FVGs after structure advances: 14:00 size 0.40, 14:45 size 0.42, 16:30 size 0.46 — all < 0.6×ATR. Only qualifying unfilled FVG is older 08:15 [102.08-102.83] size 0.75 — not first-after-ChoCh and no realistic fill at current price. → WAIT."
 }
