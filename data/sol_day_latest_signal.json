@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-27T18:01:41Z",
+  "ts_utc": "2026-08-27T19:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.819,
+  "atr_14": 0.825,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price 107.98 (Binance.US). 15m ATR(14)=0.819 (0.6x≈0.492). Structure Bias: bullish (HH/HL from ~100→109.6). Recent bull FVGs after advances: 13:45 size 0.40, 14:30 size 0.42, 16:15 size 0.46, 16:30 size 0.13 — all < 0.6×ATR. No qualifying first FVG after ChoCh with realistic fill at current price. → WAIT."
+  "notes": "Price 108.49 (Binance.US). 15m ATR(14)=0.825 (0.6x≈0.495). Structure Bias: bullish (HH/HL ~100.7→109.62). Recent QUAL bull FVG @19:00 15m 107.57-108.31 size 0.74, but price 108.49 above it with no retracement/fill yet. Prior FVGs after impulse mostly <0.6×ATR. No clear ChoCh + first qualifying FVG with realistic fill available. → WAIT."
 }
