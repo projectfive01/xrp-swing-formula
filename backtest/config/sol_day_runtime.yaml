@@ -1,5 +1,6 @@
 # SOL Day v3 — Runtime config
 # PHASE: micro-unit live ($96 → grow to $1000). No withdrawals until $1000.
+# Runner reads THIS file, not sol_day.yaml.
 
 symbol: SOLUSDT
 timeframe: 15m
@@ -9,13 +10,14 @@ poll_seconds: 120
 equity_unit_usd: 96
 kelly_fraction: 0.045          # Quarter-Kelly → ~$4.32 risk / trade
 max_risk_pct: 0.05             # hard cap ~$4.80
-daily_loss_limit_pct: 0.08     # halt after ~-$7.68 day
+daily_loss_limit_pct: 0.08     # halt after ~-$7.68 day (Chicago date)
 
 # Formula
 fvg_min_atr_multiple: 0.60
 min_rr: 3.0
 prefer_rr: 4.0
-signal_fresh_minutes: 90
+signal_fresh_minutes: 90       # age of FVG bar, not wall-clock of the write
+max_entry_distance_r: 1.25     # reject chase; 0.25 is too tight vs FVG-mid fills
 one_trade_at_a_time: true
 
 # Session preference (America/Chicago)
