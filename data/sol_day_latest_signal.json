@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-28T13:07:33Z",
+  "ts_utc": "2026-08-28T14:24:57Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.491,
+  "atr_14": 0.644,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price 104.98 (Binance.US). 15m ATR(14)=0.491 (0.6x≈0.295). Structure Bias: bearish (LH/LL from 110.54 high; LHs 109.8→107.8→107.6, lows to 104.57). Bearish ChoCh confirmed. First QUAL bear FVGs after ChoCh: 07:15 106.85-107.74 size 0.89 + later 105.3-106.3 zone. Price extended below primary FVG with no retrace/fill available. No realistic limit fill. → WAIT."
+  "notes": "Price 104.12 (Binance.US). 15m ATR(14)=0.644 (0.6x≈0.386). Structure Bias: bearish (LH/LL sequence from 110.54 high; successive LHs and LLs to 103.69). Bearish ChoCh confirmed. First QUAL bear FVG after ChoCh: 07:15 106.85-107.74 size 0.89. Price extended well below with no retrace/fill into FVG available. Later smaller FVGs also unfilled for entry. No realistic limit fill. → WAIT."
 }
