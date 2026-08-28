@@ -1,19 +1,21 @@
 # Feature Demo
 
-Interactive Streamlit demo of the XRP Swing Formula system.
+Interactive Streamlit apps for the research system.
 
-## Features Shown
+## SOL 1m RSI-S paper dashboard
 
-- **Signal & Load-Bar** — BASE formula gates and progress
-- **Paper Trading** — $2,000 units, 1R risk, 3R / 5R targets
-- **Backtesting** — simplified BASE backtest with R-multiple results
-- **SOL Day Scaffold** — shared unit model placeholder
-
-## Run Locally
+Account equity, open position, win/loss log, win rate, avg R.
+Reads local paper files written by `scripts/sol_1m_rsi_core_paper.py`.
 
 ```bash
-pip install streamlit pandas numpy
-streamlit run demo/app.py
+pip install streamlit pandas
+streamlit run demo/rsi_1m_dashboard.py
 ```
 
-Then open the URL shown in the terminal (usually http://localhost:8501).
+Opens in the browser (usually http://localhost:8501). Refresh the page to update.
+
+## XRP / SOL Day feature demo
+
+```bash
+streamlit run demo/app.py
+```
