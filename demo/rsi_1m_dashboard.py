@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""SOL command board — two $2,000 paper books, matching columns."""
+"""SOL command board — cached market + paper reads, formulas imported not copied."""
 
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -13,9 +14,13 @@ import pandas as pd
 import streamlit as st
 
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO))
+
+from backtest.core.sol_1m_rsi_core import RSI_LONG, RSI_SHORT, SESSION_HOURS_UTC  # noqa: E402
+from scripts.formula_lock_agent import audit, write_status  # noqa: E402
+
 BOOK = 2000.0
-SESSION_HOURS = (7, 10, 11, 20)
-RSI_LONG, RSI_SHORT = 20.0, 80.0
+SESSION_HOURS = tuple(SESSION_HOURS_UTC)
 
 P_STATE = REPO / "data" / "sol_1m_rsi_core_state.json"
 P_TRADES = REPO / "data" / "sol_1m_rsi_core_paper_trades.jsonl"
@@ -27,6 +32,11 @@ P_DAY_DAILY = REPO / "data" / "sol_day_daily_state.json"
 P_DAY_CFG = REPO / "backtest" / "config" / "sol_day_runtime.yaml"
 
 st.set_page_config(page_title="SOL Command Board", page_icon="◈", layout="wide", initial_sidebar_state="collapsed")
+st.components.v1.html(
+    "<script>setTimeout(function(){window.parent.location.reload()},15000)</script>",
+    height=0,
+)
+
 st.markdown(
     """
 <style>
@@ -38,7 +48,7 @@ html, body, [class*="css"] { font-family: "IBM Plex Sans", sans-serif; }
 .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #7d8aa3; }
 h1.dash-title { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; margin: .15rem 0 .35rem; color: #f4f7fb; }
 .sub { color: #93a0b5; font-size: .92rem; }
-.pill { font-family: "IBM Plex Mono", monospace; font-size: 12px; padding: 7px 10px; border-radius: 999px; border: 1px solid #243044; background: #121722; color: #c9d4e5; }
+.pill { font-family: "IBM Plex Mono", monospace; font-size: 12px; padding: 7px 10px; border-radius: 999px; border: 1px solid #243044; background: #121722; color: #c9d4e5; display: inline-block; }
 .pill.on { border-color: #1f6b45; background: #10261b; color: #3ee08f; }
 .pill.off { border-color: #5a2430; background: #241016; color: #ff7b8a; }
 .pill.closed { border-color: #3a4558; color: #9aa8bd; }
@@ -60,35 +70,14 @@ h1.dash-title { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; margi
 )
 
 
-def load_json(path: Path, default):
-    if not path.exists():
-        return default
-    try:
-        return json.loads(path.read_text() or json.dumps(default))
-    except Exception:
-        return default
-
-
-def load_jsonl(path: Path) -> pd.DataFrame:
-    rows = []
-    if path.exists():
-        for line in path.read_text().splitlines():
-            if line.strip():
-                try:
-                    rows.append(json.loads(line))
-                except json.JSONDecodeError:
-                    pass
-    return pd.DataFrame(rows)
-
-
-def http_get(path: str):
+def _http_get(path: str):
     for base in (
         "https://data-api.binance.vision/api/v3",
         "https://api.binance.us/api/v3",
         "https://api.binance.com/api/v3",
     ):
         try:
-            req = Request(f"{base}{path}", headers={"User-Agent": "sol-desk/1.2"})
+            req = Request(f"{base}{path}", headers={"User-Agent": "sol-desk/1.3"})
             with urlopen(req, timeout=8) as r:
                 return json.loads(r.read().decode())
         except Exception:
@@ -96,10 +85,66 @@ def http_get(path: str):
     return None
 
 
-def wilder_rsi(closes: np.ndarray, period: int = 14):
+@st.cache_data(ttl=15, show_spinner=False)
+def market_snapshot(symbol: str = "SOLUSDT") -> dict:
+    ticker = _http_get(f"/ticker/price?symbol={symbol}") or {}
+    kl = _http_get(f"/klines?symbol={symbol}&interval=1m&limit=80") or []
+    price = float(ticker["price"]) if ticker.get("price") else None
+    closed = kl[:-1] if len(kl) > 2 else []
+    closes = [float(c[4]) for c in closed]
+    return {"price": price, "closes": closes, "fetched_at": datetime.now(timezone.utc).isoformat()}
+
+
+@st.cache_data(ttl=5, show_spinner=False)
+def read_json_text(path_str: str, mtime: float, default: str) -> str:
+    p = Path(path_str)
+    if not p.exists():
+        return default
+    try:
+        return p.read_text()
+    except Exception:
+        return default
+
+
+@st.cache_data(ttl=5, show_spinner=False)
+def read_jsonl_rows(path_str: str, mtime: float) -> list:
+    p = Path(path_str)
+    rows = []
+    if not p.exists():
+        return rows
+    for line in p.read_text().splitlines():
+        if line.strip():
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+    return rows
+
+
+def file_mtime(path: Path) -> float:
+    try:
+        return path.stat().st_mtime
+    except FileNotFoundError:
+        return 0.0
+
+
+def load_json(path: Path, default):
+    raw = read_json_text(str(path), file_mtime(path), json.dumps(default))
+    try:
+        return json.loads(raw)
+    except Exception:
+        return default
+
+
+def load_jsonl(path: Path) -> pd.DataFrame:
+    return pd.DataFrame(read_jsonl_rows(str(path), file_mtime(path)))
+
+
+def wilder_rsi(closes, period: int = 14):
     if len(closes) < period + 1:
         return None
-    delta = np.diff(closes)
+    arr = np.asarray(closes, dtype=float)
+    delta = np.diff(arr)
     gains = np.where(delta > 0, delta, 0.0)
     losses = np.where(delta < 0, -delta, 0.0)
     avg_gain = float(np.mean(gains[:period]))
@@ -130,16 +175,13 @@ def trade_stats(df: pd.DataFrame, r_col: str):
     if df.empty or r_col not in df.columns:
         return 0, 0, 0, 0.0
     r = pd.to_numeric(df[r_col], errors="coerce").dropna()
-    wins = int((r > 0).sum())
-    losses = int((r < 0).sum())
-    return len(r), wins, losses, float(r.sum()) if len(r) else 0.0
+    return len(r), int((r > 0).sum()), int((r < 0).sum()), float(r.sum()) if len(r) else 0.0
 
 
 def load_day_cfg() -> dict:
     out = {"equity_unit_usd": BOOK, "kelly_fraction": 0.045}
-    if not P_DAY_CFG.exists():
-        return out
-    for line in P_DAY_CFG.read_text().splitlines():
+    raw = read_json_text(str(P_DAY_CFG), file_mtime(P_DAY_CFG), "")
+    for line in raw.splitlines():
         s = line.split("#", 1)[0].strip()
         if s.startswith("equity_unit_usd:"):
             out["equity_unit_usd"] = float(s.split(":", 1)[1].strip())
@@ -156,11 +198,9 @@ day_book = float(day_cfg.get("equity_unit_usd") or BOOK)
 kelly = float(day_cfg.get("kelly_fraction") or 0.045)
 day_risk = day_book * kelly
 
-ticker = http_get("/ticker/price?symbol=SOLUSDT") or {}
-px = float(ticker["price"]) if ticker.get("price") else None
-kl = http_get("/klines?symbol=SOLUSDT&interval=1m&limit=80") or []
-closes = np.array([float(c[4]) for c in kl[:-1]]) if len(kl) > 2 else np.array([])
-rsi = wilder_rsi(closes) if len(closes) else None
+snap = market_snapshot("SOLUSDT")
+px = snap["price"]
+rsi = wilder_rsi(snap["closes"])
 
 state = load_json(P_STATE, {})
 trades_1m = load_jsonl(P_TRADES)
@@ -189,12 +229,18 @@ status = str(sig.get("status") or "WAIT").upper()
 notes = str(sig.get("notes") or "No latest 15m signal file yet.")
 direction = sig.get("direction") or "none"
 ready = status == "READY"
-structure_ok = any(x in notes.lower() for x in ("bullish", "bearish", "structure"))
-choch_ok = "choch" in notes.lower()
-fvg_exists = "fvg" in notes.lower()
-fill_ok = ready
-if any(x in notes.lower() for x in ("no retrace", "no realistic fill", "still above", "no qualifying")):
-    fill_ok = False
+low = notes.lower()
+structure_ok = any(x in low for x in ("bullish", "bearish", "structure"))
+choch_ok = "choch" in low
+fvg_exists = "fvg" in low
+fill_ok = ready and not any(x in low for x in ("no retrace", "no realistic fill", "still above", "no qualifying"))
+
+lock = audit()
+write_status(lock)
+lock_pill = "pill on" if lock["ok"] else "pill off"
+lock_label = "FORMULAS LOCKED" if lock["ok"] else f"DRIFT {lock['issue_count']}"
+hb1 = lock["heartbeat"]["rsi_1m_state"]
+hb2 = lock["heartbeat"]["sol_day_signal"]
 
 st.markdown(
     f"""
@@ -202,11 +248,12 @@ st.markdown(
   <div>
     <div class="kicker">Two paper books · $2,000 each · formulas locked</div>
     <h1 class="dash-title">Command board</h1>
-    <div class="sub">Left 1m RSI-S · 1% risk. Right 15m SOL Day v3 · 4.5% Quarter-Kelly. Same kill file.</div>
+    <div class="sub">Left 1m RSI-S · 1% risk. Right 15m SOL Day v3 · 4.5% Quarter-Kelly. Cache 15s market / 5s files.</div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <div class="{'pill on' if sess else 'pill closed'}">{'1M OPEN' if sess else '1M CLOSED'}</div>
     <div class="{'pill off' if kill else 'pill on'}">{'KILL ON' if kill else 'KILL OFF'}</div>
+    <div class="{lock_pill}">{lock_label}</div>
     <div class="pill">{now.strftime('%H:%M:%S')} UTC</div>
     <div class="pill">{f'${px:.2f}' if px else '—'}</div>
   </div>
@@ -236,6 +283,7 @@ with left:
     )
     if kill:
         next_1 = "Kill switch ON. No entries on either desk."
+    pos_side = pos_1m.get("side") if isinstance(pos_1m, dict) else "no working order"
     st.markdown(
         f"""
 <div class="panel">
@@ -244,16 +292,16 @@ with left:
     <div class="cell"><div class="lbl">Paper account</div><div class="val">${eq_1m:,.2f}</div><div class="delta {pnl_cls_1}">start $2,000 · {pnl_1m:+.2f}</div></div>
     <div class="cell"><div class="lbl">Risk / trade</div><div class="val">${risk_1m:,.2f}</div><div class="delta">1.0% of current equity</div></div>
     <div class="cell"><div class="lbl">Day R</div><div class="val">{day_r_1m:+.2f}R</div><div class="delta">cap −3.0R · UTC date</div></div>
-    <div class="cell"><div class="lbl">Inventory</div><div class="val">{'IN' if pos_1m else 'FLAT'}</div><div class="delta">{pos_1m.get('side') if pos_1m else 'no working order'}</div></div>
+    <div class="cell"><div class="lbl">Inventory</div><div class="val">{'IN' if pos_1m else 'FLAT'}</div><div class="delta">{pos_side}</div></div>
     <div class="cell"><div class="lbl">Closed trades</div><div class="val">{n1}</div><div class="delta">{w1}W / {l1}L · {r1:+.2f}R</div></div>
     <div class="cell"><div class="lbl">Live RSI</div><div class="val">{rsi_txt}</div><div class="delta">long ≤20 · short ≥80</div></div>
   </div>
   {gate_row(sess, "Session hour", "07 / 10 / 11 / 20 UTC · " + (next_session(now) if not sess else "inside window"))}
   {gate_row(long_ok or short_ok, "RSI extreme", f"Wilder 14 closed 1m · now {rsi_txt}")}
-  {gate_row(pos_1m is None, "One trade at a time", "flat" if pos_1m is None else "already in")}
+  {gate_row(not pos_1m, "One trade at a time", "flat" if not pos_1m else "already in")}
   {gate_row(not kill, "Kill switch", "OFF" if not kill else "ON")}
   {gate_row(day_r_1m > -3.0, "Daily cap", f"{day_r_1m:+.2f}R vs −3.0R")}
-  <div class="need"><b>Now:</b> {now_txt}<br><b>Do next:</b> {next_1}</div>
+  <div class="need"><b>Watch:</b> RSI 20/80 only on a CLOSED 1m bar inside 07/10/11/20 UTC. Off-hours WAIT is correct.<br><b>Now:</b> {now_txt}<br><b>Do next:</b> {next_1}</div>
 </div>
 """,
         unsafe_allow_html=True,
@@ -263,9 +311,9 @@ with right:
     next_2 = "Need structure + ChoCh + first FVG ≥ 0.6×ATR, then a retrace into the gap."
     if ready:
         next_2 = f"READY {direction}. Fill FVG mid, 1R stop, 3R/4R, risk ${day_risk:.0f}."
-    elif "no qualifying" in notes.lower():
+    elif "no qualifying" in low:
         next_2 = "No qualifying 15m setup on the last detect cycle. Wait for ChoCh + first FVG."
-    if fill_ok is False and choch_ok and fvg_exists:
+    if (not fill_ok) and choch_ok and fvg_exists:
         next_2 = "Setup exists. Do not chase. Wait for the FVG fill."
     if kill:
         next_2 = "Kill switch ON. No entries on either desk."
@@ -289,7 +337,7 @@ with right:
   {gate_row(fill_ok, "Retrace / fill", "mid or favorable edge — no chase")}
   {gate_row(open_n == 0, "One trade at a time", "flat" if open_n == 0 else f"{open_n} open")}
   {gate_row(not halted and not kill, "Risk halt", "daily halt OFF and kill OFF")}
-  <div class="need"><b>Now:</b> {notes}<br><b>Do next:</b> {next_2}</div>
+  <div class="need"><b>Watch:</b> Need ChoCh + first FVG ≥ 0.6×ATR, then a fill. Do not chase. 3R is the floor.<br><b>Now:</b> {notes}<br><b>Do next:</b> {next_2}</div>
 </div>
 """,
         unsafe_allow_html=True,
@@ -312,7 +360,8 @@ with c2:
         cols = [c for c in ["exit_ts", "direction", "pnl_r", "pnl_usd", "entry_px", "exit_px", "exit_reason"] if c in day_trades.columns]
         st.dataframe(day_trades[cols] if cols else day_trades, use_container_width=True, hide_index=True)
 
+lock_line = " · ".join(lock["issues"][:6]) if lock["issues"] else "no formula drift"
 st.markdown(
-    '<div class="foot">Sizing only changed. 1m still 1% / 2R / hours 7-10-11-20. 15m still ChoCh+FVG / 3R-4R / 4.5% Kelly. Restart the 15m runner after pull so it reads unit=$2000.</div>',
+    f'<div class="foot">Lock {lock_label}. 1m age {hb1.get("age_s")}s · 15m age {hb2.get("age_s")}s. {lock_line}. Market cache 15s.</div>',
     unsafe_allow_html=True,
 )
