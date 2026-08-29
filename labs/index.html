@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>Formula desk — phone</title>
+  <style>
+    :root { --bg:#0b0f14; --card:#141b24; --line:#2a3647; --text:#e8eef7; --muted:#8b9bb4; --go:#34d399; --wait:#f59e0b; --bad:#f87171; --blue:#60a5fa; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); padding:16px 16px 40px; }
+    h1 { font-size:1.15rem; margin:0 0 4px; }
+    .sub { color:var(--muted); font-size:.82rem; margin:0 0 14px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin-bottom:12px; }
+    .status { font-size:2rem; font-weight:800; letter-spacing:-.03em; }
+    .go { color:var(--go); } .wait { color:var(--wait); } .bad { color:var(--bad); }
+    .kv { display:grid; grid-template-columns:110px 1fr; gap:6px 10px; font-size:.9rem; margin-top:10px; }
+    .k { color:var(--muted); } .v { word-break:break-word; }
+    button, .btn {
+      display:inline-block; border:0; border-radius:10px; padding:10px 12px; font-weight:700;
+      background:#2563eb; color:#fff; text-decoration:none; font-size:.9rem; margin:4px 6px 0 0;
+    }
+    button.secondary, .btn.secondary { background:#334155; }
+    label { display:block; color:var(--muted); font-size:.75rem; margin:8px 0 4px; }
+    input { width:100%; background:#0c1017; border:1px solid var(--line); color:var(--text); border-radius:10px; padding:10px; font-size:1rem; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .formula { font-family:ui-monospace,Menlo,monospace; font-size:.72rem; color:var(--muted); white-space:pre-wrap; line-height:1.4; margin-top:8px; }
+    a.link { color:var(--blue); text-decoration:none; display:block; padding:8px 0; border-bottom:1px solid var(--line); }
+    a.link:last-child { border-bottom:0; }
+    .notes { color:var(--muted); font-size:.85rem; line-height:1.45; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <h1>Formula desk</h1>
+  <p class="sub">Reads locked files from <code>projectfive01/xrp-swing-formula</code>. Same rules on phone as on desk.</p>
+
+  <div class="card">
+    <div id="badge" class="status wait">…</div>
+    <div class="sub" id="meta">Loading latest SOL Day signal…</div>
+    <div class="kv" id="kv"></div>
+    <p class="notes" id="notes"></p>
+    <button id="refresh">Refresh signal</button>
+    <a class="btn secondary" href="https://github.com/projectfive01/xrp-swing-formula/blob/main/data/sol_day_latest_signal.json">Open raw JSON</a>
+  </div>
+
+  <div class="card">
+    <strong>Quarter-Kelly size</strong>
+    <div class="row">
+      <div><label>Equity unit $</label><input id="eq" type="number" value="1000" /></div>
+      <div><label>Kelly fraction</label><input id="kf" type="number" step="0.001" value="0.045" /></div>
+    </div>
+    <div class="row">
+      <div><label>Entry</label><input id="en" type="number" step="0.01" /></div>
+      <div><label>Stop</label><input id="st" type="number" step="0.01" /></div>
+    </div>
+    <div id="size" class="notes">Enter entry + stop when READY.</div>
+    <div class="formula">Risk $ = equity × 0.045 (cap 5%)
+Size = Risk $ / |entry − stop|
+1R stop. Targets 3R then 4R.</div>
+  </div>
+
+  <div class="card">
+    <strong>Locked formulas</strong>
+    <p class="notes"><b>SOL Day v3:</b> Structure bias + ChoCh same direction AND first FVG after ChoCh ≥ 0.6×ATR(14). Else WAIT.</p>
+    <p class="notes"><b>XRP Swing BASE:</b> Exhaustion ≥20% in ≤10d and RSI≥75. Entry first ≥10% pullback holding 200d zone. BUY only at 100% load bar. Unit $2,000 / 1R.</p>
+    <p class="notes"><b>1m RSI-S lock:</b> RSI 20/80, stop 1×ATR, target 2R, 1% risk, daily cap 3R.</p>
+  </div>
+
+  <div class="card">
+    <strong>Labs</strong>
+    <a class="link" href="./formula_brain_flow.html">Formula brain flow</a>
+    <a class="link" href="./formula_probability_lab.html">Probability lab</a>
+    <a class="link" href="https://github.com/projectfive01/xrp-swing-formula/blob/main/sol-day/docs/FORMULA_ONEPAGER.md">SOL Day one-pager</a>
+    <a class="link" href="https://github.com/projectfive01/xrp-swing-formula/blob/main/docs/FORMULA_ONEPAGER.md">XRP one-pager</a>
+    <a class="link" href="https://github.com/projectfive01/xrp-swing-formula">Repo</a>
+  </div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+function fmt(v) {
+  if (v === null || v === undefined || v === "") return "—";
+  if (typeof v === "number") return String(v);
+  if (typeof v === "object") return JSON.stringify(v);
+  return String(v);
+}
+
+function sizeCalc() {
+  const eq = +$("eq").value || 0;
+  const kf = Math.min(+($("kf").value) || 0, 0.05);
+  const en = +$("en").value;
+  const st = +$("st").value;
+  const risk = eq * kf;
+  if (!en || !st || en === st) {
+    $("size").textContent = `Risk $${risk.toFixed(2)} (cap 5%). Need entry and stop for size.`;
+    return;
+  }
+  const r = Math.abs(en - st);
+  const qty = risk / r;
+  $("size").innerHTML = `Risk <b>$${risk.toFixed(2)}</b> · 1R = ${r.toFixed(4)} · size <b>${qty.toFixed(4)}</b><br>3R ${en > st ? (en + 3*r).toFixed(4) : (en - 3*r).toFixed(4)} · 4R ${en > st ? (en + 4*r).toFixed(4) : (en - 4*r).toFixed(4)}`;
+}
+
+async function load() {
+  $("badge").textContent = "…";
+  $("badge").className = "status wait";
+  $("meta").textContent = "Fetching signal from GitHub…";
+  try {
+    const res = await fetch("https://raw.githubusercontent.com/projectfive01/xrp-swing-formula/main/data/sol_day_latest_signal.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const s = await res.json();
+    const ready = String(s.status || "").toUpperCase() === "READY";
+    $("badge").textContent = ready ? "READY" : (s.status || "WAIT");
+    $("badge").className = "status " + (ready ? "go" : "wait");
+    $("meta").textContent = `${s.symbol || "SOLUSDT"} · ${s.formula_version || "v3"} · ${s.ts_utc || ""}`;
+    const rows = [
+      ["direction", s.direction],
+      ["entry zone", s.entry_zone],
+      ["stop", s.stop],
+      ["3R", s.target_3r],
+      ["4R", s.target_4r],
+      ["ATR14", s.atr_14],
+      ["risk $", s.risk_usd_quarter_kelly],
+      ["unit $", s.equity_unit_usd],
+    ];
+    $("kv").innerHTML = rows.map(([k,v]) => `<div class="k">${k}</div><div class="v">${fmt(v)}</div>`).join("");
+    $("notes").textContent = s.notes || "";
+    if (typeof s.equity_unit_usd === "number") $("eq").value = s.equity_unit_usd;
+    if (s.entry_zone && typeof s.entry_zone === "object") {
+      const mid = s.entry_zone.mid || s.entry_zone.entry || s.entry_zone.low;
+      if (mid) $("en").value = mid;
+    } else if (typeof s.entry_zone === "number") $("en").value = s.entry_zone;
+    if (typeof s.stop === "number") $("st").value = s.stop;
+    sizeCalc();
+  } catch (err) {
+    $("badge").textContent = "ERROR";
+    $("badge").className = "status bad";
+    $("meta").textContent = String(err);
+  }
+}
+
+["eq","kf","en","st"].forEach((id) => $(id).addEventListener("input", sizeCalc));
+$("refresh").onclick = load;
+load();
+</script>
+</body>
+</html>
