@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-31T16:03:03Z",
+  "ts_utc": "2026-08-31T17:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.46,
+  "atr_14": 0.42,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price 102.77 (Binance.US). 15m ATR(14)≈0.46 (0.6×≈0.28). Persistent ~9h data gap (03:45–13:00 UTC) still prevents clean confirmation of Structure Bias + ChoCh in same direction. Post-gap action: gap-up open 103.31 → high 103.83 → pull to 102.22 → retest high then fade to 102.77. No reliable joint satisfaction of hard requirements. → WAIT."
+  "notes": "Price ~102.96 (Binance.US). 15m ATR(14)\u22480.42 (0.6\u00d7\u22480.25). Major low 100.38 then bounce to 103.83, now consolidating 102.5-103.5. Bullish FVGs present (incl. 14:30 [102.70-103.30] size 0.60 with price inside), but no clean confirmed Structure Bias + ChoCh pair with first post-ChoCh FVG still at realistic unfilled limit level. Data gap remains a factor. Hard requirements not jointly satisfied. \u2192 WAIT."
 }
