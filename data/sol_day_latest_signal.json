@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-08-31T17:05:00Z",
+  "ts_utc": "2026-08-31T18:02:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.42,
+  "atr_14": 0.53,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~102.96 (Binance.US). 15m ATR(14)\u22480.42 (0.6\u00d7\u22480.25). Major low 100.38 then bounce to 103.83, now consolidating 102.5-103.5. Bullish FVGs present (incl. 14:30 [102.70-103.30] size 0.60 with price inside), but no clean confirmed Structure Bias + ChoCh pair with first post-ChoCh FVG still at realistic unfilled limit level. Data gap remains a factor. Hard requirements not jointly satisfied. \u2192 WAIT."
+  "notes": "Price ~103.62 (Binance data-api). 15m ATR(14)\u22480.53 (0.6\u00d7\u22480.32). Recent swing low 102.18 then HL sequence + push to 103.80. Bullish FVG at 17:45 [103.07-103.52] size 0.45 (unfilled, price above). No clean confirmed Structure Bias + ChoCh with first post-ChoCh FVG at realistic fill level. Hard requirements not jointly satisfied. \u2192 WAIT."
 }
