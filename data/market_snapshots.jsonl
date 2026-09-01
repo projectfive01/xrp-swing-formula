@@ -1,1 +1,1 @@
-SNAPSHOT_WILL_FOLLOW
+{"ts_utc": "2026-09-01T23:12:00Z", "asset": "XRP-USD", "price": 1.3462, "rsi_daily": 58.3, "ema200": 1.28, "atr_pct": 0.061, "volume": 108526814.6, "xrp_btc": null, "local_high_approx": 1.695, "source": "binance_vision_live_grok_scan", "created_at": "2026-09-01T23:12:00Z", "sol_usdt": 99.78, "sol_24h_pct": -3.267, "xrp_24h_pct": -2.322, "xrp_24h_high": 1.3967, "xrp_24h_low": 1.3382, "sma200": 1.2761, "ema200_live": 1.3383, "notes": "CURRENT price back inside $1.28-$1.35 after 22:04Z reject; 200d gate GREEN; load bar 80% HOLD; not_chase still red"}
