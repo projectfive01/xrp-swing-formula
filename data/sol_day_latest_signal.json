@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-01T14:17:00Z",
+  "ts_utc": "2026-09-01T15:28:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.3679,
+  "atr_14": 0.4643,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~102.42 (Binance.US). 15m ATR(14)\u22480.368 (0.6\u00d7\u22480.221). Bearish structure bias intact (major high 104.38 \u2192 LH 102.67 \u2192 LL 101.40). No confirmed bullish ChoCh (price has not broken above 102.67). No valid first post-ChoCh FVG \u22650.6\u00d7ATR with realistic unfilled limit level available. Hard requirements not jointly satisfied \u2192 WAIT."
+  "notes": "Price 101.64 (Binance.US). 15m ATR(14)\u22480.464 (0.6\u00d7\u22480.279). Bearish structure bias intact (major high 104.38 \u2192 LH 102.67 \u2192 LL 101.03). No confirmed bullish ChoCh (price has not broken above 102.67). Recent bear FVGs exist but no clear new ChoCh + first qualifying FVG with realistic unfilled limit fill available under locked rules. Hard requirements not jointly satisfied \u2192 WAIT."
 }
