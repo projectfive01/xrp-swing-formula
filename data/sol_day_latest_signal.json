@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-02T13:28:43Z",
+  "ts_utc": "2026-09-02T14:33:09Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.3771,
+  "atr_14": 0.5814,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~98.25 (Binance.US). 15m ATR(14)\u22480.377 (0.6\u00d7\u22480.226). Overall bearish structure bias (LH sequence from ~100.68). Recent low 97.42 then bounce; higher low candidate 97.75 but no confirmed bullish ChoCh (no break of 98.45). No qualifying first post-ChoCh FVG \u22650.6 ATR with realistic fill opportunity. Hard requirements not met \u2192 WAIT."
+  "notes": "Price ~99.08 (Gate.io proxy for Binance). 15m ATR(14)\u22480.581 (0.6\u00d7\u22480.349). Overall structure still mixed-to-bearish from ~102 highs (LH sequence). Recent impulse bounce from 97.38 created a bullish FVG (98.43-98.92) after the up-move, but no confirmed Structure Bias + ChoCh pair in the same direction with that as the first qualifying FVG and clear realistic fill setup. Hard requirements not fully met \u2192 WAIT."
 }
