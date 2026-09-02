@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-02T19:10:10Z",
+  "ts_utc": "2026-09-02T20:11:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.441,
+  "atr_14": 0.45,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~99.53 (Gate.io). 15m ATR(14)≈0.441 (0.6×≈0.265). Recent bull FVG 98.58-99.09 (size 0.51>0.6ATR) after bounce from 98.22 low, but price has not retraced into it (lowest post-FVG 99.18). Earlier major bull FVG 98.43-98.92 already filled. Mild higher-low structure but no fresh clear Structure Bias + ChoCh with unfilled first qualifying FVG at a realistic limit-fillable level. Hard requirements not met → WAIT."
+  "notes": "Price ~99.70. 15m ATR(14)≈0.45 (0.6×≈0.27). Recent bounce from ~97.38 low produced higher lows and some bull FVGs (e.g. around 98.5-99.1 range), but no clear Structure Bias + ChoCh in same direction with first unfilled qualifying FVG (≥0.6×ATR) at a realistic retracement/limit-fillable level right now. Price has moved higher without filling the latest candidate FVGs cleanly for entry. Hard requirements not met → WAIT."
 }
