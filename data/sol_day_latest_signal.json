@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-02T20:11:00Z",
+  "ts_utc": "2026-09-03T13:02:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.45,
+  "atr_14": 0.40,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~99.70. 15m ATR(14)≈0.45 (0.6×≈0.27). Recent bounce from ~97.38 low produced higher lows and some bull FVGs (e.g. around 98.5-99.1 range), but no clear Structure Bias + ChoCh in same direction with first unfilled qualifying FVG (≥0.6×ATR) at a realistic retracement/limit-fillable level right now. Price has moved higher without filling the latest candidate FVGs cleanly for entry. Hard requirements not met → WAIT."
+  "notes": "Price ~101.4. 15m ATR(14)≈0.40 (0.6×≈0.24). Recent structure shows higher lows from ~99.93 and break of prior highs (bullish bias), with some 5m bull FVGs (e.g. 12:35 100.80-101.06 sz0.26; 12:55 101.28-101.51 sz0.23). However, no clear confirmed ChoCh + first qualifying unfilled FVG at a realistic retracement/limit-fillable level meeting both hard requirements cleanly. Price is extended after the impulse. Hard requirements not fully met → WAIT."
 }
