@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-04T16:06:00Z",
+  "ts_utc": "2026-09-04T17:14:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.47,
+  "atr_14": 0.524,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Post-impulse consolidation ~101.4 after 12:30 dump (104.4→100.3). Prior FVG 101.77-103.97 no longer at realistic fill (price below zone, further LL). No fresh Structure Bias + ChoCh pair with first qualifying FVG (≥0.6×ATR≈0.28) that has available fill. Hard requirements not met. WAIT."
+  "notes": "Post-dump consolidation ~101.76 after 12:30 impulse (104.4→100.2). Bearish structure bias intact but no fresh ChoCh + first qualifying FVG (≥0.6×ATR) with realistic unfilled fill available. Prior large bear FVG fully engaged/broken. Hard requirements not met. WAIT."
 }
