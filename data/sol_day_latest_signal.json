@@ -1,15 +1,19 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-09-03T20:01:00Z",
+  "status": "READY",
+  "ts_utc": "2026-09-04T13:12:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.534,
+  "direction": "short",
+  "entry_zone": {
+    "low": 101.77,
+    "high": 103.97,
+    "mid": 102.87
+  },
+  "stop": 104.50,
+  "target_3r": 97.98,
+  "target_4r": 96.35,
+  "atr_14": 0.60,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~104.78. 15m ATR(14)≈0.534 (0.6×≈0.320). Bullish structure bias after strong impulse. Earlier large FVGs during rally; recent small ones < threshold or no clear fresh ChoCh + first qualifying FVG with realistic fill. Hard requirements not met → WAIT."
+  "notes": "Bearish ChoCh via large impulse candle (104.39→100.29). Structure bias short. First FVG after ChoCh: 101.77-103.97 (size 2.20 >> 0.6×ATR≈0.36). Price currently ~101.44 near FVG low; limit fillable on retrace into zone. READY short."
 }
