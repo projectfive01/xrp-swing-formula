@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-04T19:05:00Z",
+  "ts_utc": "2026-09-04T20:04:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.316,
+  "atr_14": 0.285,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Post-dump range 101.11-102.07. No fresh ChoCh + first qualifying FVG (≥0.6×ATR≈0.19) with realistic unfilled fill. Recent bear FVG filled; bull FVGs mitigated. Hard requirements not met. WAIT."
+  "notes": "Post 12:30 dump (104.39→100.29) bearish ChoCh. Price ranging 100.41-102.07. No fresh ChoCh + first qualifying FVG (≥0.6×ATR≈0.17) with realistic unfilled fill. Structure consolidating, prior FVGs mitigated. Hard requirements not met. WAIT."
 }
