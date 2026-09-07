@@ -1,15 +1,19 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-09-07T15:02:31Z",
+  "status": "READY",
+  "ts_utc": "2026-09-07T16:10:20Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.336,
-  "risk_usd_quarter_kelly": null,
+  "direction": "short",
+  "entry_zone": {
+    "low": 103.44,
+    "high": 103.84,
+    "mid": 103.64
+  },
+  "stop": 104.15,
+  "target_3r": 102.11,
+  "target_4r": 101.60,
+  "atr_14": 0.4745,
+  "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~104.70. After session high 105.91, sharp decline to ~104.06 then bounce. ATR(14)=0.336 (0.6×=0.20). Recent bull FVG (104.29-104.70 size 0.41) formed on bounce but no confirmed Structure Bias + ChoCh in same direction preceding it. Prior bearish impulse FVGs mitigated or price through. Hard requirements not met. WAIT."
+  "notes": "Structure bias short (LH/LL after 12:45 high 105.94). Bearish ChoCh on breakdown through 104.8 area into 15:30 impulse. First FVG after ChoCh: 103.44-103.84 (size 0.40 ≥ 0.6×ATR 0.285). Price ~103.56 inside FVG → realistic fill available. READY short."
 }
