@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-07T19:15:02Z",
+  "ts_utc": "2026-09-07T20:15:11Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.2050,
+  "atr_14": 0.2486,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~103.89 consolidating after prior bearish FVG 103.38-103.96 (gap 0.58 after ChoCh) was fully traversed. No new clear Structure Bias + ChoCh in same direction + first qualifying FVG (≥0.6×ATR≈0.123) with realistic fill available. WAIT."
+  "notes": "Price ~103.94 consolidating in tight range after earlier down-move low ~102.98 and recovery. ATR(14)=0.25. Multiple small FVGs exist but no clear fresh Structure Bias + ChoCh pair in the same direction followed by first qualifying FVG (≥0.6×ATR≈0.15) that still offers realistic unfilled entry. Prior setups traversed. WAIT."
 }
