@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-08T17:04:00Z",
+  "ts_utc": "2026-09-08T18:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.5464,
+  "atr_14": 0.3807,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~104.40. ATR(14) 15m ≈0.55 (0.6×ATR≈0.33). Post 13:30 LL 101.72 bounce to 16:30/16:40 high 104.83. Structure transitional/choppy after recovery. Qualifying FVGs (5m/15m) either undersized or already filled (e.g. 5m bull 104.09-104.28 size 0.19 filled on retrace to 103.96). No clean Structure Bias + ChoCh same direction with first unfilled ≥0.6×ATR FVG and realistic fill available. WAIT."
+  "notes": "Price ~103.82. ATR(14) 15m ≈0.38 (0.6×ATR≈0.23). After 13:30 LL ~101.79 recovery to 16:30 high 104.80, now consolidating. Qualifying FVGs present earlier (e.g. 0.33-0.35) but filled or not first after clear ChoCh with current retrace into unfilled ≥0.6×ATR FVG. No clean Structure Bias + ChoCh same direction + first unfilled qualifying FVG with realistic fill. WAIT."
 }
