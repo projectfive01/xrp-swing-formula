@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-08T19:14:00Z",
+  "ts_utc": "2026-09-08T20:07:45Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.417,
+  "atr_14": 0.341,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~103.43. ATR(14) 15m ≈0.42 (0.6×ATR≈0.25). From 13:30 LL 101.79 → 16:30 HH 104.80, then LH 104.44 and drop. Recent BEAR FVG 103.45-103.98 (size 0.53) exists but no clean confirmed Structure Bias + ChoCh same direction with first unfilled qualifying FVG that has realistic retrace fill available yet. Price at edge of FVG but ChoCh not fully locked. WAIT."
+  "notes": "Price ~103.26. ATR(14) 15m ≈0.341 (0.6×ATR≈0.205). Structure: LL 101.79 (13:30) → HH 104.80 (16:30) → LH 104.44 (18:15) then drop. Qualifying BEAR FVG 103.45-103.98 (size 0.53) after potential ChoCh, but price currently below FVG low (no realistic retrace fill yet) and Structure Bias + ChoCh not fully confirmed/locked in same direction. No other qualifying first FVG with fill available. WAIT."
 }
