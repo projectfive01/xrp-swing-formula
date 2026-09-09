@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-09T15:29:00Z",
+  "ts_utc": "2026-09-09T17:21:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.466,
+  "atr_14": 0.493,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~102.56. ATR(14) 15m ≈0.466 (0.6×≈0.280); 5m ATR≈0.326 (0.6×≈0.196). Clear bearish structure (LH/LL after 12:45 high 104.79) + ChoCh down around 13:30-13:40. First post-ChoCh bear FVG (13:35 ~104.20-104.47 size 0.27) long abandoned with no retrace fill. Later FVGs exist but rule prefers first; no realistic fill available into a qualifying first FVG. Continuation lower, not pullback entry. WAIT."
+  "notes": "Price ~103.53. ATR(14) 15m ≈0.493 (0.6×≈0.296). Bearish structure from 105.14 high → LL 102.13. Higher low forming (102.82) but no clear bullish ChoCh (no BOS above recent swing highs ~104.12/104.79). No first post-ChoCh FVG ≥0.6×ATR with realistic fill available. WAIT."
 }
