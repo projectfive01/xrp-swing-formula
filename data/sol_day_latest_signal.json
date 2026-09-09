@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-09T18:10:00Z",
+  "ts_utc": "2026-09-09T19:10:28Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.381,
+  "atr_14": 0.356,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~103.46. ATR(14) 15m ≈0.381 (0.6×≈0.229). Bearish structure from 105.14 high → LL 102.13. Higher low at 102.82 but no clear bullish ChoCh (no BOS above recent swing highs ~104.12/104.79). No first post-ChoCh FVG ≥0.6×ATR with realistic fill available. WAIT."
+  "notes": "Price ~103.11. ATR(14) 15m ≈0.356 (0.6×≈0.214). Bearish structure bias from ~104.79 high → LL 102.13. Bounce to 103.78 (higher low sequence) but no clear bullish ChoCh (no BOS above recent swing highs ~104.12/104.79). No first post-ChoCh FVG ≥0.6×ATR with realistic fill available. WAIT."
 }
