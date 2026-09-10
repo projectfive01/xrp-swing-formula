@@ -1,6 +1,6 @@
 {
   "status": "READY",
-  "ts_utc": "2026-09-10T14:15:00Z",
+  "ts_utc": "2026-09-10T15:10:49Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "short",
@@ -12,8 +12,8 @@
   "stop": 101.55,
   "target_3r": 97.35,
   "target_4r": 96.30,
-  "atr_14": 0.541,
+  "atr_14": 0.591,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Bearish structure bias + ChoCh (impulse 12:30-12:45 through ~100.85 lows into 98.53). First FVG after ChoCh: 99.88-101.12 (size 1.24 >> 0.6×ATR≈0.324). Price retraced into FVG (H 100.02) then currently ~99.60; limit fillable on any re-entry into zone. READY short."
+  "notes": "Bearish structure bias + ChoCh (impulse 12:30-12:45 through ~100.85 lows into 98.53). First FVG after ChoCh: 99.88-101.12 (size 1.24 >> 0.6×ATR≈0.355). Price currently ~100.10 inside FVG; limit/market fill available. No bullish ChoCh yet. READY short."
 }
