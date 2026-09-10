@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-10T18:09:41Z",
+  "ts_utc": "2026-09-10T19:13:50Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.391,
+  "atr_14": 0.358,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Bearish structure bias remains after 12:30-12:45 ChoCh (impulse through ~100.85 into 98.53). First FVG 99.88-101.12 fully traversed (price now ~99.51 below it). No fresh ChoCh + qualifying first FVG (≥0.6×ATR≈0.235) with realistic unfilled entry available. ATR(14)≈0.391. WAIT."
+  "notes": "Bearish structure bias from 12:30-12:45 ChoCh remains (impulse into 98.53). First FVG 99.88-101.12 already fully traversed; price now ~99.82 ranging below it with no fresh ChoCh + qualifying first FVG (≥0.6×ATR≈0.215) showing realistic unfilled entry. Recent micro-FVGs exist but lack clear structure+ChoCh alignment. ATR(14)≈0.358. WAIT."
 }
