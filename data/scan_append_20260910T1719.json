@@ -1,0 +1,41 @@
+{
+  "gate_scan": {
+    "ts_utc": "2026-09-10T17:19:00Z",
+    "price": 1.3563,
+    "local_high": 1.695,
+    "pullback_pct": -0.1998,
+    "dist_to_200d_pct": 0.0596,
+    "rsi_daily": 52.4,
+    "ema200": 1.28,
+    "gate_exhaustion": 1,
+    "gate_pullback": 1,
+    "gate_200d_zone": 1,
+    "gate_not_chase": 0,
+    "gate_regime_ok": 1,
+    "progress_pct": 80,
+    "action": "HOLD",
+    "catalyst_weight": -1,
+    "sol_usdt": 99.86,
+    "sol_24h_pct": -3.396,
+    "xrp_24h_pct": -4.567,
+    "in_zone_now": false,
+    "zone_high": 1.35,
+    "zone_low": 1.28,
+    "zone_tagged": true,
+    "zone_tag_low": 1.3098
+  },
+  "market_snapshot": {
+    "ts_utc": "2026-09-10T17:19:00Z",
+    "asset": "XRP-USD",
+    "price": 1.3563,
+    "rsi_daily": 52.4,
+    "ema200": 1.28,
+    "sol_usdt": 99.86,
+    "sol_24h_pct": -3.396,
+    "xrp_24h_pct": -4.567,
+    "xrp_24h_high": 1.4246,
+    "xrp_24h_low": 1.34,
+    "source": "binanceus_gate_kucoin_kraken_coinbase_okx_coingecko_live_grok_scan",
+    "notes": "XRP 1.3473 -> 1.3563; bounced back ABOVE $1.35 lip after 16:18Z in-zone last; load bar 80% HOLD; not_chase still red; no 100%/BUY flip; SOL 99.17 -> 99.86"
+  }
+}
