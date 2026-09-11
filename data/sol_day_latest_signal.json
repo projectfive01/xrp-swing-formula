@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-11T16:18:20Z",
+  "ts_utc": "2026-09-11T17:05:53Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.968,
+  "atr_14": 1.029,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Prior bullish ChoCh + FVG (101.83-103.71) invalidated by sharp drop to 101.32 (through structural stop area). Current price ~101.74 recovering in range. No fresh Structure Bias + ChoCh in same direction with first unfilled FVG ≥0.6×ATR(≈0.58) offering realistic fill. Micro gaps present but lack clear aligned ChoCh. ATR(14)15m≈0.968. WAIT."
+  "notes": "After 105.8 high (14:00), sharp drop to 101.25 formed LL/LH bearish structure. Bearish FVG 102.36-103.18 (size 0.82 ≥0.6×ATR≈0.62) after potential ChoCh, but price ~102.33 still below FVG low — no realistic fill yet. No clear bullish ChoCh + qualifying unfilled FVG with price at fillable level. ATR(14)15m≈1.029. WAIT."
 }
