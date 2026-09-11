@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-11T18:09:33Z",
+  "ts_utc": "2026-09-11T19:10:32Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.658,
+  "atr_14": 0.694,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Post 105.77 high (14:00 UTC): clear LH/LL bearish structure + ChoCh. Bearish FVG ~102.31-103.28 (size 0.97 ≥0.6×ATR≈0.39) after ChoCh, but price has already moved to 100.49-101.07 — no realistic fill available. No new qualifying first FVG after fresh ChoCh with price at/retracing into zone. ATR(14)15m≈0.658. WAIT."
+  "notes": "Post 105.77 high (14:00 UTC): clear LH/LL bearish structure. Prior bearish FVG ~102.31-103.28 already left behind (price 100.49-101.32). No fresh ChoCh + first qualifying FVG (≥0.6×ATR≈0.416) with realistic fill available. Current consolidation ~101.3. ATR(14)15m≈0.694. WAIT."
 }
