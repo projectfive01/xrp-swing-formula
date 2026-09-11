@@ -1,0 +1,31 @@
+{
+  "gate_scan": {
+    "ts_utc": "2026-09-11T21:08:00Z",
+    "price": 1.3637,
+    "local_high": 1.695,
+    "pullback_pct": -0.1955,
+    "dist_to_200d_pct": 0.0654,
+    "rsi_daily": 52.6,
+    "ema200": 1.28,
+    "gate_exhaustion": 1,
+    "gate_pullback": 1,
+    "gate_200d_zone": 1,
+    "gate_not_chase": 0,
+    "gate_regime_ok": 1,
+    "progress_pct": 80,
+    "action": "HOLD",
+    "catalyst_weight": -1,
+    "in_zone_now": false,
+    "sol_usdt": 102.67,
+    "sol_24h_pct": 2.577,
+    "xrp_24h_pct": 0.672
+  },
+  "market_snapshot": {
+    "ts_utc": "2026-09-11T21:08:00Z",
+    "asset": "XRP-USD",
+    "price": 1.3637,
+    "rsi_daily": 52.6,
+    "sol_usdt": 102.67,
+    "notes": "XRP 1.3675 -> 1.3637; 20:00Z closed 1.3622 after high 1.3683 low 1.3573; 21:00Z last 1.3637 above lip; load bar 80% HOLD; not_chase still red; no 100%/BUY flip; SOL 102.78 -> 102.67"
+  }
+}
