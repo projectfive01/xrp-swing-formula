@@ -1,0 +1,12 @@
+{
+  "ts_utc": "2026-09-13T06:04:00Z",
+  "price": 1.3676,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "sol_usdt": 101.82,
+  "xrp_24h_pct": 0.337,
+  "sol_24h_pct": 0.207,
+  "gate_not_chase": 0,
+  "in_zone_now": false,
+  "notes": "Completed 05:00Z close 1.3680 bounce AWAY from $1.35 lip. Load bar still 80% HOLD. Appended to gate_scans.jsonl and market_snapshots.jsonl."
+}
