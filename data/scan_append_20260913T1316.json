@@ -1,0 +1,13 @@
+{
+  "ts_utc": "2026-09-13T13:16:00Z",
+  "price": 1.341,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "sol_usdt": 99.81,
+  "sol_24h_pct": -2.041,
+  "xrp_24h_pct": -1.974,
+  "in_zone_now": true,
+  "gate_not_chase": 0,
+  "xrp_24h_low": 1.3369,
+  "notes": "Fifth completed Sep-13 hourly close under $1.35 lip (12:00Z close 1.3405, low 1.3369). Load bar still 80% HOLD. Paper watch armed. Logged to gate_scan_latest.json."
+}
