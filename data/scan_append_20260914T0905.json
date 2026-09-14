@@ -1,0 +1,22 @@
+{
+  "ts_utc": "2026-09-14T09:05:00Z",
+  "price": 1.3872,
+  "local_high": 1.695,
+  "pullback_pct": -0.1816,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "gate_exhaustion": 1,
+  "gate_pullback": 1,
+  "gate_200d_zone": 1,
+  "gate_not_chase": 0,
+  "gate_regime_ok": 1,
+  "sol_usdt": 101.55,
+  "sol_24h_pct": 1.357,
+  "xrp_24h_pct": 2.71,
+  "xrp_24h_high": 1.3937,
+  "xrp_24h_low": 1.3325,
+  "close_08z": 1.3853,
+  "in_zone_now": false,
+  "paper_watch": "armed",
+  "notes": "Eighth consecutive Sep-14 hourly close through $1.35 lip (08:00Z 1.3853) and new 24h high 1.3937. Load bar still 80% HOLD. not_chase red. No BUY."
+}
