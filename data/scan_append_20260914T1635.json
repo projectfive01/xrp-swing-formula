@@ -1,0 +1,21 @@
+{
+  "ts_utc": "2026-09-14T16:35:00Z",
+  "xrp_usdt": 1.4103,
+  "sol_usdt": 102.45,
+  "xrp_24h_pct": 4.606,
+  "sol_24h_pct": 1.809,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "gates": {
+    "exhaustion": 1,
+    "pullback": 1,
+    "zone_200d": 1,
+    "not_chase": 0,
+    "regime_ok": 1
+  },
+  "paper_watch_armed": true,
+  "in_zone_now": false,
+  "close_15:00Z": 1.4033,
+  "xrp_24h_high": 1.4199,
+  "notes": "15th consecutive Sep-14 hourly close through $1.35 lip. New 24h high 1.4199. 16:00Z last 1.4103 still above zone. No 100%/BUY flip. Appended to gate_scans.jsonl + market_snapshots.jsonl."
+}
