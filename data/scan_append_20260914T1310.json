@@ -1,0 +1,22 @@
+{
+  "ts_utc": "2026-09-14T13:10:00Z",
+  "price": 1.3916,
+  "sol_usdt": 101.13,
+  "sol_24h_pct": 1.353,
+  "xrp_24h_pct": 3.835,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "gate_exhaustion": 1,
+  "gate_pullback": 1,
+  "gate_200d_zone": 1,
+  "gate_not_chase": 0,
+  "gate_regime_ok": 1,
+  "in_zone_now": false,
+  "local_high": 1.695,
+  "pullback_pct": -0.179,
+  "hourly_close_12z": 1.3951,
+  "through_lip_streak": 12,
+  "hour_low_13z": 1.3826,
+  "paper_watch": "ARMED",
+  "notes": "12:00Z close 1.3951 is 12th consecutive Sep-14 through-lip hourly close. Last 1.3916 still above $1.35 (hour low 1.3826). Load bar 80% HOLD. No BUY flip."
+}
