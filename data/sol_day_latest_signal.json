@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-14T17:17:35Z",
+  "ts_utc": "2026-09-14T18:18:03Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.378,
+  "atr_14": 0.327,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~103.04 (new session highs). Bullish structure from 13:00 low 100.71 with HH/HL. No clear ChoCh + first FVG ≥0.6×ATR(≈0.23) with realistic fill near price. Recent push 101.95→102.80 had negligible gap. ATR(14)15m≈0.378. WAIT."
+  "notes": "Price ~103.07 (near session highs 103.28). Bullish structure bias (HH/HL from 13:00 low 100.71). No clear recent ChoCh. First notable post-low bullish FVG 102.13-102.40 (size 0.27 ≥0.6×ATR≈0.196) sits well below price with no retracement/fill available. No qualifying short setup. ATR(14)15m≈0.327. WAIT."
 }
