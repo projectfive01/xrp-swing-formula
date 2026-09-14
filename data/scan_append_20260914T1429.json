@@ -1,0 +1,20 @@
+{
+  "ts_utc": "2026-09-14T14:29:00Z",
+  "xrp_usdt": 1.4018,
+  "sol_usdt": 101.64,
+  "xrp_24h_pct": 3.937,
+  "sol_24h_pct": 1.185,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "gates": {
+    "exhaustion": 1,
+    "pullback": 1,
+    "zone_200d": 1,
+    "not_chase": 0,
+    "regime_ok": 1
+  },
+  "paper_watch_armed": true,
+  "in_zone_now": false,
+  "close_13:00Z": 1.3945,
+  "notes": "13th consecutive Sep-14 hourly close through $1.35 lip. 14:00Z last 1.4018 bouncing away from zone. No 100%/BUY flip. Appended to gate_scans.jsonl + market_snapshots.jsonl."
+}
