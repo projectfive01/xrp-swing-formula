@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-14T14:40:00Z",
+  "ts_utc": "2026-09-14T15:52:17Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.446,
+  "atr_14": 0.538,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~101.54. Session high 102.27 (09:45 UTC) then pullback to 100.71 and range 101.2-102.0. No clear Structure Bias + ChoCh in same direction with first FVG ≥0.6×ATR(≈0.27) that has realistic fill available near price. Only large bull FVG (06:00 101.00-101.53) is old and fully traded through. ATR(14)15m≈0.446. WAIT."
+  "notes": "Price ~102.10. Recent high 102.27 (15:30 UTC). From 13:00 low 100.68 recovered with higher highs; no clear Structure Bias + ChoCh + first FVG ≥0.6×ATR(≈0.32) with realistic fill available near current price. Small/old FVGs only. ATR(14)15m≈0.538. WAIT."
 }
