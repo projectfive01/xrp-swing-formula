@@ -1,0 +1,11 @@
+{
+  "ts_utc": "2026-09-14T07:20:00Z",
+  "price": 1.3886,
+  "sol_usdt": 101.67,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "in_zone_now": false,
+  "xrp_24h_pct": 2.005,
+  "sol_24h_pct": 0.345,
+  "note": "Appended to gate_scans.jsonl and market_snapshots.jsonl. Sixth consecutive Sep-14 through-lip hourly close (06:00Z 1.3866) and new 24h high 1.3906. Load bar still 80% HOLD. not_chase red. Paper watch armed. No BUY."
+}
