@@ -1,0 +1,22 @@
+{
+  "ts_utc": "2026-09-14T03:09:00Z",
+  "price": 1.3723,
+  "local_high": 1.695,
+  "pullback_pct": -0.1904,
+  "dist_to_200d_pct": 0.0721,
+  "rsi_daily": 52.6,
+  "progress_pct": 80,
+  "action": "HOLD",
+  "gate_exhaustion": 1,
+  "gate_pullback": 1,
+  "gate_200d_zone": 1,
+  "gate_not_chase": 0,
+  "gate_regime_ok": 1,
+  "catalyst_weight": -1,
+  "sol_usdt": 101.17,
+  "sol_24h_pct": -0.755,
+  "xrp_24h_pct": 0.329,
+  "in_zone_now": false,
+  "zone_tagged": true,
+  "note": "02:00Z close 1.3702 expanded through $1.35 lip to 24h high 1.3737. Load bar still 80% HOLD. Paper watch armed. Appended to latest + jsonl intent."
+}
