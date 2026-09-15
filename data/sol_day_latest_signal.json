@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-15T18:20:00Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-15T19:04:23Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "long",
-  "entry_zone": {
-    "low": 99.39,
-    "high": 100.03,
-    "mid": 99.71
-  },
-  "stop": 98.70,
-  "target_3r": 102.74,
-  "target_4r": 103.75,
-  "atr_14": 0.479,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.73,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Bullish structure bias (HH 100.66 > 99.70, HL 98.73 > 98.06) after ChoCh on recovery from 14:45 low 98.06. First qualifying FVG after ChoCh: 17:45 99.39-100.03 (size 0.64 ≥ 0.6×ATR≈0.288). Price ~99.56 currently inside FVG → realistic fill available. Structural stop below HL 98.73. READY long."
+  "notes": "Structure bias currently bearish after sharp drop (low 95.83). Last clear ChoCh was short at ~14:30 UTC (broke 99.78). First FVG after that ChoCh was ~99.94-100.27 (size ok vs ATR) but price has not retraced into it; instead continued lower. No new ChoCh + qualifying first FVG with realistic fill at current ~98.04 level. Action WAIT."
 }
