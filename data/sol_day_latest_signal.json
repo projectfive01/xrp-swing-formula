@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-15T13:35:00Z",
+  "ts_utc": "2026-09-15T14:30:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.45,
+  "atr_14": 0.42,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~100.92. Recent range 100.08-102.86 after prior high ~104.8. No clear Structure Bias + ChoCh in same direction with first FVG ≥0.6×ATR(≈0.27) that has realistic fill available near current price. Choppy/range-bound action; prior FVGs either filled or not after a valid ChoCh. ATR(14)15m≈0.45. WAIT."
+  "notes": "Price ~100.58. Down from ~104.8 high into range 100.5-102.5. No clear Structure Bias + ChoCh in same direction with first FVG ≥0.6×ATR(~0.25) that has realistic fill available near current price. Prior gaps filled or not post-valid ChoCh. Choppy. ATR(14)15m≈0.42. WAIT."
 }
