@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-16T14:29:41Z",
+  "ts_utc": "2026-09-16T15:14:50Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.223,
+  "atr_14": 0.443,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~97.22. After 11:45 high 98.27, lower highs/lows forming. Multiple small-to-medium FVGs present (bull 11:40-45 size 0.21-0.26, bear 13:00 size 0.31+) but no clear confirmed Structure Bias + ChoCh pair with a first unfilled ≥0.6×ATR FVG currently at realistic limit-fillable level. Range/chop after impulse. Action WAIT."
+  "notes": "Price ~97.31. 15m range-bound ~96.3-98.2 after larger bearish impulse. No clear Structure Bias + ChoCh pair in same direction with first FVG ≥0.6×ATR(0.443) currently at realistic fillable level. Chop continues. Action WAIT."
 }
