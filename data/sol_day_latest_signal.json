@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-16T17:22:00Z",
+  "ts_utc": "2026-09-16T18:07:16Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.385,
+  "atr_14": 0.603,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Price ~97.14. Post 98.31 impulse, 15m/5m range-bound chop ~96.64-97.60. No clear Structure Bias + ChoCh same direction + first FVG ≥0.6×ATR(0.385≈0.231) with realistic fill available. Action WAIT."
+  "notes": "Price ~98.37. Sharp recovery from 96.11 LL after prior range. Potential bullish ChoCh on break of ~97.6 highs, but no first FVG ≥0.6×ATR(0.603≈0.362) formed after ChoCh yet; price at highs of impulse, no realistic fill. Action WAIT."
 }
