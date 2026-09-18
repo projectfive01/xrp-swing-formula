@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-18T15:26:05Z",
+  "ts_utc": "2026-09-18T16:07:47Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.8607,
+  "atr_14": 0.9707,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "15m/5m bullish structure bias + ChoCh confirmed on 13:30-13:35 UTC impulse (broke prior highs ~106.1 into 107+). First qualifying post-ChoCh FVGs (e.g. 15m 106.05-107.58 size 1.53; 5m 106.40-107.21 size 0.81) already left behind and mitigated. Latest 5m FVG 110.10-110.68 (size 0.58 ≥0.6×ATR≈0.34) also fully filled (price dipped to 109.38). Current price 110.93 at session highs with no pending unfilled ≥0.6×ATR FVG for realistic limit fill. WAIT."
+  "notes": "15m/5m bullish structure bias + ChoCh confirmed on 13:30-13:35 UTC impulse (broke ~106 into 107+ and continued to 111.6). First qualifying post-ChoCh FVGs (15m 106.05-107.58 size 1.53; 5m 106.40-107.21 size 0.81; later 5m 110.10-110.68 size 0.58) all already left behind and fully mitigated (price dipped to 109.38). Current price 111.48 at session highs with no pending unfilled ≥0.6×ATR FVG for realistic limit fill. WAIT."
 }
