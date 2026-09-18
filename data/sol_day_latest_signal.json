@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-18T18:20:24Z",
+  "ts_utc": "2026-09-18T19:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.7514,
+  "atr_14": 0.5864,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "15m bullish structure bias intact (HH/HL sequence after 13:30-13:45 UTC ChoCh/BOS impulse from ~105.9). First qualifying post-ChoCh FVG 106.05-107.52 (size 1.47 ≫ 0.6×ATR≈0.45) remains completely unfilled and far below current price ~112.48. No newer ≥0.6×ATR FVG after ChoCh that is unfilled and limit-fillable. Action WAIT."
+  "notes": "15m bullish structure bias intact (HH/HL after 13:30 UTC ChoCh/BOS impulse from ~105.5-106). First qualifying post-ChoCh FVG 106.05-107.58 (size 1.53 ≫ 0.6×ATR≈0.35) remains completely unfilled and far below current price ~112.67. No newer ≥0.6×ATR FVG after ChoCh that is unfilled and limit-fillable. Action WAIT."
 }
