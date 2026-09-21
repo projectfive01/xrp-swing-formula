@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-21T18:19:07Z",
+  "ts_utc": "2026-09-21T19:16:38Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.7057,
+  "atr_14": 0.5057,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "15m ATR(14)=0.71. Post 119.15 high: mild lower-high sequence but no clear bearish ChoCh + first FVG ≥0.6×ATR with realistic fill available. Recent 15m FVGs too small (<0.42). 5m bearish FVGs around 118 zone already tested/partially filled; price consolidating ~117.5. Structure bias mixed/range. Action WAIT."
+  "notes": "15m ATR(14)=0.51. Post 119.08 high: mild LH sequence but no clear bearish ChoCh + first FVG ≥0.6×ATR (0.30) with realistic fill. Recent 15m FVGs max size 0.19. Price consolidating ~117.5-117.7. Structure bias mixed/range. Action WAIT."
 }
