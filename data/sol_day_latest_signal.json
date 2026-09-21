@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-21T16:42:54Z",
+  "ts_utc": "2026-09-21T17:25:32Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.93,
+  "atr_14": 0.78,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "15m bullish structure bias intact (HH sequence to 119.08). Morning impulse FVGs (08:15–08:30) long filled/passed. No recent qualifying ≥0.6×ATR FVG after clear ChoCh that price has retraced into. Pullback from 119.08 to ~117.2 has not produced bearish ChoCh + FVG. Current price ~117.17. Action WAIT."
+  "notes": "15m bullish structure bias intact (HH sequence to 119.08). Morning impulse FVGs filled/passed. No recent qualifying ≥0.6×ATR FVG after clear ChoCh that price has retraced into. Pullback from 119.08 to ~117.4 has not produced bearish ChoCh + FVG. Current price ~117.42. Action WAIT."
 }
