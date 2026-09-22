@@ -1,6 +1,6 @@
 {
   "status": "READY",
-  "ts_utc": "2026-09-22T15:12:00Z",
+  "ts_utc": "2026-09-22T16:28:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "long",
@@ -12,8 +12,8 @@
   "stop": 115.70,
   "target_3r": 120.14,
   "target_4r": 121.25,
-  "atr_14": 0.464,
+  "atr_14": 0.62,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Bullish structure bias (HH/HL) + bull ChoCh at 08:30 UTC remains intact. First FVG after ChoCh 116.39-117.23 (size 0.84 ≥ 0.6×ATR≈0.28). Current price ~116.88 still inside FVG → realistic fill available. No opposite ChoCh observed. Structural stop 115.70. READY long."
+  "notes": "Bullish structure bias (HH/HL) + bull ChoCh at 08:30 UTC remains intact (no LL below ~115.76). First FVG after ChoCh 116.39-117.23 (size 0.84 ≥ 0.6×ATR). Current price ~116.88 still inside FVG → realistic fill available. Structural stop 115.70. READY long."
 }
