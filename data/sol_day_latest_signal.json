@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-22T19:19:10Z",
+  "ts_utc": "2026-09-22T20:19:04Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.491,
+  "atr_14": 0.455,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "No clear Structure Bias + ChoCh pair with first qualifying FVG (≥0.6×ATR≈0.294) that still has realistic fill available. Prior bull FVG 116.51-117.17 (08:45) filled. 14:30 drop to 115.93 created temporary LL then recovery to HH ~118.47; no bull FVG ≥0.29 after recovery ChoCh (only small/near gaps). Recent 5m FVGs small or already traversed. Price ~118.34. Action WAIT."
+  "notes": "No clear Structure Bias + ChoCh pair with first qualifying FVG (≥0.6×ATR≈0.273) that still has realistic fill available. Prior bull FVG 116.51-117.17 filled. Post-14:30 LL (115.93) recovery made HH ~118.71; no new bull FVG ≥0.27 after that ChoCh (only small gaps). 5m also lacks qualifying unfilled FVG. Price ~117.95 consolidating. Action WAIT."
 }
