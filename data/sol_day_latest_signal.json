@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-23T16:17:05Z",
+  "ts_utc": "2026-09-23T20:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 1.122,
+  "atr_14": 0.659,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "No clean Structure Bias + ChoCh pair with first post-ChoCh FVG ≥0.6×ATR(14)≈0.67 that currently offers realistic fill. Recent dump created large bear FVG but subsequent bounce (higher high ~115.82) and price action mixed; no fresh aligned setup. ATR14=1.12. Price ~114.90. WAIT."
+  "notes": "No clean Structure Bias + ChoCh pair with first post-ChoCh FVG \u22650.6\u00d7ATR(14) that currently offers realistic fill. 14:00 UTC 15m dump (117.05\u2192113.00) was a bear ChoCh with first bear FVG 114.75-116.44 (size 1.69 >> 0.6\u00d7ATR\u22480.40), but price already traded into that FVG (15:15 high 115.93) then left it; subsequent HLs from 113.00 and mixed range 113.96-114.92 erase a clean short bias. No bullish ChoCh (cap ~115.93/117.19 intact). Qualifying bull FVGs after dump are too small (0.21, 0.03). ATR14 Wilder=0.66. Price ~114.43. WAIT."
 }
