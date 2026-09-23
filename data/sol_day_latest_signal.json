@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-23T15:01:30Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-23T16:17:05Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 114.76,
-    "high": 116.44,
-    "mid": 115.60
-  },
-  "stop": 116.80,
-  "target_3r": 112.00,
-  "target_4r": 110.80,
-  "atr_14": 0.985,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 1.122,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Bearish structure bias (LL sequence) + ChoCh on breakdown through ~116.00 range floor into 14:00-14:15 impulse (117.03→113.02). First FVG after ChoCh: 15m 114.76-116.44 (size 1.68 >> 0.6×ATR≈0.591). Price ~115.30 inside FVG → realistic fill available. Structural stop above FVG/impulse origin ~116.80. No bullish ChoCh yet. READY short."
+  "notes": "No clean Structure Bias + ChoCh pair with first post-ChoCh FVG ≥0.6×ATR(14)≈0.67 that currently offers realistic fill. Recent dump created large bear FVG but subsequent bounce (higher high ~115.82) and price action mixed; no fresh aligned setup. ATR14=1.12. Price ~114.90. WAIT."
 }
