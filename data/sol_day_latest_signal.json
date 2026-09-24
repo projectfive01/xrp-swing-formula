@@ -1,15 +1,15 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-09-23T20:10:00Z",
+  "status": "READY",
+  "ts_utc": "2026-09-24T13:14:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.659,
-  "risk_usd_quarter_kelly": null,
+  "direction": "short",
+  "entry_zone": {"low": 114.44, "high": 115.23, "mid": 114.835},
+  "stop": 115.7,
+  "target_3r": 112.24,
+  "target_4r": 111.38,
+  "atr_14": 0.374,
+  "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "No clean Structure Bias + ChoCh pair with first post-ChoCh FVG \u22650.6\u00d7ATR(14) that currently offers realistic fill. 14:00 UTC 15m dump (117.05\u2192113.00) was a bear ChoCh with first bear FVG 114.75-116.44 (size 1.69 >> 0.6\u00d7ATR\u22480.40), but price already traded into that FVG (15:15 high 115.93) then left it; subsequent HLs from 113.00 and mixed range 113.96-114.92 erase a clean short bias. No bullish ChoCh (cap ~115.93/117.19 intact). Qualifying bull FVGs after dump are too small (0.21, 0.03). ATR14 Wilder=0.66. Price ~114.43. WAIT."
+  "notes": "Bearish structure bias (LH after 05:00 high 116.04, LL 09:30 112.61) + ChoCh on 08:15-09:30 15m breakdown through ~114.4 into 112.61. First qualifying FVG after ChoCh: 08:30 114.44-115.23 (size 0.79 >> 0.6×ATR≈0.224). Price ~114.26 just under FVG low — limit-fillable on retrace into zone. No bullish ChoCh (115.64/116.04 intact). Structural stop above 07:45 high 115.64. READY short."
 }
