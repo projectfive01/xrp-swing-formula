@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-24T15:11:00Z",
+  "ts_utc": "2026-09-24T16:03:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.581,
+  "atr_14": 0.801,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~114.90. 14:15 15m printed HH 116.39 through 05:00 116.04 (bull ChoCh) then first bull FVG 115.22-115.82 was fully filled by 14:45 low 114.14. No subsequent LL / bear ChoCh (114.14 still above 13:00 113.83 and 09:30 112.61). New 15:00 bear FVG 114.98-115.82 has no matching same-direction ChoCh. Structure mixed. Hard gates not jointly met → WAIT."
+  "notes": "Price ~116.13. Bull structure (HH 15:30 116.61 > 14:15 116.49; HL 14:45 114.12 > 13:00 113.83) + bull ChoCh at 14:15 through 05:00 116.13 remains intact. First bull FVG after ChoCh 115.21-115.78 already fully filled at 14:45 low 114.12; price now above zone, not limit-fillable. Later bull FVG 115.09-115.58 is not first. No bear ChoCh (114.12 still above 13:00 113.83 / 09:30 112.51). Hard gates not jointly met with a live fill → WAIT."
 }
