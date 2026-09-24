@@ -1,15 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-24T13:14:00Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-24T14:13:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {"low": 114.44, "high": 115.23, "mid": 114.835},
-  "stop": 115.7,
-  "target_3r": 112.24,
-  "target_4r": 111.38,
-  "atr_14": 0.374,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.411,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Bearish structure bias (LH after 05:00 high 116.04, LL 09:30 112.61) + ChoCh on 08:15-09:30 15m breakdown through ~114.4 into 112.61. First qualifying FVG after ChoCh: 08:30 114.44-115.23 (size 0.79 >> 0.6×ATR≈0.224). Price ~114.26 just under FVG low — limit-fillable on retrace into zone. No bullish ChoCh (115.64/116.04 intact). Structural stop above 07:45 high 115.64. READY short."
+  "notes": "Price ~114.91. Prior bearish ChoCh (08:15-09:30 into 112.61) and first FVG 114.44-115.23 already fully traversed (13:30 high 115.37). Current structure mixed: LH vs 05:00 116.04 but HL after 09:30 112.61. No new same-direction ChoCh + first FVG ≥ 0.6×ATR(14)=0.247 with a fresh fill. Hard gates not jointly met → WAIT."
 }
