@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-25T17:10:44Z",
+  "ts_utc": "2026-09-25T18:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.983,
+  "atr_14": 0.949,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~121.48 (Binance.US 15m 17:00Z; intl Binance API geo-blocked). ATR(14)=0.983; 0.6xATR=0.590. Session high 11:00 122.17, session low 07:00 115.90. Bull bias intact vs 14:00 HL 118.35; no clean opposite ChoCh (16:30 121.85 still below 122.17). Last bull ChoCh ~10:15-11:00 through ~118.95. First size-qualifying FVG after that ChoCh is 11:15 119.50-120.34 (0.84) — spent. Later 16:15 bull FVG 120.05-120.87 (0.82) qualifies on size but is not first after ChoCh and price is already above the zone. Hard gates not jointly met with a live first-FVG fill -> WAIT."
+  "notes": "Spot ~121.26-121.42 (Binance vision 15m 18:00Z). ATR(14)=0.949; 0.6xATR=0.570. Session high 11:00 122.33, 14:00 HL 118.27. Bull bias intact; no opposite ChoCh (recent swing lows 15:45 119.03 / 17:15 120.35 held). Last bull ChoCh ~10:15-11:00 through ~119.0 into 122.33. First size-qualifying FVG after that ChoCh is 11:00 119.57-120.33 (0.76) — spent (price traded to 118.27). Later 16:00 bull FVG 120.14-120.79 (0.65) qualifies on size but is not first after ChoCh and already filled (17:15/17:30 lows 120.35/120.26). Hard gates not jointly met with a live first-FVG fill -> WAIT."
 }
