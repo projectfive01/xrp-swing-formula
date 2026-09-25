@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-25T13:18:00Z",
+  "ts_utc": "2026-09-25T14:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.772,
+  "atr_14": 1.22,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~120.50 (Binance.US 15m). Bull structure intact (HH 11:00 122.17 > 09:30 118.83; HL 12:15 118.71 > 07:00 115.90). Last bull ChoCh 10:15 through 02:00 high 118.36. First FVG after ChoCh 10:30 118.35-118.70 size 0.35 < 0.6xATR 0.463 — fails size gate and already left. Later 11:15 FVG 119.50-120.34 is not first. No bear ChoCh (price still above 12:15 HL 118.71). Hard gates not jointly met with a live first-FVG fill -> WAIT."
+  "notes": "Spot ~119.02 (Binance Vision 15m 14:00Z forming). ATR(14)=1.22; 0.6xATR=0.732. Bull structure still intact on close: HH 11:00 122.33 > 09:30 118.90; last HL 12:15 118.62 > 07:00 115.86. Wicks 13:45/14:00 probed 118.50/118.27 through 118.62 but no close below HL so no bear ChoCh. Last bull ChoCh 10:15 through 02:15 high 118.44. First FVG after that ChoCh is 10:30 118.38-118.67 size 0.29 < 0.6xATR and already left. 11:15 FVG 119.57-120.33 size 0.76 qualifies on size but is not first after ChoCh and is already traded through. Hard gates not jointly met with a live first-FVG fill -> WAIT."
 }
