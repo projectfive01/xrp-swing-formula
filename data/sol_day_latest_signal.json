@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-24T20:08:00Z",
+  "ts_utc": "2026-09-25T13:18:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.439,
+  "atr_14": 0.772,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Price ~117.24 (Binance.US 15m). Bull structure intact (HH 16:30 117.74 > 15:30 116.57; HL 18:00 116.31 > 14:45 114.14). Last bull ChoCh 14:15 through 05:00 high 116.04. First qualifying bull FVG after ChoCh 14:30 115.22-115.82 (size 0.60 >= 0.6xATR 0.263) already left; price not in zone. Next qual FVG 15:15 114.98-115.66 also left; 16:15 116.39-116.90 is not first and price is above it. No bear ChoCh (116.31 still above 18:00 HL). Hard gates not jointly met with a live first-FVG fill -> WAIT."
+  "notes": "Price ~120.50 (Binance.US 15m). Bull structure intact (HH 11:00 122.17 > 09:30 118.83; HL 12:15 118.71 > 07:00 115.90). Last bull ChoCh 10:15 through 02:00 high 118.36. First FVG after ChoCh 10:30 118.35-118.70 size 0.35 < 0.6xATR 0.463 — fails size gate and already left. Later 11:15 FVG 119.50-120.34 is not first. No bear ChoCh (price still above 12:15 HL 118.71). Hard gates not jointly met with a live first-FVG fill -> WAIT."
 }
