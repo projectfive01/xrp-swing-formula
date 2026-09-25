@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-25T18:10:00Z",
+  "ts_utc": "2026-09-25T19:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.949,
+  "atr_14": 0.854,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~121.26-121.42 (Binance vision 15m 18:00Z). ATR(14)=0.949; 0.6xATR=0.570. Session high 11:00 122.33, 14:00 HL 118.27. Bull bias intact; no opposite ChoCh (recent swing lows 15:45 119.03 / 17:15 120.35 held). Last bull ChoCh ~10:15-11:00 through ~119.0 into 122.33. First size-qualifying FVG after that ChoCh is 11:00 119.57-120.33 (0.76) — spent (price traded to 118.27). Later 16:00 bull FVG 120.14-120.79 (0.65) qualifies on size but is not first after ChoCh and already filled (17:15/17:30 lows 120.35/120.26). Hard gates not jointly met with a live first-FVG fill -> WAIT."
+  "notes": "Spot 121.87 (Binance Vision 15m 19:00Z). ATR(14)=0.854; 0.6xATR=0.512. Structure bias bull: HH 18:15 122.78 > 11:00 122.33; swing lows 14:00 118.27 / 15:45 119.03 / 17:30 120.26 held — no bearish ChoCh. Last bull ChoCh ~10:15-11:00 through ~119 into 122.33. First size-qualifying FVG after that ChoCh is 11:00 119.57-120.33 (0.76) — spent (traded to 118.27). Later 16:00 120.14-120.79 (0.65) filled; 18:00 bull FVG 121.05-121.68 (0.63) qualifies on size but is not first after ChoCh and price 121.87 is above the zone (19:00 low 121.72, no fill). Hard gates not jointly met with a live first-FVG fill -> WAIT."
 }
