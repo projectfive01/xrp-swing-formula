@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-28T19:05:00Z",
+  "ts_utc": "2026-09-28T20:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.778,
+  "atr_14": 0.588,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~119.38 (Binance vision 15m 19:00). ATR(14,15m)=0.778; 0.6xATR=0.467. Last bear ChoCh 14:45 LL 117.36 below 09:45 117.58. Last bull ChoCh 17:00-17:15 highs 120.52/120.73 broke 13:30 120.39. First post-bull-ChoCh FVG 17:15 bull 119.37-119.57 (0.20) < 0.467. 16:30 bull FVG 118.89-119.07 (0.18) also undersize. Qualifying 12:15 bull FVG 118.73-119.31 (0.58) is pre-ChoCh. No post-ChoCh bear FVG >= 0.467. No realistic fill of a qualifying first FVG. Hard requirements not met. WAIT."
+  "notes": "Spot ~118.45 (Binance.US 15m 20:00). ATR(14,15m)=0.588; 0.6xATR=0.353. Structure leans bear (LL 14:45 117.39 after 09:45 117.63; LH 18:45 120.03 after 17:15 120.67) but no bear ChoCh close below last swing low 117.39. Last bull impulse 12:00 through AM highs; first post-ChoCh bull FVG 12:15 118.71-119.41 already traded through (price now below). Later bull FVG 17:15 119.32-119.62 size 0.30 < 0.353. Bear FVGs 19:15 119.16-119.90 (0.74) and 19:45 118.48-118.89 (0.41) exist but lack a same-direction ChoCh. No qualifying first FVG after ChoCh with fill. WAIT."
 }
