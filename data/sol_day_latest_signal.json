@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-28T14:10:00Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-28T15:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "long",
-  "entry_zone": {
-    "low": 118.73,
-    "high": 119.31,
-    "mid": 119.02
-  },
-  "stop": 118.40,
-  "target_3r": 120.88,
-  "target_4r": 121.50,
-  "atr_14": 0.572,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.589,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~119.59 (Binance vision 15m). ATR(14,15m)=0.572; 0.6xATR=0.343. Overnight/AM bear (high 123.45 → LL 09:45 117.58). Bull ChoCh on 12:00 impulse (H 119.97 / C 119.54) through 06:00 swing high 119.48. First FVG after ChoCh: 12:00 118.73-119.31 (size 0.58 ≥ 0.343). 14:00 low 119.27 inside FVG — fill available. Structural stop under 11:45 low 118.39. No opposite ChoCh. READY long."
+  "notes": "Spot 118.30 (Binance.US 15m). ATR(14,15m)=0.589; 0.6xATR=0.354. Prior bull ChoCh (12:00 through ~119.44) + FVG 118.71-119.41 is invalidated: 14:45 printed LL 117.39 below 09:45 low 117.63 (bear ChoCh). First FVG after that bear ChoCh does not exist at >=0.6xATR (14:00/14:15 bear gaps 0.15/0.23). Price is not in a valid post-ChoCh FVG. WAIT."
 }
