@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-28T16:05:00Z",
+  "ts_utc": "2026-09-28T17:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.563,
+  "atr_14": 0.761,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~118.73 (Binance.US 15m). ATR(14,15m)=0.563; 0.6xATR=0.338. Bear ChoCh remains in force: 14:45 printed LL 117.39 below 09:45 low 117.63. No opposite bull ChoCh (14:00 high 119.72 / 13:30 high 120.35 intact). First FVG after that ChoCh is 15:45 bull gap 118.17-118.39 (size 0.22 < 0.338). Pre-ChoCh bear gaps 14:15/14:30 are 0.15/0.23 and also fail size. Hard requirements not met. WAIT."
+  "notes": "Spot ~118.87 (Binance.US 15m). ATR(14,15m)=0.761; 0.6xATR=0.456. Bear ChoCh still in force from 14:45 LL 117.39 below 09:45 117.63. 16:15 high 120.35 only equaled 13:30 swing high 120.35 — no bull ChoCh. Post-ChoCh FVGs: 15:30 bull 118.17-118.39 (0.22), 16:15 bull 118.83-119.27 (0.44), 16:45 bear 119.10-119.27 (0.17) all < 0.456. Hard requirements not met. WAIT."
 }
