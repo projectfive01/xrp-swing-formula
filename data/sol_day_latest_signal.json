@@ -1,15 +1,19 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-09-25T20:05:00Z",
+  "status": "READY",
+  "ts_utc": "2026-09-28T13:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.728,
+  "direction": "long",
+  "entry_zone": {
+    "low": 118.75,
+    "high": 119.32,
+    "mid": 119.035
+  },
+  "stop": 118.40,
+  "target_3r": 120.94,
+  "target_4r": 121.57,
+  "atr_14": 0.547,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 121.74 (Binance Vision 15m 20:00Z close; last 5m 121.75). ATR(14,15m)=0.728; 0.6xATR=0.437. Structure bias bull: HH 18:15 122.78 still intact vs 11:00 122.33. Swing lows 14:00 118.27 / 15:45 119.03 / 17:30 120.26 held; 19:40 5m low 121.46 is a higher low — no bearish ChoCh. Last bull ChoCh ~10:15-11:00 through ~119 into 122.33. First size-qualifying FVG after that ChoCh remains 11:00 119.57-120.33 — spent. Later 16:00 and 18:00 FVGs are not first-after-ChoCh. 19:40 wick into 18:00 FVG (121.05-121.68) does not satisfy the first-FVG rule. Hard gates not jointly met with a live first-FVG fill -> WAIT."
+  "notes": "Spot ~119.55 (OKX/Binance.US 15m; Binance REST geo-blocked). ATR(14,15m)=0.547; 0.6xATR=0.328. Overnight/AM structure was bear (SH 00:15 122.94 → LL 09:45 117.59). Bull ChoCh on 12:00 impulse (H 119.97 / C 119.54) through 06:00-07:00 swing highs 119.48/119.16. First FVG after that ChoCh: 12:15 118.75-119.32 (size 0.57 ≥ 0.328). Price 119.55 just above FVG high — limit-fillable into zone. Structural stop under 11:45 low 118.41 / FVG. No opposite ChoCh after 12:00. READY long."
 }
