@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-29T16:05:00Z",
+  "ts_utc": "2026-09-29T17:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.67,
+  "atr_14": 0.565,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~118.33 (Binance.US 15m 16:00). ATR(14,15m)=0.67; 0.6xATR=0.402. Prior bull HH 13:45 121.61 / HL 10:30 119.22 invalidated. Bear ChoCh on 15:00-15:15 impulse through 119.22 then 118.95 into LL 118.00. First qualifying FVG after ChoCh: 15:15 bear 119.55-120.22 (size 0.67 >= 0.402). Price 118.33 is ~1.22 below FVG low with post-impulse highs only 118.81 — no retrace into first FVG, not limit-fillable at current level. Later bear FVG 15:30 118.71-119.22 (size 0.51) was tagged at 118.81 but is not the first FVG. No new bull ChoCh. WAIT."
+  "notes": "Spot ~118.23 (Binance.US 15m 17:00). ATR(14,15m)=0.565; 0.6xATR=0.339. Prior bull HH 13:45 121.61 / HL 10:30 119.22 invalidated. Bear structure + ChoCh on 15:00-15:15 impulse through 119.22 into LL 118.00 then 16:45 LL 117.58. First qualifying FVG after ChoCh: 15:15 bear 119.55-120.22 (size 0.67 >= 0.339). Price 118.23 is ~1.32 below FVG low; post-impulse bounce high only 118.81 — no retrace into first FVG, not limit-fillable. Later bear FVG 15:30 118.71-119.22 (size 0.51) tagged at 118.81 but is not the first FVG. No new bull ChoCh (118.66/118.81 well below 121.61). WAIT."
 }
