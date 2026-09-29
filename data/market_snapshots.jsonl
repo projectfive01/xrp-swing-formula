@@ -1,3 +1,4 @@
 SEE_FILE
 {"ts_utc": "2026-09-29T13:13:00Z", "source": "binance.us+kraken", "xrp_usdt": 1.5494, "xrp_24h_pct": 1.968, "sol_usdt": 121.06, "sol_24h_pct": 1.246, "kraken_xrp_usd": 1.54542, "kraken_sol_usd": 120.98, "local_high": 1.695, "zone": [1.28, 1.35], "in_zone_now": false}
 {"ts_utc": "2026-09-29T15:10:00Z", "source": "binance.vision+binance.us+kraken", "xrp_usdt": 1.5331, "xrp_24h_pct": 3.072, "sol_usdt": 119.6, "sol_24h_pct": 1.116, "kraken_xrp_usd": 1.53378, "kraken_sol_usd": 119.6, "local_high": 1.695, "zone": [1.28, 1.35], "in_zone_now": false}
+{"ts_utc": "2026-09-29T16:08:00Z", "source": "binance.vision+binance.us+kraken", "xrp_usdt": 1.5206, "xrp_24h_pct": 1.488, "sol_usdt": 118.25, "sol_24h_pct": -0.379, "kraken_xrp_usd": 1.5199, "kraken_sol_usd": 118.24, "local_high": 1.695, "zone": [1.28, 1.35], "in_zone_now": false}
