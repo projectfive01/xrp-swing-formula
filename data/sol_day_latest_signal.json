@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-30T16:06:00Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-30T17:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 119.15,
-    "high": 120.27,
-    "mid": 119.71
-  },
-  "stop": 120.55,
-  "target_3r": 117.19,
-  "target_4r": 116.35,
-  "atr_14": 0.99,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.715,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~119.62 (Binance vision / Binance.US). ATR(14,15m)=0.990; 0.6xATR=0.594. ATR(14,5m)=0.384. AM bull to 13:30 H=122.83 invalidated: 14:15 15m impulse (120.50→118.63) broke 11:00-12:15 HLs. Structure bias short + bear ChoCh aligned. First FVG after ChoCh: 15m 14:00/14:15/14:30 119.15-120.27 (size 1.12 >= 0.594). Price 119.62 inside FVG — fill available. Post-dump bounce H 119.63 has not broken 14:15 H 120.51. Structural stop 120.55. No bull ChoCh. READY short."
+  "notes": "Spot ~120.38 (Binance vision 120.36 / Binance.US 120.39). ATR(14,15m)=0.715; 0.6xATR=0.429. ATR(14,5m)=0.342. Last ChoCh remains bearish (14:15 impulse 120.50\u2192118.63 through AM HLs; session high 13:30 122.83). First FVG after that ChoCh 119.15-120.27 is fully traversed; price 120.38-120.52 is above FVG high and at the 14:15 swing high 120.51 / prior short stop 120.55. No bull ChoCh yet (no 15m close through 120.51). Bounce is HL sequence from 15:15 low 118.02 but hard reqs + realistic remaining FVG fill not met. WAIT."
 }
