@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-09-30T13:08:00Z",
+  "ts_utc": "2026-09-30T14:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.583,
+  "atr_14": 0.826,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~122.32 (Binance.US). ATR(14,15m)=0.583; 0.6xATR=0.350. ATR(14,5m)=0.345. AM low 08:30 117.86 then HH/HL into 12:30 impulse (C 121.42 through 10:45 SH 119.89) = bull structure + bull ChoCh. First FVG after ChoCh: 15m 12:45 119.94-121.25 (size 1.31 >= 0.350). Price 122.32 is ~1.07 above FVG high — no retrace / not at a realistic limit-fill level. Prior 5m short FVG 118.93-119.20 invalidated. WAIT."
+  "notes": "Spot ~121.16 (Binance.US proxy; Binance.com geo-blocked). ATR(14,15m)=0.826; 0.6xATR=0.496. ATR(14,5m)=0.567. Structure bias still bull (AM 08:30 low 117.86 then HH/HL; 13:30 wick L=119.90 did not break 11:00 119.23). Last bull ChoCh remains 12:30 impulse through 10:45 SH 119.89. First FVG after that ChoCh: 15m 119.94-121.25 (size 1.31 >= 0.496) was fully filled/pierced on 13:30 L=119.90. No new same-direction ChoCh + first FVG >= 0.6xATR with a realistic unfilled limit. 5m bear FVG 121.16-122.02 exists but 15m bias is still bull (mismatch). WAIT."
 }
