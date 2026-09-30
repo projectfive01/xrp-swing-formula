@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-09-29T20:17:00Z",
+  "status": "WAIT",
+  "ts_utc": "2026-09-30T13:08:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 118.93,
-    "high": 119.20,
-    "mid": 119.065
-  },
-  "stop": 119.53,
-  "target_3r": 117.67,
-  "target_4r": 117.205,
-  "atr_14": 0.246,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.583,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 119.06 (Binance vision). Working TF 5m. ATR(14,5m)=0.246; 0.6xATR=0.147. ATR(14,15m)=0.442. 15m mixed (HH 13:45 121.69 vs LL 17:45 117.36 then bounce). 5m structure bias short after 19:05 HH 119.53 and LH/LL sequence. Bearish ChoCh 19:40 through ~119.18. First FVG after ChoCh: 118.93-119.20 (size 0.27 >= 0.147). Price 119.06 inside FVG — fill available. Structural stop above 19:05 high 119.53. READY short."
+  "notes": "Spot ~122.32 (Binance.US). ATR(14,15m)=0.583; 0.6xATR=0.350. ATR(14,5m)=0.345. AM low 08:30 117.86 then HH/HL into 12:30 impulse (C 121.42 through 10:45 SH 119.89) = bull structure + bull ChoCh. First FVG after ChoCh: 15m 12:45 119.94-121.25 (size 1.31 >= 0.350). Price 122.32 is ~1.07 above FVG high — no retrace / not at a realistic limit-fill level. Prior 5m short FVG 118.93-119.20 invalidated. WAIT."
 }
