@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-01T13:09:00Z",
+  "ts_utc": "2026-10-01T15:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.315,
+  "atr_14": 0.419,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 117.09 (Binance.US; Binance.com geo-blocked). 15m ATR(14) Wilder=0.315; 0.6xATR=0.189. Structure bias still bearish: 09-30 17:00 swing high 120.57 unbreached; overnight bounce stalled at 10-01 06:30 high 119.59. 07:15 displacement 119.04->117.36 broke the 02:15 HL 117.85 (bearish ChoCh vs the overnight leg). First FVG after that ChoCh is bearish 118.10-119.16 (size 1.06 >= 0.189). Post-impulse high only 118.18 (shallow tag of the FVG low) then price left the zone. Spot 117.09 is below the zone; no remaining realistic limit fill. No bull ChoCh (no 15m close through 119.59 / 120.57). Later FVGs are not first-after-ChoCh or are already through. Hard reqs + live fill not met. WAIT."
+  "notes": "Spot 117.23 (Binance.US; Binance.com geo-blocked). 15m ATR(14) Wilder=0.419 on last closed bar; 0.6xATR=0.251. Structure bias bearish: 09-30 17:00 swing high 120.57 unbreached; LH sequence 119.59 / 118.18 / 118.17; LL 13:00 116.80. Prior 07:15 ChoCh first qualifying FVG remains 118.10-119.16 (size 1.06); only shallow tags to 118.18/118.17, spot well below — not limit-fillable. Fresh bearish ChoCh: 13:00 close through bounce HL 10:15 117.18. First size-valid FVG after that ChoCh is 14:45 117.47-117.79 (size 0.32 >= 0.251). 15:00 high 117.66 tagged the zone then left; spot 117.23 is below the zone with no remaining realistic limit fill. No bull ChoCh (no 15m close through 118.18 / 119.59 / 120.57). Hard reqs + live fill not met. WAIT."
 }
