@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-10-01T18:08:25Z",
+  "status": "WAIT",
+  "ts_utc": "2026-10-01T20:05:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "long",
-  "entry_zone": {
-    "low": 117.78,
-    "high": 118.26,
-    "mid": 118.02
-  },
-  "stop": 116.85,
-  "target_3r": 121.53,
-  "target_4r": 122.7,
-  "atr_14": 0.611,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.579,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 118.17 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m. ATR(14,15m) Wilder=0.611; 0.6xATR=0.367. ATR(14,5m)=0.354; 0.6xATR=0.212. Prior READY short invalidated: 17:15 close 118.69 and 17:30 high 119.16 took structural stop 118.28 / 14:30 swing high 118.23. Bull ChoCh: 17:15 15m close 118.69 through LH cluster 117.91/118.03/118.23 (and 09:30 118.25). External 06:30 high 119.63 not taken; bias flipped with the ChoCh (same-direction long), matching prior-signal ChoCh definition. First size-valid FVG after ChoCh: 15m 17:30 bull 117.78-118.26 (size 0.48 >= 0.367). 17:15 bull FVG 117.54-117.74 size 0.20 failed the gate. Spot 118.17 inside the zone — fill available. Structural stop 116.85 under 16:55 swing low 116.91. 1R from mid=1.17; size ~38.5 SOL at $45 risk. No fresh bear ChoCh (no close through 116.91/118.26). READY long."
+  "notes": "Spot 118.46 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.579; 0.6xATR=0.347. ATR(14,5m)=0.304; 0.6xATR=0.182. Prior READY long FVG 117.78-118.26 mitigated: 19:25 5m low 117.58 traded through the zone; stop 116.85 not hit. Spot 118.46 is above that zone — no live fill. Internal break: 19:15 15m close 117.63 through HL cluster 118.11/118.14. First bear FVGs after that break fail size (15m 19:30 118.07-118.23 size 0.16 < 0.347; 5m gaps ~0.12 < 0.182). No fresh bull ChoCh after 117.58. External swing low 116.76/116.91 unbroken. Hard requirements + fill not both met. WAIT."
 }
