@@ -1,19 +1,19 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-01T17:13:00Z",
+  "ts_utc": "2026-10-01T18:08:25Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
+  "direction": "long",
   "entry_zone": {
-    "low": 117.32,
-    "high": 117.59,
-    "mid": 117.455
+    "low": 117.78,
+    "high": 118.26,
+    "mid": 118.02
   },
-  "stop": 118.28,
-  "target_3r": 114.98,
-  "target_4r": 114.16,
-  "atr_14": 0.357,
+  "stop": 116.85,
+  "target_3r": 121.53,
+  "target_4r": 122.7,
+  "atr_14": 0.611,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 117.68 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 5m. ATR(14,5m) Wilder=0.357; 0.6xATR=0.214. ATR(14,15m)=0.561; 0.6xATR=0.337. Structure bias bearish: 09-30 17:00 swing high 120.59 unbreached; LH sequence 119.63 / 118.25 / 118.23 / 117.91. Bearish ChoCh: 13:00 15m close 116.89 through 10:00 HL 117.03. No 15m bear FVG after ChoCh >= 0.337. First size-valid bear FVG is 5m 14:50 117.32-117.59 (size 0.27 >= 0.214). Spot 117.68 is 0.09 above the zone — limit-fillable on retrace. Structural stop 118.28 above 14:30 swing high 118.23 (16:30 wick 118.03 did not take it). 1R from mid=0.825; size ~54.5 SOL at $45 risk. No bull ChoCh (no close through 117.91/118.03/118.23). READY short."
+  "notes": "Spot 118.17 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m. ATR(14,15m) Wilder=0.611; 0.6xATR=0.367. ATR(14,5m)=0.354; 0.6xATR=0.212. Prior READY short invalidated: 17:15 close 118.69 and 17:30 high 119.16 took structural stop 118.28 / 14:30 swing high 118.23. Bull ChoCh: 17:15 15m close 118.69 through LH cluster 117.91/118.03/118.23 (and 09:30 118.25). External 06:30 high 119.63 not taken; bias flipped with the ChoCh (same-direction long), matching prior-signal ChoCh definition. First size-valid FVG after ChoCh: 15m 17:30 bull 117.78-118.26 (size 0.48 >= 0.367). 17:15 bull FVG 117.54-117.74 size 0.20 failed the gate. Spot 118.17 inside the zone — fill available. Structural stop 116.85 under 16:55 swing low 116.91. 1R from mid=1.17; size ~38.5 SOL at $45 risk. No fresh bear ChoCh (no close through 116.91/118.26). READY long."
 }
