@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-01T20:05:30Z",
+  "ts_utc": "2026-10-02T13:12:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.579,
+  "atr_14": 0.575,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 118.46 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.579; 0.6xATR=0.347. ATR(14,5m)=0.304; 0.6xATR=0.182. Prior READY long FVG 117.78-118.26 mitigated: 19:25 5m low 117.58 traded through the zone; stop 116.85 not hit. Spot 118.46 is above that zone — no live fill. Internal break: 19:15 15m close 117.63 through HL cluster 118.11/118.14. First bear FVGs after that break fail size (15m 19:30 118.07-118.23 size 0.16 < 0.347; 5m gaps ~0.12 < 0.182). No fresh bull ChoCh after 117.58. External swing low 116.76/116.91 unbroken. Hard requirements + fill not both met. WAIT."
+  "notes": "Spot 122.50 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.575; 0.6xATR=0.345. ATR(14,5m)=0.358; 0.6xATR=0.215. 15m structure bias bull (HH 123.21>122.47, HL 121.61>121.35). Latest aligned bull ChoCh 08:15 UTC close 122.33 through 122.11. First FVGs after that ChoCh fail size (08:15 121.88-122.01 size 0.13; 08:30 122.14-122.21 size 0.07; both < 0.345). Prior qualifying bull FVGs mitigated and not fillable (02:00 118.87-119.37; 05:00 122.62-123.10 traded through to 121.04). 5m last swings LH/LL, latest bull ChoCh 12:30 broke 122.15, first FVG 12:55 size 0.02 < 0.215. Hard requirements + fill not both met. WAIT."
 }
