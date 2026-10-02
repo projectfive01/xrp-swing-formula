@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-02T15:09:44Z",
+  "ts_utc": "2026-10-02T17:07:18Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.714,
+  "atr_14": 0.647,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.14 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.714; 0.6xATR=0.428. ATR(14,5m)=0.472; 0.6xATR=0.283. Confirmed 15m swings still HH/HL (123.37>123.21, 121.61>121.35) so bias not yet bearish. Bear ChoCh 14:30 UTC close 121.42 through HL 121.61. First FVG after it: 14:45 short 121.60-121.63 size 0.03; forming 15:00 short 120.75-121.05 size 0.30, both < 0.428. 5m bias neutral (HH 123.37>122.97, LL 121.05<122.23). 5m bear ChoCh 14:50 close 120.43 through 121.05; first FVG 14:55 short 120.73-121.33 size 0.60 >= 0.283 but structure not same-direction and price 120.14 is below the zone (not a retrace fill). Hard requirements + realistic fill not both met. WAIT."
+  "notes": "Spot 119.92 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.647; 0.6xATR=0.388. ATR(14,5m)=0.354; 0.6xATR=0.212. 15m bias short (LH 123.37<123.76, LL 119.67<121.61) aligned with bear ChoCh 14:30 close 121.42 through HL 121.61. First FVGs after ChoCh: 14:45 short 121.60-121.63 size 0.03; 15:00 short 120.75-121.05 size 0.30; both < 0.388. 5m bias short (LH sequence, LL 16:40 119.47). Bear ChoCh 14:50 close 120.43 through 121.05; first FVG 14:55 short 120.73-121.33 size 0.60 >= 0.212, but spot 119.92 is ~0.81 below the zone (not a retrace / not limit-fillable). No later size-valid FVG. No bull ChoCh (16:15 high 120.44 intact). Hard requirements + realistic fill not both met. WAIT."
 }
