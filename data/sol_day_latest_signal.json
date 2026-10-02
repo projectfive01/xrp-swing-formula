@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-02T19:08:00Z",
+  "ts_utc": "2026-10-02T20:06:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.71,
+  "atr_14": 0.634,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 118.46 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.710; 0.6xATR=0.426. ATR(14,5m)=0.423; 0.6xATR=0.254. 15m bias short (LH 120.44<123.37, LL 117.11<119.22<119.67) aligned with bear ChoCh 14:30 close 121.42 through HL 121.61. First size-qualified FVG after that ChoCh is 18:30 short 119.01-119.57 size 0.56 >= 0.426; spot 118.46 is ~0.55 below the zone (not a retrace / not limit-fillable). Later 18:45 short FVG 118.19-118.82 contains spot but is not the first qualifying FVG. 5m bias short (LH 119.87<120.17<120.44<123.37, LL 117.11<119.22). Bear ChoCh still the 14:50 break of 121.05; first qualifying FVG remains 14:55 short 120.73-121.33, unfilled and far above. 5m 18:40 short FVG 118.00-118.60 size 0.60 contains spot but is a continuation gap, not the first FVG after ChoCh. No bull ChoCh (18:00 high 119.87 intact). Hard requirements + realistic fill of the first qualifying FVG not both met. WAIT."
+  "notes": "Spot 118.12 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.634; 0.6xATR=0.380. ATR(14,5m)=0.330; 0.6xATR=0.198. 15m bias short (LH 119.87<120.17<120.44<123.37, LL 117.11<119.22) aligned with bear ChoCh 14:30 close 121.42 through HL 121.61. First size-qualified FVG after that ChoCh remains 18:30 short 119.01-119.57 size 0.56 >= 0.380; post-gap high 118.51, spot 118.12 is ~0.89 below the zone (unfilled, not limit-fillable). Later 18:45 short FVG 118.19-118.82 does not contain spot and is not first. 5m bias short; first qualifying FVG still 14:55 short 120.73-121.33, unfilled and far above. 5m 18:40 short FVG 118.00-118.60 contains spot but is a continuation gap, not the first FVG after ChoCh. No bull ChoCh (19:45 high 118.17 / 18:00 high 119.87 intact). Hard requirements + realistic fill of the first qualifying FVG not both met. WAIT."
 }
