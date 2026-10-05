@@ -1,15 +1,15 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-10-05T16:10:17Z",
+  "status": "READY",
+  "ts_utc": "2026-10-05T18:07:37Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.448,
-  "risk_usd_quarter_kelly": null,
+  "direction": "short",
+  "entry_zone": {"low": 119.77, "high": 120.25, "mid": 120.01},
+  "stop": 120.40,
+  "target_3r": 118.84,
+  "target_4r": 118.45,
+  "atr_14": 0.415,
+  "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 119.52 (data-api.binance.vision). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.448; 0.6xATR=0.269. ATR(14,5m)=0.293; 0.6xATR=0.176. Structure bias bearish: LH 10-04 22:15 122.29 then 08:00 122.08, then 14:15 121.30. Bearish ChoCh: 14:30 15m broke 13:30 swing low 120.22 and 05:15 structural low 120.00 (low 119.34). First size-qualified bear FVG after ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48 (>=0.269). Post-formation 15m highs 119.74/119.76/119.73/119.55/119.53; session low 119.13. Spot 119.52 has not entered the zone. 5m first post-break FVG 14:30 119.70-120.25 was left below; no current limit fill. No bullish ChoCh (5m swing high 15:25 119.76 unbroken). Hard requirements met on direction, realistic fill not available. WAIT."
+  "notes": "Spot 120.02 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder=0.415; 0.6xATR=0.249. Structure bias bearish: LH 10-04 22:15 122.29, 08:00 122.08, 14:15 121.30; LL 16:15 118.93. Bearish ChoCh: 14:30 15m broke 13:30 swing low 120.22 and 05:15 structural low 120.00 (low 119.34). First FVG after ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48 (>=0.249). Concurrent ChoCh-bar gap 120.26-120.58 not counted as after. 17:45-18:00 highs 120.04/120.23 traded into zone; spot 120.02 inside — fill available. Structural stop 120.40 beyond FVG high. 1R from mid=0.39. Micro break of 5m 15:25 high 119.76 does not flip 15m LH/LL. READY short."
 }
