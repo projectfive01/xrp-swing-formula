@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-02T20:06:30Z",
+  "ts_utc": "2026-10-05T13:15:24Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.634,
+  "atr_14": 0.336,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 118.12 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.634; 0.6xATR=0.380. ATR(14,5m)=0.330; 0.6xATR=0.198. 15m bias short (LH 119.87<120.17<120.44<123.37, LL 117.11<119.22) aligned with bear ChoCh 14:30 close 121.42 through HL 121.61. First size-qualified FVG after that ChoCh remains 18:30 short 119.01-119.57 size 0.56 >= 0.380; post-gap high 118.51, spot 118.12 is ~0.89 below the zone (unfilled, not limit-fillable). Later 18:45 short FVG 118.19-118.82 does not contain spot and is not first. 5m bias short; first qualifying FVG still 14:55 short 120.73-121.33, unfilled and far above. 5m 18:40 short FVG 118.00-118.60 contains spot but is a continuation gap, not the first FVG after ChoCh. No bull ChoCh (19:45 high 118.17 / 18:00 high 119.87 intact). Hard requirements + realistic fill of the first qualifying FVG not both met. WAIT."
+  "notes": "Spot 120.62 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.336; 0.6xATR=0.202. ATR(14,5m)=0.180; 0.6xATR=0.108. Structure mixed, not aligned: 10-04 22:15 SH 122.29, 10-05 05:15 SL 120.00, 08:00 SH 122.08 (LH vs 122.29), pullback low 12:45 120.35 still above 120.00. Bull displacement 06:45-08:00 broke 02:15 swing 121.68 but stalled under 122.29. First size-qualified bull FVG after that push: 15m 07:00 121.04-121.43 size 0.39 >= 0.202; price traded through it and spot is ~0.42 below (not a live fill). 06:15 bull FVG 120.55-120.84 contains spot but printed before the 121.68 break and bias is not confirmed bullish. Bear side: 08:45-09:15 broke internal HL ~121.36 but not 120.00. First size-qualified bear FVG 15m 09:00 121.11-121.36 size 0.25 is unfilled and far above. No 5m FVG after the breakdown contains spot. Hard requirements + realistic fill of the first qualifying FVG not both met. WAIT."
 }
