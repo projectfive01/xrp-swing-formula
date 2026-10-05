@@ -1,6 +1,6 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-05T18:07:37Z",
+  "ts_utc": "2026-10-05T19:06:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "short",
@@ -8,8 +8,8 @@
   "stop": 120.40,
   "target_3r": 118.84,
   "target_4r": 118.45,
-  "atr_14": 0.415,
+  "atr_14": 0.361,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.02 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder=0.415; 0.6xATR=0.249. Structure bias bearish: LH 10-04 22:15 122.29, 08:00 122.08, 14:15 121.30; LL 16:15 118.93. Bearish ChoCh: 14:30 15m broke 13:30 swing low 120.22 and 05:15 structural low 120.00 (low 119.34). First FVG after ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48 (>=0.249). Concurrent ChoCh-bar gap 120.26-120.58 not counted as after. 17:45-18:00 highs 120.04/120.23 traded into zone; spot 120.02 inside — fill available. Structural stop 120.40 beyond FVG high. 1R from mid=0.39. Micro break of 5m 15:25 high 119.76 does not flip 15m LH/LL. READY short."
+  "notes": "Spot 120.00 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.361; 0.6xATR=0.216. Structure bias bearish: LH 08:00 122.08 then 14:15 121.30; LL 16:15 118.93. Bearish ChoCh intact: 14:30 broke 13:30 SL 120.22 and 05:15 structural low 120.00 (low 119.34). Bounce SH 18:00 120.23 has not taken 14:15 121.30 — no bull ChoCh. First FVG after ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48 (>=0.216). Concurrent ChoCh-bar gap 120.26-120.58 not counted as after. 17:15 bull FVG 0.13 < 0.6xATR, ignored. Spot 120.00 inside zone; 18:00 high 120.23 traded the zone — fill available. Structural stop 120.40 beyond FVG high. 1R from mid=0.39. READY short."
 }
