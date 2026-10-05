@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-05T14:11:32Z",
+  "ts_utc": "2026-10-05T15:08:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.391,
+  "atr_14": 0.471,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot 121.12 (data-api.binance.vision). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.391; 0.6xATR=0.234. ATR(14,5m)=0.260; 0.6xATR=0.156. Structure mixed/range: 10-04 22:15 SH 122.29, 10-05 05:15 SL 120.00, 08:00 SH 122.08 (LH), 13:30 SL 120.22 (HL vs 120.00). Bull displacement broke 02:15 swing 121.68 but stalled under 122.29. First size-qualified bull FVG after that push: 15m 07:00 121.04-121.43 size 0.39; price already traded through it to 120.22 and is only re-entering from below — not a fresh aligned fill. Bear side never broke 120.00. First size-qualified bear FVG 15m 09:00 121.11-121.36 is being tagged at the low edge but bias is not bearish. 5m 14:10 bull FVG 120.87-121.12 size 0.25 is the impulse candle itself; no retrace and no confirmed 5m structure bias + ChoCh. Hard requirements + realistic fill not both met. WAIT."
+  "notes": "Spot 119.62 (data-api.binance.vision). Working TF 15m, 5m checked. ATR(14,15m) Wilder=0.471; 0.6xATR=0.283. ATR(14,5m)=0.323; 0.6xATR=0.194. Bearish ChoCh: 15m broke 13:30 swing low 120.22 and 05:15 structural low 120.00 on the 14:30 candle (low 119.34; session low 119.25). Prior structure was LH 08:00 122.08 under 122.29. First size-qualified bear FVG after that ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48. Price has not retraced into it (post-formation high 119.74, spot 119.62). 5m first post-break FVG 14:30 119.70-120.25 size 0.55 was wicked to 119.87 at 14:40 then left; spot is back below the zone, so no current limit fill. Hard requirements met on direction, realistic fill not available. WAIT."
 }
