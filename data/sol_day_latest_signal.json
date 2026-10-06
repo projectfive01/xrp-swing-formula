@@ -1,15 +1,15 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-06T13:13:26Z",
+  "ts_utc": "2026-10-06T14:11:33Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {"low": 119.51, "high": 120.15, "mid": 119.83},
-  "stop": 120.90,
-  "target_3r": 116.62,
-  "target_4r": 115.55,
-  "atr_14": 0.392,
+  "direction": "long",
+  "entry_zone": {"low": 120.40, "high": 120.79, "mid": 120.60},
+  "stop": 119.96,
+  "target_3r": 122.52,
+  "target_4r": 123.16,
+  "atr_14": 0.395,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.35 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.392; 0.6xATR=0.235. Prior Oct5 short (stop 120.40) invalidated by 22:00 impulse H 121.59. Overnight bull ChoCh then failed: LH 22:00 121.59 / 01:00 121.28 / 08:00 120.81; LL 03:30 119.72 / 06:00 119.22 / 09:15 118.88. Bearish ChoCh 09:15 broke 06:00 SL 119.22 and Oct5 LL 118.93 (low 118.88). No bull ChoCh: bounce highs 10:45 120.60 / 12:00 120.64 have not taken 08:00 SH 120.81. First size-valid FVG after ChoCh: 15m 09:00/09:15/09:30 bear gap 119.51-120.15 size 0.64 (>=0.235). Earlier bear gaps 0.19/0.22 < 0.6xATR, ignored. 10:00 high 120.42 traded through the zone; spot 120.35 is 0.20 above FVG high — limit-fillable. Structural stop 120.90 beyond 08:00 SH 120.81. 1R from mid=1.07. READY short."
+  "notes": "Spot 120.65 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.395; 0.6xATR=0.237. Prior short (stop 120.90 / 08:00 SH 120.81) invalidated: 13:30 H 121.00 and 13:45 H 121.18. Bull structure bias: HL 12:30 120.06 > 09:15 LL 118.88, then bull ChoCh 13:30 through last LH 12:00 120.64 and 08:00 SH 120.81. 5m post-ChoCh gaps 0.09/0.03 < 0.6xATR(5m)=0.143, ignored. First size-valid FVG after ChoCh: 15m 13:15/13:30/13:45 bull gap 120.40-120.79 size 0.39 (>=0.237). 14:00 low 120.62 and spot 120.65 are inside the zone — fill available. Structural stop 119.96 under 12:30 HL 120.06. 1R from mid=0.64. READY long."
 }
