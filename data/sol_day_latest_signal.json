@@ -1,15 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-10-06T14:11:33Z",
+  "status": "WAIT",
+  "ts_utc": "2026-10-06T15:09:33Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "long",
-  "entry_zone": {"low": 120.40, "high": 120.79, "mid": 120.60},
-  "stop": 119.96,
-  "target_3r": 122.52,
-  "target_4r": 123.16,
-  "atr_14": 0.395,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.449,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.65 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.395; 0.6xATR=0.237. Prior short (stop 120.90 / 08:00 SH 120.81) invalidated: 13:30 H 121.00 and 13:45 H 121.18. Bull structure bias: HL 12:30 120.06 > 09:15 LL 118.88, then bull ChoCh 13:30 through last LH 12:00 120.64 and 08:00 SH 120.81. 5m post-ChoCh gaps 0.09/0.03 < 0.6xATR(5m)=0.143, ignored. First size-valid FVG after ChoCh: 15m 13:15/13:30/13:45 bull gap 120.40-120.79 size 0.39 (>=0.237). 14:00 low 120.62 and spot 120.65 are inside the zone — fill available. Structural stop 119.96 under 12:30 HL 120.06. 1R from mid=0.64. READY long."
+  "notes": "Spot 121.63 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.449; 0.6xATR=0.270. Bull structure bias still valid: HL 12:30 120.06 > LL 09:15 118.88, bull ChoCh 13:30 through LH 12:00 120.64 and SH 08:00 120.81; later HL 14:15 120.60 unbroken. First size-valid FVG after ChoCh remains 15m 13:15/13:30/13:45 bull gap 120.40-120.79 size 0.39. That zone was filled (14:00 L 120.62, 14:15 L 120.60) and spot is 0.84 above the high — not limit-fillable. No newer 15m FVG >= 0.270 after ChoCh. 5m post-ChoCh gaps (e.g. 13:25/13:30/13:35 size 0.09) < 0.6xATR(5m)=0.179. Do not chase. WAIT."
 }
