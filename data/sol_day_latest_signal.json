@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-06T19:07:00Z",
+  "ts_utc": "2026-10-06T20:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.43,
+  "atr_14": 0.412,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.75 (data-api.binance.vision). Working TF 15m. ATR(14) Wilder closed bars=0.430; 0.6xATR=0.258. Bull structure bias valid: HH 15:15 122.00 > SH 12:00 120.64; HL 17:15 120.13 > HL 12:30 120.06. Bull ChoCh 13:30 close 120.94 through 120.64. First size-valid FVG after ChoCh is 15m 13:45 bull gap 120.40-120.79 size 0.39. Fully mitigated (14:00 L 120.62, 14:15 L 120.60); spot 120.75 is just under the zone high and not inside the gap. Later 15m FVGs fail size (18:00 bull 120.63-120.87 size 0.24). No bear ChoCh: 17:15 HL 120.13 unbroken. 5m ATR=0.211, 0.6x=0.127. 5m bull ChoCh ~18:00 close through 16:15 LH 121.17; first FVG after is 18:05 bull 120.87-121.14 size 0.27, fully mitigated (18:35 L 120.61); spot below zone. Do not chase. WAIT."
+  "notes": "Spot 120.81 (data-api.binance.vision). Working TF 15m. ATR(14) Wilder closed bars=0.412; 0.6xATR=0.247. Bull bias still valid: HH 15:15 122.00 > SH 12:00 120.64; HL 19:15 120.32 > HL 17:15 120.13 > HL 12:30 120.06. Prior bull ChoCh 13:30 through 120.64; first size-valid FVG 13:45 bull 120.40-120.79 sz 0.39 fully mitigated (deepest 120.13). 18:00 bull FVG 120.63-120.87 sz 0.240 fails 0.6xATR and is fully mitigated; spot 120.81 sits in that dead gap — do not chase. No new bull ChoCh after 19:15 HL (no close through 18:00 swing high 121.29). No bear ChoCh: 17:15 HL 120.13 unbroken (19:15 L 120.32). 15m bear FVG 15:45 121.10-121.35 sz 0.250 is size-ok but has no bear ChoCh. 5m ATR=0.212, 0.6x=0.127. 5m bull ChoCh ~18:00 through 16:15 LH 121.17; first FVG 18:05 bull 120.87-121.14 sz 0.27 fully mitigated. No 5m bear ChoCh. WAIT."
 }
