@@ -1,15 +1,15 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-05T19:06:30Z",
+  "ts_utc": "2026-10-06T13:13:26Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "short",
-  "entry_zone": {"low": 119.77, "high": 120.25, "mid": 120.01},
-  "stop": 120.40,
-  "target_3r": 118.84,
-  "target_4r": 118.45,
-  "atr_14": 0.361,
+  "entry_zone": {"low": 119.51, "high": 120.15, "mid": 119.83},
+  "stop": 120.90,
+  "target_3r": 116.62,
+  "target_4r": 115.55,
+  "atr_14": 0.392,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.00 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.361; 0.6xATR=0.216. Structure bias bearish: LH 08:00 122.08 then 14:15 121.30; LL 16:15 118.93. Bearish ChoCh intact: 14:30 broke 13:30 SL 120.22 and 05:15 structural low 120.00 (low 119.34). Bounce SH 18:00 120.23 has not taken 14:15 121.30 — no bull ChoCh. First FVG after ChoCh: 15m 14:15/14:30/14:45 gap 119.77-120.25 size 0.48 (>=0.216). Concurrent ChoCh-bar gap 120.26-120.58 not counted as after. 17:15 bull FVG 0.13 < 0.6xATR, ignored. Spot 120.00 inside zone; 18:00 high 120.23 traded the zone — fill available. Structural stop 120.40 beyond FVG high. 1R from mid=0.39. READY short."
+  "notes": "Spot 120.35 (data-api.binance.vision). Working TF 15m. ATR(14,15m) Wilder excl forming=0.392; 0.6xATR=0.235. Prior Oct5 short (stop 120.40) invalidated by 22:00 impulse H 121.59. Overnight bull ChoCh then failed: LH 22:00 121.59 / 01:00 121.28 / 08:00 120.81; LL 03:30 119.72 / 06:00 119.22 / 09:15 118.88. Bearish ChoCh 09:15 broke 06:00 SL 119.22 and Oct5 LL 118.93 (low 118.88). No bull ChoCh: bounce highs 10:45 120.60 / 12:00 120.64 have not taken 08:00 SH 120.81. First size-valid FVG after ChoCh: 15m 09:00/09:15/09:30 bear gap 119.51-120.15 size 0.64 (>=0.235). Earlier bear gaps 0.19/0.22 < 0.6xATR, ignored. 10:00 high 120.42 traded through the zone; spot 120.35 is 0.20 above FVG high — limit-fillable. Structural stop 120.90 beyond 08:00 SH 120.81. 1R from mid=1.07. READY short."
 }
