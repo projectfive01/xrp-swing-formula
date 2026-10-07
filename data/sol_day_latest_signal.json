@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-07T19:06:04Z",
+  "ts_utc": "2026-10-07T20:07:03Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.448,
+  "atr_14": 0.409,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 116.15 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 18:45, forming 19:00. ATR(14) Wilder closed=0.448; 0.6xATR=0.269. Bear bias intact: LH 10-06 22:00 121.48 > 23:45 120.96 > 10-07 05:45 118.91 > 08:30 118.79 > 10:30 117.97 > 16:00/16:30 117.23 > 18:00 117.05; session LL 13:45 115.52. Bear ChoCh remains 01:45 close through prior HL. First size-valid FVGs after that ChoCh still 02:00 119.10-119.80 (0.70) and 02:15 118.19-119.00 (0.81) — spot ~2 below, not limit-fillable. Later 15m gaps fail 0.6xATR: 09:45 bear 0.12, 15:45 bull 0.21, 17:30 bear 0.24. No bull ChoCh: 16:00-16:30 high 117.23 and 18:00 high 117.05 both under 10:30 swing 117.97 and 12:00 117.50. 5m ATR=0.212, 0.6x=0.127; 5m still LH/LL (16:05 117.23 > 17:10 117.17 > 18:05 117.05). 17:25 bear FVG 116.57-116.85 sz 0.28 was traded through on the 18:05 bounce and spot is now ~0.42 below — not limit-fillable. 18:05 bull FVG 116.35-116.64 sz 0.29 filled (low 116.07) but no aligned bull ChoCh. 18:20 bear FVG 0.12 fails size. No fillable setup. WAIT."
+  "notes": "Spot 116.03 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 19:45, forming 20:00. ATR(14) Wilder closed=0.409; 0.6xATR=0.245. Bear bias intact: LH 10-06 22:00 121.48 > 23:45 120.96 > 10-07 05:45 118.91 > 08:30 118.79 > 10:30 117.97 > 16:05 117.23 > 18:00 117.05 > 18:50 116.44; session LL 13:45 115.52 not broken (19:45 low 115.73). Bear ChoCh remains 01:45 close through prior HL. First size-valid FVGs after that ChoCh still 02:00 119.10-119.80 (0.70) and 02:15 118.19-119.00 (0.81) — spot ~2.2-3.8 below, not limit-fillable. Later 15m gaps fail 0.6xATR: 15:30 bull 0.21, 17:15 bear 0.24. No bull ChoCh: 18:00 high 117.05 and 19:20 high 116.39 both under prior LH. 5m ATR=0.200, 0.6x=0.120; 5m still LH/LL. 17:20 bear FVG 116.57-116.85 sz 0.28 is ~0.55 above spot, not filled. 19:15 bull FVG 116.14-116.27 sz 0.13 meets 5m size but has no aligned bull ChoCh and spot is below the zone. No fillable setup. WAIT."
 }
