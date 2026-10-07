@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-07T16:07:00Z",
+  "ts_utc": "2026-10-07T17:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.457,
+  "atr_14": 0.449,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 117.06 (data-api.binance.vision, 16:00 15m forming; ticker earlier 117.16). Working TF 15m. ATR(14) Wilder closed bars=0.457; 0.6xATR=0.274. Bear bias intact: LH 22:00 121.48 > 23:45 120.96 > 05:45 118.91 > 06:30 119.08 > 12:00 117.50; session LL 13:45 115.52 (prior 116.03/116.75). Bear ChoCh remains 01:45 close 119.00. First size-valid FVGs after that ChoCh still 02:00 bear 119.10-119.80 sz 0.70 and 02:15 118.19-119.00 sz 0.81 — spot ~2 below, not limit-fillable. No later 15m bear FVG >= 0.6xATR. Bounce off 115.52 has not confirmed a 15m bull ChoCh: last closed 15:45 close 116.79; 16:00 high 117.20 still under 12:00 swing 117.50. Bull 15m FVG 15:45 116.27-116.48 sz 0.210 fails 0.6xATR. 5m ATR=0.259, 0.6x=0.156. 5m 13:55 bull FVG 115.97-116.19 sz 0.220 already filled and left behind. 15:35 bull 116.13-116.40 sz 0.270 printed before the 15:50 break of 116.56; no post-break 5m FVG. No fillable setup. WAIT."
+  "notes": "Spot 116.97 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m. ATR(14) Wilder closed bars=0.449; 0.6xATR=0.270. Bear bias intact: LH 10-06 22:00 121.48 > 23:45 120.96 > 10-07 05:45 118.91 > 08:30 118.79 > 12:00 117.50; session LL 13:45 115.52. Bear ChoCh remains 01:45 close 119.00. First size-valid FVGs after that ChoCh still ~119.10-119.80 / 118.19-119.00 — spot ~2 below, not limit-fillable. No later 15m bear FVG >= 0.6xATR (08:00 0.03, 09:45 0.12, 11:30 0.05, 12:30 0.05). No bull ChoCh: last closed 16:45 close 116.81; session highs 16:00-16:30 peaked 117.23, still under 12:00 swing 117.50. Bull 15m FVGs 15:45 116.27-116.48 sz 0.21, 16:00 0.02, 16:15 0.04 all fail 0.6xATR. 5m ATR=0.242, 0.6x=0.145; 5m bias still LH/LL (10:30 117.97 > 12:10 117.50 > 16:05 117.23). 16:05 bull FVG 116.81-117.04 sz 0.23 was filled (16:40 low 116.69) but no aligned bull structure bias + ChoCh. No fillable setup. WAIT."
 }
