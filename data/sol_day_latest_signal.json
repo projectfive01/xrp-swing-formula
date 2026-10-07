@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-06T20:05:00Z",
+  "ts_utc": "2026-10-07T13:14:13Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.412,
+  "atr_14": 0.46,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 120.81 (data-api.binance.vision). Working TF 15m. ATR(14) Wilder closed bars=0.412; 0.6xATR=0.247. Bull bias still valid: HH 15:15 122.00 > SH 12:00 120.64; HL 19:15 120.32 > HL 17:15 120.13 > HL 12:30 120.06. Prior bull ChoCh 13:30 through 120.64; first size-valid FVG 13:45 bull 120.40-120.79 sz 0.39 fully mitigated (deepest 120.13). 18:00 bull FVG 120.63-120.87 sz 0.240 fails 0.6xATR and is fully mitigated; spot 120.81 sits in that dead gap — do not chase. No new bull ChoCh after 19:15 HL (no close through 18:00 swing high 121.29). No bear ChoCh: 17:15 HL 120.13 unbroken (19:15 L 120.32). 15m bear FVG 15:45 121.10-121.35 sz 0.250 is size-ok but has no bear ChoCh. 5m ATR=0.212, 0.6x=0.127. 5m bull ChoCh ~18:00 through 16:15 LH 121.17; first FVG 18:05 bull 120.87-121.14 sz 0.27 fully mitigated. No 5m bear ChoCh. WAIT."
+  "notes": "Spot 116.18 (data-api.binance.vision). Working TF 15m. ATR(14) Wilder closed bars=0.460; 0.6xATR=0.276. Bear bias: LH sequence 22:00 121.48 > 23:45 120.96 > 05:45 118.91 > 10:30 117.97; LL 02:00 117.02 then 10:00 116.75, session low 116.03. Bear ChoCh 01:45 close 119.00 through prior HL 120.13/21:15 120.66. First size-valid FVG after that ChoCh: 02:00 bear 119.10-119.80 sz 0.70 (and 02:15 118.19-119.00 sz 0.81). Spot is ~2 below those gaps — not limit-fillable; do not chase. Micro bear ChoCh of the bounce ~09:30/10:00 through 04:30 HL 117.94 and 02:00 117.02. No later 15m FVG >= 0.6xATR (09:45 bear 117.90-118.02 sz 0.12 fails; 11:30 and 12:30 gaps ~0.05 fail). 5m ATR=0.305, 0.6x=0.183. 5m first size-valid post-break FVG 11:20 bear 117.45-117.67 sz 0.22 already left behind. Later 5m gaps 12:30 116.88-116.99 sz 0.11 and 12:45 116.63-116.79 sz 0.16 fail 0.6xATR. No bull ChoCh. WAIT."
 }
