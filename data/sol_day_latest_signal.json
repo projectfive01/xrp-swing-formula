@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-07T13:14:13Z",
+  "ts_utc": "2026-10-07T16:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.46,
+  "atr_14": 0.457,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 116.18 (data-api.binance.vision). Working TF 15m. ATR(14) Wilder closed bars=0.460; 0.6xATR=0.276. Bear bias: LH sequence 22:00 121.48 > 23:45 120.96 > 05:45 118.91 > 10:30 117.97; LL 02:00 117.02 then 10:00 116.75, session low 116.03. Bear ChoCh 01:45 close 119.00 through prior HL 120.13/21:15 120.66. First size-valid FVG after that ChoCh: 02:00 bear 119.10-119.80 sz 0.70 (and 02:15 118.19-119.00 sz 0.81). Spot is ~2 below those gaps — not limit-fillable; do not chase. Micro bear ChoCh of the bounce ~09:30/10:00 through 04:30 HL 117.94 and 02:00 117.02. No later 15m FVG >= 0.6xATR (09:45 bear 117.90-118.02 sz 0.12 fails; 11:30 and 12:30 gaps ~0.05 fail). 5m ATR=0.305, 0.6x=0.183. 5m first size-valid post-break FVG 11:20 bear 117.45-117.67 sz 0.22 already left behind. Later 5m gaps 12:30 116.88-116.99 sz 0.11 and 12:45 116.63-116.79 sz 0.16 fail 0.6xATR. No bull ChoCh. WAIT."
+  "notes": "Spot 117.06 (data-api.binance.vision, 16:00 15m forming; ticker earlier 117.16). Working TF 15m. ATR(14) Wilder closed bars=0.457; 0.6xATR=0.274. Bear bias intact: LH 22:00 121.48 > 23:45 120.96 > 05:45 118.91 > 06:30 119.08 > 12:00 117.50; session LL 13:45 115.52 (prior 116.03/116.75). Bear ChoCh remains 01:45 close 119.00. First size-valid FVGs after that ChoCh still 02:00 bear 119.10-119.80 sz 0.70 and 02:15 118.19-119.00 sz 0.81 — spot ~2 below, not limit-fillable. No later 15m bear FVG >= 0.6xATR. Bounce off 115.52 has not confirmed a 15m bull ChoCh: last closed 15:45 close 116.79; 16:00 high 117.20 still under 12:00 swing 117.50. Bull 15m FVG 15:45 116.27-116.48 sz 0.210 fails 0.6xATR. 5m ATR=0.259, 0.6x=0.156. 5m 13:55 bull FVG 115.97-116.19 sz 0.220 already filled and left behind. 15:35 bull 116.13-116.40 sz 0.270 printed before the 15:50 break of 116.56; no post-break 5m FVG. No fillable setup. WAIT."
 }
