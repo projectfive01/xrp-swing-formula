@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-08T14:08:54Z",
+  "ts_utc": "2026-10-08T16:09:57Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.636,
+  "atr_14": 0.863,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 112.32 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 13:45 close 112.27, forming 14:00 low 112.15 high 112.67. ATR(14) Wilder closed=0.636; 0.6xATR=0.382. Bear bias intact: 15m LH 01:15 116.81 > 02:45 116.78 > 07:15 115.86 > 09:30 115.34 > 13:15 112.89; LL 04:15 114.22 broken, session low 13:30 111.21. Bear ChoCh = 11:00 close 113.65 through prior swing low 114.22. First FVG on that displacement 11:15 bear 113.83-114.08 size 0.25 < 0.382. No later 15m FVG. 5m ATR=0.434, 0.6x=0.261; post-ChoCh bear gaps all fail size (largest 13:40 111.82-112.07 size 0.250). No bull ChoCh: 13:15 high 112.89 unbroken. No fillable setup. WAIT."
+  "notes": "Spot 108.66 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 15:45 close 108.57, forming 16:00 low 108.00 high 108.83. ATR(14) Wilder closed=0.863; 0.6xATR=0.518. Bear bias intact: 15m LH 01:15 116.81 > 02:45 116.78 > 07:15 115.86 > 09:30 115.34 > 13:15 112.89 > 14:15 112.83; LL 13:30 111.21 broken. Bear ChoCh/BOS = 15:00 close 110.98 through 111.21 (15:15 close 108.88). First FVG after that break: 15:15 bear 111.23-112.26 size 1.03 >= 0.518, unfilled (post-gap high 109.62). Next 15:30 bear 109.44-110.92 size 1.48 also unfilled at spot (15:45 high 109.62 only tagged the lower edge, price now below). 5m ATR=0.631, 0.6x=0.379; post-break bear gaps 15:15 111.23-111.79 and 15:25 109.75-110.56 both unfilled. No bull ChoCh (14:15 high 112.83 unbroken). No realistic fill. WAIT."
 }
