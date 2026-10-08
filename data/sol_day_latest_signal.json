@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-08T19:06:41Z",
+  "ts_utc": "2026-10-08T20:06:43Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.924,
+  "atr_14": 0.823,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 108.64 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 18:45 C108.09 H108.27 L107.79, forming 19:00 O108.08 H108.77 L108.07 C108.64. ATR(14) Wilder closed=0.924; 0.6xATR=0.554. Bear bias intact: 15m LH 01:15 116.81 > 02:45 116.78 > 07:15 115.86 > 09:30 115.34 > 13:15 112.89 > 14:15 112.83; LL 13:30 111.21 then 16:00 108.00 and 17:15 105.71. Bear ChoCh/BOS = 15:00 close 110.98 through 111.21. First FVG after that ChoCh: 15:15 bear 111.23-112.26 size 1.03 >= 0.554, still unfilled (post-gap high 109.62 at 15:45; session high since 108.77). Next 15:30 bear 109.44-110.92 size 1.48 also unfilled. No bull ChoCh: 14:15 swing high 112.83 unbroken and 5m internal LH 16:20 109.14 unbroken (high since 108.77). 5m ATR=0.517, 0.6x=0.310; post-bounce bull FVGs 18:20 106.57-106.98 and 18:25 106.98-107.74 are not after a ChoCh, and price 108.64 is not in the first of those zones. No realistic fill of the qualifying FVG. WAIT."
+  "notes": "Spot 109.12 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 19:45 C109.17 H109.39 L109.00, forming 20:00 O109.17 H109.33 L109.03 C109.12. ATR(14) Wilder closed=0.823; 0.6xATR=0.494. Bear bias intact: 15m LH 01:15 116.81 > 02:45 116.78 > 07:15 115.86 > 09:30 115.34 > 13:15 112.89 > 14:15 112.83; LL 13:30 111.21 then 16:00 108.00 and 17:15 105.71. Bear ChoCh/BOS = 15:00 close 110.98 through 111.21. First FVG after that ChoCh: 15:15 bear 111.23-112.26 size 1.03 >= 0.494, still unfilled (post-gap high 109.62 at 15:50; session high since 109.47 at 19:35). Next 15:30 bear 109.44-110.92 size 1.48 only wick-tagged (19:35 H109.47); not the first FVG. No bull ChoCh: 14:15 swing high 112.83 unbroken; 5m prior impulse high 15:50 109.62 unbroken (19:35 broke only the internal 16:20 LH 109.14). 5m ATR=0.385, 0.6x=0.231; bounce bull FVGs are not after a bull ChoCh. No realistic fill of the qualifying first FVG (~2.11 below 111.23). WAIT."
 }
