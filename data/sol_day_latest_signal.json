@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-10-09T14:09:21Z",
+  "status": "WAIT",
+  "ts_utc": "2026-10-09T17:07:20Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 109.92,
-    "high": 110.14,
-    "mid": 110.03
-  },
-  "stop": 110.74,
-  "target_3r": 107.9,
-  "target_4r": 107.19,
-  "atr_14": 0.344,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.521,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 109.80 (data-api.binance.vision; api.binance.com geo-blocked). Prior 13:12 long invalidated: 13:30 15m low 109.17 took structural stop 109.33 and 10:45 HL 109.38, and traded through FVG 110.14-110.82. 15m ATR(14) Wilder closed=0.516; 0.6xATR=0.310. First bear FVG after that 15m break is 13:45 109.97-110.14 size 0.17 < 0.310, so 15m fails. Working TF 5m. ATR(14,5m)=0.344; 0.6xATR=0.206. Bear bias: LH 11:45 112.06 / 12:05 111.38 / 13:05 110.69 / 13:50 109.97 and LL 13:40 109.17 < 10:50 SL 109.38. Bear ChoCh: 13:35 broke 109.38 (low 109.28). First FVG on that ChoCh candle: 109.92-110.14 size 0.22 >= 0.206. 13:50 high 109.97 entered the zone; forming 14:05 high 110.00 inside; spot 109.80 just under - limit-fillable. Structural stop 110.74 above 13:05 LH 110.69. 1R from mid=0.71. No bull ChoCh (112.06 intact). READY short."
+  "notes": "Spot 109.75 (data-api.binance.vision; api.binance.com geo-blocked). Prior 14:09 READY short invalidated: 14:35 5m high 110.78 took structural stop 110.74. 15m ATR(14) Wilder closed=0.521; 0.6xATR=0.313. No 15m FVG after 13:30 ChoCh >= 0.313 (13:45 FVG 0.17, 15:15 FVG 0.14). Structure is range: LH 14:30 110.78 / 16:15 110.10 and HL 13:30 109.17 / 15:00 109.38 / 16:30 109.47. No bull ChoCh (110.10 and 110.78 intact). No fresh bear ChoCh (109.38 intact). 5m ATR(14)=0.258; 0.6xATR=0.155. 16:25 bear FVG 109.60-109.88 size 0.28 is mitigated (16:30 low 109.47 traded through) and not a first FVG on a fresh same-direction ChoCh. 16:50 bull FVG size 0.05 < 0.155. WAIT."
 }
