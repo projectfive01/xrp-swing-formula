@@ -1,19 +1,19 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-09T13:12:00Z",
+  "ts_utc": "2026-10-09T14:09:21Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "long",
+  "direction": "short",
   "entry_zone": {
-    "low": 110.14,
-    "high": 110.82,
-    "mid": 110.48
+    "low": 109.92,
+    "high": 110.14,
+    "mid": 110.03
   },
-  "stop": 109.33,
-  "target_3r": 113.93,
-  "target_4r": 115.08,
-  "atr_14": 0.47,
+  "stop": 110.74,
+  "target_3r": 107.9,
+  "target_4r": 107.19,
+  "atr_14": 0.344,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 110.33 (data-api.binance.vision; api.binance.com geo-blocked). Working TF 15m, last closed 12:45 C110.46 H110.57 L110.18, forming 13:00 O110.46 H110.69 L110.30 C110.33. ATR(14) Wilder closed=0.470; 0.6xATR=0.282. Bull bias on working TF after 17:15 LL 105.71: HL 00:15 108.80 then 10:45 109.38; HH 21:45 110.87 then 11:45 112.06. Bull ChoCh: 21:45 took 15:45 impulse high 109.62; 11:45 took 02:45 swing high 110.92 (C111.31). First size-valid bull FVG after that ChoCh: 11:45 110.14-110.82 size 0.68 >= 0.282 (earlier bull gaps 0.17/0.15/0.21/0.14/0.08/0.18 all < 0.6xATR). Post-gap low 110.18 inside zone, not through 110.14; spot 110.33 inside — fill available. Structural stop 109.33 under 10:45 swing low 109.38. 1R from mid=1.15. Prior bear FVG 111.23-112.26 tagged to 112.06 then left; spot ~0.90 below it, not the live fill. Major 14:15 high 112.83 still unbroken. READY long."
+  "notes": "Spot 109.80 (data-api.binance.vision; api.binance.com geo-blocked). Prior 13:12 long invalidated: 13:30 15m low 109.17 took structural stop 109.33 and 10:45 HL 109.38, and traded through FVG 110.14-110.82. 15m ATR(14) Wilder closed=0.516; 0.6xATR=0.310. First bear FVG after that 15m break is 13:45 109.97-110.14 size 0.17 < 0.310, so 15m fails. Working TF 5m. ATR(14,5m)=0.344; 0.6xATR=0.206. Bear bias: LH 11:45 112.06 / 12:05 111.38 / 13:05 110.69 / 13:50 109.97 and LL 13:40 109.17 < 10:50 SL 109.38. Bear ChoCh: 13:35 broke 109.38 (low 109.28). First FVG on that ChoCh candle: 109.92-110.14 size 0.22 >= 0.206. 13:50 high 109.97 entered the zone; forming 14:05 high 110.00 inside; spot 109.80 just under - limit-fillable. Structural stop 110.74 above 13:05 LH 110.69. 1R from mid=0.71. No bull ChoCh (112.06 intact). READY short."
 }
