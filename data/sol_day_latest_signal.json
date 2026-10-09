@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-09T18:06:22Z",
+  "ts_utc": "2026-10-09T19:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.506,
+  "atr_14": 0.483,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 109.88 (data-api.binance.vision). 15m ATR(14) Wilder closed=0.506; 0.6xATR=0.304. Structure still a range after 13:30 bear ChoCh (low 109.17): LH 14:30 110.78 / 16:15 110.10, HL 15:00 109.38 / 16:30 109.47. 17:15 low 109.37 is a 1-cent undercut of 109.38, not a fresh bear ChoCh (109.17 intact). No bull ChoCh (110.10 and 110.78 intact). No 15m FVG after the 13:30 ChoCh >= 0.304 (13:45 bear 0.17 filled, 15:15 bear 0.14 filled). 5m ATR(14)=0.238; 0.6xATR=0.143. Last 5m FVG 17:55 bull 109.74-109.79 size 0.05 unfilled and not after a same-direction ChoCh. WAIT."
+  "notes": "Spot 109.66 (data-api.binance.vision; api.binance.com geo-blocked). 15m ATR(14) Wilder closed=0.483; 0.6xATR=0.290. Range still intact after 13:30 bear ChoCh low 109.17: LH 14:30 110.78 / 16:15 110.10 / 18:00 110.04; HL 15:00 109.38 / 16:30 109.47. 18:30 wicked to 109.17 equal low, close 109.33, no close break. No bull ChoCh (110.04 / 110.10 intact). No 15m FVG after 13:30 ChoCh >= 0.290 (13:45 bear 0.17, 15:15 bear 0.14, 18:15 bear 0.15 all filled/small). 5m ATR(14)=0.226; 0.6xATR=0.136. 18:35 broke 17:20 swing low 109.37 to 109.17; first bear FVG 18:30 109.40-109.56 size 0.16 meets size but already mitigated and price is back above the zone at 109.66, so no realistic fill. 18:45 bull FVG 109.37-109.52 size 0.15 is not after a bull ChoCh. WAIT."
 }
