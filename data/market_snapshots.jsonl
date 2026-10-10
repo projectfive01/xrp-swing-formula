@@ -1,1 +1,2 @@
 {"ts_utc": "2026-10-10T04:08:00Z", "xrp_usdt": 1.4064, "xrp_24h_pct": 0.716, "sol_usdt": 109.95, "sol_24h_pct": 0.164, "source": "binance_api", "notes": "Live spot check for XRP BASE gate scan. XRP high 1.410 low 1.3741; SOL high 112.06 low 108.45."}
+{"ts_utc": "2026-10-10T06:13:00Z", "xrp_usdt": 1.3898, "xrp_24h_pct": -0.807, "sol_usdt": 110.36, "sol_24h_pct": -2.120, "source": "binance_api", "notes": "Live spot check for XRP BASE gate scan. XRP high 1.4088 low 1.3189; SOL high 112.89 low 105.71."}
