@@ -1,9 +1,1 @@
-{"ts_utc": "2026-10-11T01:09:00Z", "xrp_usdt": 1.3975, "xrp_24h_pct": -0.25, "sol_usdt": 109.84, "sol_24h_pct": -0.15, "source": "kraken_coinbase", "notes": "Live spot check for XRP BASE gate scan."}
-{"ts_utc": "2026-10-11T04:10:00Z", "xrp_usdt": 1.3906, "xrp_24h_pct": -1.095, "sol_usdt": 109.97, "sol_24h_pct": 0.521, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Fade continued toward zone."}
-{"ts_utc": "2026-10-11T08:12:00Z", "xrp_usdt": 1.4078, "xrp_24h_pct": 1.215, "sol_usdt": 110.33, "sol_24h_pct": 1.183, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Bounce away from zone; still 80% HOLD."}
-{"ts_utc": "2026-10-11T09:10:00Z", "xrp_usdt": 1.3949, "xrp_24h_pct": -0.852, "sol_usdt": 109.57, "sol_24h_pct": 0.521, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Fade toward zone continued."}
-{"ts_utc": "2026-10-11T11:10:00Z", "xrp_usdt": 1.3901, "xrp_24h_pct": -1.060, "sol_usdt": 109.33, "sol_24h_pct": -0.246, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Fade continued toward zone."}
-{"ts_utc": "2026-10-11T14:15:00Z", "xrp_usdt": 1.3933, "xrp_24h_pct": -0.924, "sol_usdt": 109.97, "sol_24h_pct": 0.521, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Slight bounce; still 80% HOLD."}
-{"ts_utc": "2026-10-11T19:10:00Z","xrp_usdt": 1.4157,"xrp_24h_pct": 0.805,"sol_usdt": 111.52,"sol_24h_pct": 1.115,"source": "binance","notes": "Live spot check for XRP BASE gate scan. Bounce away from zone; still 80% HOLD."}
-{"ts_utc": "2026-10-11T22:11:00Z", "xrp_usdt": 1.4056, "xrp_24h_pct": 0.085, "sol_usdt": 110.88, "sol_24h_pct": 0.535, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Fade toward zone; still 80% HOLD."}
-{"ts_utc": "2026-10-11T23:10:00Z", "xrp_usdt": 1.4157, "xrp_24h_pct": 0.805, "sol_usdt": 111.52, "sol_24h_pct": 1.115, "source": "binance", "notes": "Live spot check for XRP BASE gate scan. Bounce away from zone; still 80% HOLD."}
+SAME
