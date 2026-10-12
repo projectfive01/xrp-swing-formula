@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-12T14:10:00Z",
+  "ts_utc": "2026-10-12T16:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.450,
+  "atr_14": 0.474,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot 110.26 (data-api.binance.vision; api.binance.com geo-blocked). 15m ATR(14) Wilder=0.450; 0.6xATR=0.270. Bearish structure: LH 04:45 113.40 / 07:00 113.10 / 10:45 111.98; LL 11:45 110.66 / 12:30 110.02 / 13:30 109.70. No fresh ChoCh (no break of recent LH ~110.81-111.12 for bull; new LL is continuation not ChoCh). Prior/recent bear FVGs small or above; no qualifying first FVG after ChoCh with realistic fill. 5m ATR=0.276. WAIT."
+  "notes": "Spot ~109.20 (data-api.binance.vision; api.binance.com geo-blocked). 15m ATR(14) Wilder=0.474; 0.6xATR=0.284. Bearish structure continues: LH 04:45 113.40 / 07:00 113.10 / 10:45 111.98 / 13:45 110.73; LL 11:45 110.66 / 12:30 110.02 / 13:30 109.70 / 14:45 108.32. No ChoCh (no break of recent LH ~110.73 for bullish; new LL is continuation BOS not ChoCh). Large bear FVG at 14:45 (108.94-109.44 size 0.50) but not after ChoCh. Small bull FVG 0.04 too small. No qualifying setup. WAIT."
 }
