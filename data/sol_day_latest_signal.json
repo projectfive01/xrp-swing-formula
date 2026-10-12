@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-12T18:06:38Z",
+  "ts_utc": "2026-10-12T20:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.475,
+  "atr_14": 0.420,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~107.80 (data-api.binance.vision). 15m ATR(14) Wilder=0.475; 0.6xATR=0.285. Bearish structure continues: recent LH cluster ~109.26 (15:15/16:00), LL progression 16:45 107.80 / 17:15 107.48 / 17:30 107.16. New LLs are continuation BOS, not ChoCh. No break of recent LH ~109.26 for bullish ChoCh. No qualifying first FVG after a ChoCh. WAIT."
+  "notes": "Spot 108.54 (data-api.binance.vision). 15m ATR(14) Wilder=0.420; 0.6xATR=0.252. Bearish structure continues: LH sequence 111.98 / 110.73 / 109.26, LL to 107.16. Bounce to 108.66 has not broken LH 109.26 — no bullish ChoCh. New LLs remain continuation BOS, not ChoCh. No first qualifying FVG after a ChoCh. WAIT."
 }
