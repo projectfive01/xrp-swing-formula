@@ -64,3 +64,6 @@
 {
   "ts_utc": "2026-10-15T11:15:00Z", "xrp_usdt": 1.3197, "xrp_24h_pct": -3.784, "sol_usdt": 102.44, "sol_24h_pct": -3.776, "xrp_high_24h": 1.3836, "xrp_low_24h": 1.2843, "sol_high_24h": 107.96, "sol_low_24h": 100.62, "source": "binance", "notes": "Live Binance spot. XRP still in $1.28-1.35 zone at 1.3197. Load bar 100% BUY confirmation."
 }
+{
+  "ts_utc": "2026-10-15T12:16:00Z", "xrp_usdt": 1.3098, "xrp_24h_pct": -4.991, "sol_usdt": 102.28, "sol_24h_pct": -5.024, "xrp_high_24h": 1.3834, "xrp_low_24h": 1.2836, "sol_high_24h": 107.92, "sol_low_24h": 100.66, "source": "binance.us", "notes": "Live Binance.US. XRP still in $1.28-1.35 zone at 1.3098. Load bar 100% BUY confirmation."
+}
