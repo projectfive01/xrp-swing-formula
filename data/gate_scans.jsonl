@@ -49,3 +49,6 @@
 {
   "ts_utc": "2026-10-15T22:09:00Z", "price": 1.3061, "local_high": 1.695, "pullback_pct": -0.2294, "dist_to_200d_pct": 0.0204, "rsi_daily": 37.0, "ema200": 1.28, "gate_exhaustion": 1, "gate_pullback": 1, "gate_200d_zone": 1, "gate_not_chase": 1, "gate_regime_ok": 1, "progress_pct": 100, "action": "BUY", "catalyst_weight": 0, "missing": [], "notes": "Live Binance. XRP deeper in $1.28-1.35 zone at 1.3061 (24h low 1.2843). Pullback ~22.9% GREEN. All gates green. Load bar 100% BUY confirmation. Paper watch still armed. KILL_SWITCH OFF.", "created_at": "2026-10-15T22:09:00Z", "in_zone_now": true
 }
+{
+  "ts_utc": "2026-10-15T23:11:00Z", "price": 1.3345, "local_high": 1.695, "pullback_pct": -0.2127, "dist_to_200d_pct": 0.0426, "rsi_daily": 38.5, "ema200": 1.28, "gate_exhaustion": 1, "gate_pullback": 1, "gate_200d_zone": 1, "gate_not_chase": 1, "gate_regime_ok": 1, "progress_pct": 100, "action": "BUY", "catalyst_weight": 0, "missing": [], "notes": "Live Binance. XRP still in $1.28-1.35 zone at 1.3345 (24h low 1.2840). Bounce from prior 1.3061. Pullback ~21.3% GREEN. Daily RSI ~38.5. All gates green. Load bar 100% BUY confirmation. Paper watch still armed. KILL_SWITCH OFF.", "created_at": "2026-10-15T23:11:00Z", "in_zone_now": true
+}
