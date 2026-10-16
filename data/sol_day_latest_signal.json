@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-15T20:06:10Z",
+  "ts_utc": "2026-10-16T13:13:38Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.503,
+  "atr_14": 0.466,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~106.00 (data-api.binance.vision). 15m ATR(14) Wilder~0.503; 0.6xATR~0.302. Prior bull ChoCh on 14:00 through structure after LL 100.91 remains intact. First FVG after that ChoCh (14:00 bull ~102.26-102.87) still unfilled at current price; price extended to 106.5 and ranging 105.2-106.5 with no retrace into FVG. No newer ChoCh + qualifying first FVG (>=0.6 ATR) with realistic fill available on 15m or 5m. WAIT."
+  "notes": "Spot ~105.57 (data-api.binance.vision). 15m ATR(14) Wilder~0.466; 0.6xATR~0.280. Prior bull ChoCh after LL 100.91 remains intact. First FVG after that ChoCh still unfilled (price extended well above). Recent pullback from 107.44 to 105.36 has no newer same-direction ChoCh + qualifying first FVG (>=0.6 ATR) with realistic fill on 15m or 5m. WAIT."
 }
