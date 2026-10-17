@@ -1,1 +1,1 @@
-PLACEHOLDER_NEED_FULL
+$(cat /tmp/market_full.jsonl)
