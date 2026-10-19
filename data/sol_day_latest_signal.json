@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-19T19:06:00Z",
+  "ts_utc": "2026-10-19T20:06:39Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.405,
+  "atr_14": 0.377,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~103.94 (data-api.binance.vision). 15m ATR(14) Wilder ~0.405; 0.6xATR ~0.243. Prior READY short (FVG 104.32-104.68) has been filled/traded through; price now ~103.94 near/through prior 3R. No clear new Structure Bias + ChoCh in same direction with first qualifying FVG (>=0.243) that currently has realistic fill available. Chop/range after 106.22 high. WAIT."
+  "notes": "Spot ~104.33 (OKX SOL-USDT; Binance API geo-restricted). 15m ATR(14) ~0.377; 0.6xATR ~0.226. Prior READY short (FVG 104.32-104.68) filled/traded through to ~103.5-103.8. Price now back near 104.3 in chop/range after 105.6+ highs. No clear new Structure Bias + ChoCh in same direction with first qualifying FVG that has realistic fill available. WAIT."
 }
