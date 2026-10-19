@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-10-19T17:06:28Z",
+  "status": "WAIT",
+  "ts_utc": "2026-10-19T19:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 104.32,
-    "high": 104.68,
-    "mid": 104.50
-  },
-  "stop": 104.73,
-  "target_3r": 103.81,
-  "target_4r": 103.58,
-  "atr_14": 0.466,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.405,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~104.62 (binance.us). 15m ATR(14)~0.466; 0.6xATR~0.279. Bearish Structure Bias after ChoCh: broke prior swing low 104.40 (11:15) with 14:00 low 103.56. First bearish FVG after ChoCh: 15:45 104.32-104.68 size 0.36 >= 0.279. Current price 104.62 inside zone \u2014 realistic fill available. Structural stop above FVG high + buffer. READY short."
+  "notes": "Spot ~103.94 (data-api.binance.vision). 15m ATR(14) Wilder ~0.405; 0.6xATR ~0.243. Prior READY short (FVG 104.32-104.68) has been filled/traded through; price now ~103.94 near/through prior 3R. No clear new Structure Bias + ChoCh in same direction with first qualifying FVG (>=0.243) that currently has realistic fill available. Chop/range after 106.22 high. WAIT."
 }
