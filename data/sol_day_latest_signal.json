@@ -1,15 +1,19 @@
 {
-  "status": "WAIT",
-  "ts_utc": "2026-10-20T14:09:16Z",
+  "status": "READY",
+  "ts_utc": "2026-10-20T15:08:04Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": null,
-  "entry_zone": null,
-  "stop": null,
-  "target_3r": null,
-  "target_4r": null,
-  "atr_14": 0.54,
-  "risk_usd_quarter_kelly": null,
+  "direction": "long",
+  "entry_zone": {
+    "low": 105.28,
+    "high": 107.17,
+    "mid": 106.225
+  },
+  "stop": 105.08,
+  "target_3r": 109.66,
+  "target_4r": 110.80,
+  "atr_14": 0.783,
+  "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Spot ~106.94 (data-api.binance.vision). 15m ATR(14) Wilder~0.540; 0.6xATR~0.324. Bullish Structure Bias + ChoCh: impulsive break above prior swing high ~105.69 (Oct 19 22:15) and morning highs ~105.5 via 13:45-14:00 15m candles to 107.18. First bull FVG after ChoCh: 13:45 15m 104.68-105.20 size 0.52 >= 0.324. Current price 106.94 well above zone (no retrace into FVG; 14:00 low only touched 105.20 on the way up). No realistic fill available yet. WAIT."
+  "notes": "OKX spot ~107.23. 15m ATR(14)~0.783; 0.6xATR~0.470. Bullish Structure Bias + ChoCh: impulsive break above prior swing highs ~104.9-105.5 to 108.27. Qualifying bull FVG after ChoCh (first large): 105.28-107.17 size 1.89 >= 0.470. Latest low 106.86 retraced into FVG — realistic fill available. Structural stop below FVG low + buffer. READY long."
 }
