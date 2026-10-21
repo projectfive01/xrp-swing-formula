@@ -1,6 +1,6 @@
 {
   "status": "READY",
-  "ts_utc": "2026-10-20T20:05:56Z",
+  "ts_utc": "2026-10-21T13:12:05Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "long",
@@ -12,8 +12,8 @@
   "stop": 105.08,
   "target_3r": 109.68,
   "target_4r": 110.83,
-  "atr_14": 0.549,
+  "atr_14": 0.351,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~106.15. 15m ATR(14) Wilder~0.549; 0.6xATR~0.329. Bullish Structure Bias + ChoCh: impulsive break from ~104.3 to 108.25 (14:00-14:15). First large bull FVG after ChoCh 105.29-107.17 size 1.88 >= 0.329. Price currently ~106.15 inside zone (recent lows 105.01 entered) \u2014 realistic fill available. Structural stop below FVG low + buffer. READY long."
+  "notes": "data-api.binance.vision spot ~107.33. 15m ATR(14) Wilder~0.351; 0.6xATR~0.211. Bullish Structure Bias + ChoCh from prior impulse ~104 to 108.25. First large bull FVG after ChoCh 105.29-107.17 size 1.88 >= 0.211. Price has repeatedly entered the zone (lows to 106.0) and is currently near upper edge ~107.33 \u2014 realistic limit fill available. Structural stop below FVG low + buffer. READY long."
 }
