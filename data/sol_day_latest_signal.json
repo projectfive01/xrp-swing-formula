@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-10-21T20:07:04Z",
+  "status": "WAIT",
+  "ts_utc": "2026-10-22T13:11:51Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 108.12,
-    "high": 108.85,
-    "mid": 108.485
-  },
-  "stop": 109.00,
-  "target_3r": 106.94,
-  "target_4r": 106.425,
-  "atr_14": 0.460,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.311,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~108.24. 15m ATR(14) Wilder~0.460; 0.6xATR~0.276. Prior bullish Structure Bias to 109.20 high, then bearish ChoCh breaking 107.93 swing low (19:00 candle to 107.34). First FVG after ChoCh is large bearish 108.12-108.85 (size 0.73 >= 0.276). Price has retraced from 107.34 low into the lower edge of the FVG (current ~108.24) — realistic limit fill available. Structural stop above FVG high + buffer. READY short."
+  "notes": "data-api.binance.vision spot ~104.25. 15m Wilder ATR(14)~0.311; 0.6xATR~0.187. Prior short from 108.12-108.85 FVG (ChoCh after 109.20 high) has played out. Current structure remains bearish (lower highs/lower lows from 109.20 to 103.55 low). Bounce to 104.80 created bull FVG 103.90-104.27 (size 0.37) but no bullish Structure Bias + ChoCh yet (no break of recent lower high). No new qualifying post-ChoCh FVG with realistic fill in same direction. WAIT."
 }
