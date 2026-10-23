@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-23T18:10:00Z",
+  "ts_utc": "2026-10-23T19:09:06Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.40,
+  "atr_14": 0.324,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live ~104.39 (OKX). 15m ATR(14)~0.40; 0.6xATR~0.24. Price ranging 103.51-105.25. No clear Structure Bias + ChoCh in same direction. No recent FVG >=0.24 (largest ~0.20). No qualifying first FVG after ChoCh with realistic fill. Tight consolidation. WAIT."
+  "notes": "Live ~104.02 (OKX SOL-USDT). 15m ATR(14)~0.324; 0.6xATR~0.194. Price ranging ~103.5-105.25 after earlier moves. No clear Structure Bias + ChoCh in same direction with qualifying first FVG >=0.194 that has realistic fill available. Tight consolidation near 104. WAIT."
 }
