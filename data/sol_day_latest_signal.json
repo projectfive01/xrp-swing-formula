@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-23T14:20:00Z",
+  "ts_utc": "2026-10-23T15:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.464,
+  "atr_14": 0.52,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~103.66. 15m ATR(14)~0.464; 0.6xATR~0.279. Price ranging 103.8-105.3 then sharp drop to 103.50 low on 14:15 candle, breaking recent swing lows. No clear Structure Bias + ChoCh in same direction. Recent FVGs undersized on 15m; 5m has large bear FVG on the dump but price already extended below with no retrace/fill into it. No realistic post-ChoCh fill setup. WAIT."
+  "notes": "Live ~104.67 (Binance/TV). 30m proxy ATR(14)~0.52; 0.6xATR~0.31. Price ranging 103.7-105.1 after earlier dump to ~103.5. No clear Structure Bias + ChoCh in same direction on recent swings. No qualifying first FVG (>=0.6 ATR) after ChoCh with realistic fill available. Choppy consolidation. WAIT."
 }
