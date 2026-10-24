@@ -1,1 +1,2 @@
 PLACEHOLDER_GATE
+{"ts_utc": "2026-10-24T12:15:00Z", "xrp_price": 1.2806, "sol_price": 101.40, "load_bar_pct": 100, "action": "BUY", "gates": {"exhaustion": "red", "pullback_10pct": "green", "zone_200d": "green", "not_chasing": "green"}, "distance_to_zone": "inside lower edge (1.2806 in 1.28-1.35)", "paper_watch_armed": true, "notes": "Live Binance spot. XRP 1.2806 at lower edge of $1.28-1.35 zone after ~24.5% pullback from 1.695 local high. Daily RSI ~37 not elevated. 100% BUY. Price faded further from prior 1.3078."}
