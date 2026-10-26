@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-26T15:10:42Z",
+  "ts_utc": "2026-10-26T17:06:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.41,
+  "atr_14": 0.54,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live Binance SOLUSDT ~101.37. 15m ATR(14)~0.41; 0.6xATR~0.25. Price ranging 99.5-102.8 with choppy action around 100.4-102.1. No clear Structure Bias + ChoCh in the same direction followed by a first FVG >=0.25 that has realistic unfilled/limit-fillable setup. Consolidation continues. WAIT."
+  "notes": "Live data-api.binance.vision SOLUSDT ~101.59. 15m ATR(14)~0.54; 0.6xATR~0.325. Price in choppy range ~100.5-102.7 after recent high 102.73. No clear Structure Bias + ChoCh in same direction followed by first FVG >=0.325 with realistic fill. Recent FVGs undersized. Consolidation continues. WAIT."
 }
