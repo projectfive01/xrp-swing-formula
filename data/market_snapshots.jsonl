@@ -1,3 +1,3 @@
-PLACEHOLDER_WILL_REPLACE
 {"ts_utc": "2026-10-25T19:10:00Z", "xrp_usdt": 1.2969, "xrp_24h_pct": 1.036, "sol_usdt": 101.52, "sol_24h_pct": 1.449, "xrp_high_24h": 1.3159, "xrp_low_24h": 1.2546, "source": "binance_spot_api"}
 {"ts_utc": "2026-10-26T04:08:00Z", "xrp_usdt": 1.2813, "xrp_24h_pct": -2.191, "sol_usdt": 100.39, "sol_24h_pct": -2.078, "xrp_high_24h": 1.3159, "xrp_low_24h": 1.2733, "source": "binance_spot_api"}
+{"ts_utc": "2026-10-26T05:08:00Z", "xrp_usdt": 1.2895, "xrp_24h_pct": -1.67, "sol_usdt": 101.42, "sol_24h_pct": -1.092, "xrp_high_24h": 1.312, "xrp_low_24h": 1.2735, "source": "binance_us_spot_proxy"}
