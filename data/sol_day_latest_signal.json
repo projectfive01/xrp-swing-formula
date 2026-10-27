@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-26T20:06:35Z",
+  "ts_utc": "2026-10-27T13:15:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.4135,
+  "atr_14": 0.349,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live data-api.binance.vision SOLUSDT ~100.37. 15m ATR(14) Wilder~0.4135; 0.6xATR~0.248. Price in choppy range after recent high ~102.73 (15:15) and low ~100.25 (19:00). No clear Structure Bias + ChoCh in same direction followed by first FVG >=0.248 with realistic fill available. Recent large FVGs (e.g. bull 101.76-102.03, bear 101.38-101.66) are not clean post-ChoCh setups with current price fillable. Consolidation/decline continues. WAIT."
+  "notes": "Binance.US SOLUSDT ~100.76. 15m ATR(14)~0.349; 0.6xATR~0.209. Bounce from 99.23 low (10:00) with large bull FVGs (e.g. 99.55-100.05 size 0.50, 100.15-100.50 size 0.35). Higher-TF structure remains lower highs/lows (bearish bias). No clean aligned Structure Bias + ChoCh followed by first qualifying FVG with current realistic fill available. Price above recent FVGs; no active fillable zone. WAIT."
 }
