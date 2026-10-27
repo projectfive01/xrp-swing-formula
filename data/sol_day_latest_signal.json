@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-27T13:15:00Z",
+  "ts_utc": "2026-10-27T14:12:25Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.349,
+  "atr_14": 0.372,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~100.76. 15m ATR(14)~0.349; 0.6xATR~0.209. Bounce from 99.23 low (10:00) with large bull FVGs (e.g. 99.55-100.05 size 0.50, 100.15-100.50 size 0.35). Higher-TF structure remains lower highs/lows (bearish bias). No clean aligned Structure Bias + ChoCh followed by first qualifying FVG with current realistic fill available. Price above recent FVGs; no active fillable zone. WAIT."
+  "notes": "Binance.US SOLUSDT ~100.36. 15m ATR(14)~0.372; 0.6xATR~0.223. Recent sharp dip to 99.23 then bounce to 101.19. Higher structure still showing lower highs from ~101 area (bearish/neutral bias). Bullish bounce created large FVGs (99.55-100.05 size 0.50, others) but no aligned Structure Bias + ChoCh in same direction with current realistic fill. Price ~100.36 has left the primary post-low FVGs. No active setup. WAIT."
 }
