@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-27T17:07:44Z",
+  "ts_utc": "2026-10-27T18:06:59Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.406,
+  "atr_14": 0.262,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance vision SOLUSDT ~101.09. 15m ATR(14)~0.406; 0.6xATR~0.244. Recent range after dip to 99.16, bounce to 101.30. Qualifying bull FVGs exist (e.g. 99.62-100.04 size 0.42, 100.16-100.43 size 0.27) but higher structure remains neutral/choppy with no clear Structure Bias + ChoCh in the same direction. Price ~101.09 is above the primary FVGs with no current realistic retrace fill into a first post-ChoCh FVG. No active setup. WAIT."
+  "notes": "Binance.US SOLUSDT ~100.76. 15m ATR(14)~0.262; 0.6xATR~0.157. Structure remains choppy/neutral in 100-101.3 range after earlier dip near 99.9. No clear Structure Bias + ChoCh in the same direction. Qualifying FVGs exist but none is the first post-ChoCh with realistic fill available. Price at recent low of the range. No active setup. WAIT."
 }
