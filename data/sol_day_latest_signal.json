@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-28T14:08:30Z",
+  "ts_utc": "2026-10-28T15:07:18Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.355,
+  "atr_14": 0.393,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~101.13. 15m ATR(14)~0.355; 0.6xATR~0.213. Recent bearish structure from 103.67 high. First significant FVG after decline ~102.14-102.74 (size 0.60). Price currently ~101.13, well below FVG; no retracement into zone for fill. Hard requirements not fully met with available fill. WAIT."
+  "notes": "Binance.US SOLUSDT ~101.04. 15m ATR(14)~0.393; 0.6xATR~0.236. Bearish structure from 103.67 high, lower lows to ~100.52. Significant first FVG after decline 102.14-102.74 (size 0.60 > threshold). Price ~101.04 well below FVG; no retracement into zone for fill. No qualifying ChoCh + fillable FVG. WAIT."
 }
