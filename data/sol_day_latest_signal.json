@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-27T20:06:00Z",
+  "ts_utc": "2026-10-28T13:11:44Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.189,
+  "atr_14": 0.277,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~101.25. 15m ATR(14)~0.189; 0.6xATR~0.114. Tight consolidation 100-101.4 after bounce from ~99.2. No clear Structure Bias + ChoCh in same direction. Small FVGs present but none is first post-ChoCh with size >=0.6 ATR and realistic fill for a valid setup. Neutral/choppy. WAIT."
+  "notes": "Binance.US SOLUSDT ~101.46. 15m ATR(14)~0.277; 0.6xATR~0.166. Bullish push to 103.67 then bearish ChoCh breaking prior swing lows ~102.53-102.61. First FVG after ChoCh is large bearish 102.14-102.74 (size 0.60 >= 0.166). Price has not retraced into the FVG (touched edge once then sold to 101.46); no realistic fill available currently. WAIT."
 }
