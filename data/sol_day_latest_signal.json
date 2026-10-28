@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-28T19:05:00Z",
+  "ts_utc": "2026-10-28T20:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.444,
+  "atr_14": 0.563,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance SOLUSDT ~100.85. 15m ATR(14)~0.444; 0.6xATR~0.267. Bearish structure bias from 103.69 high, lower lows to 100.46. Prior large bearish FVG ~102.18-102.68 (size 0.50) but no fresh ChoCh in bearish direction with first qualifying FVG after it that has realistic fill at current price. No bullish ChoCh + large FVG. Price consolidating near lows without setup. WAIT."
+  "notes": "data-api.binance.vision spot ~103.22. 15m ATR(14)~0.563; 0.6xATR~0.338. Bullish structure bias after bounce from ~100.46 low with higher highs/lows. Large bullish FVG 102.58-103.05 (size 0.47 >= 0.338) on recent impulse, but price ~103.22 is above the zone with no retracement/fill available yet. No other first FVG after clear ChoCh that is fillable at current levels. WAIT."
 }
