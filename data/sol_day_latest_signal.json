@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-30T19:10:19Z",
+  "ts_utc": "2026-10-30T20:07:54Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.582,
+  "atr_14": 0.548,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "OKX spot ~94.38. 15m ATR(14)~0.582; 0.6xATR~0.349. Structure bias mixed/ranging to mildly bearish (lower highs from 95.86/95.39 into lower low 93.56). No clear Structure Bias + ChoCh in the same direction followed by first FVG ≥ 0.6×ATR with realistic unfilled/fillable level at current price. Qualifying large FVGs are prior or not first after aligned ChoCh. WAIT."
+  "notes": "data-api.binance.vision spot ~94.93. 15m ATR(14) Wilder~0.548; 0.6xATR~0.329. Structure bias mildly bearish/ranging (lower highs 98.59\u219295.44, recent low 93.62). No clear Structure Bias + ChoCh in the same direction followed by first FVG \u2265 0.6\u00d7ATR with realistic unfilled/fillable level. Recent FVGs tiny or not qualifying. WAIT."
 }
