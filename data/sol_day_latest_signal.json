@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-30T15:09:34Z",
+  "ts_utc": "2026-10-30T16:09:27Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.580,
+  "atr_14": 0.734,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US spot ~95.18. 15m ATR(14)~0.580; 0.6xATR~0.348. Overnight low 92.24, recovery high 98.59, then lower highs/lower lows to 93.97. Bearish structure bias present but no clear ChoCh in same direction followed by first FVG ≥ 0.6×ATR with realistic unfilled fill available at current price. Recent imbalances filled or undersized relative to threshold. Price consolidating near 95. WAIT."
+  "notes": "Binance.US spot ~94.97. 15m ATR(14)~0.734; 0.6xATR~0.440. Bearish structure bias from overnight high ~103.14 to low 92.24, then lower highs/lower lows into 93.97 area. No clear ChoCh in the same direction followed by first FVG ≥ 0.6×ATR with realistic unfilled fill available at current price (~95 consolidating). Recent imbalances either undersized relative to threshold or not the first after a valid ChoCh. WAIT."
 }
