@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-10-29T20:07:18Z",
+  "ts_utc": "2026-10-30T13:14:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.465,
+  "atr_14": 0.463,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~98.56. 15m ATR(14)~0.465; 0.6xATR~0.279. Prior bullish setup invalidated by breakdown below 100. Sharp 20:00 impulse low 98.42 created small bearish FVG 99.94-100.13 size 0.19 < 0.279. No clear Structure Bias + ChoCh + first qualifying FVG (≥0.6xATR) with realistic current fill available. WAIT."
+  "notes": "data-api.binance.vision spot ~96.58. 15m ATR(14) Wilder~0.463; 0.6xATR~0.278. After overnight low 92.34 and recovery to 98.59, structure has shifted to lower highs/lower lows. No clear Structure Bias + ChoCh in same direction followed by first FVG ≥ 0.6×ATR with realistic current fill available. Recent bear FVGs either filled or undersized. Price chopping ~96.5-96.9. WAIT."
 }
