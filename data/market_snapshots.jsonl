@@ -1,2 +1,3 @@
 {"ts_utc":"2026-10-31T09:11:00Z","xrp_usdt":1.2456,"xrp_24h_pct":-1.119,"sol_usdt":96.94,"sol_24h_pct":-3.590,"source":"binance_vision_spot","notes":"XRP under 200d zone ~2.7%, pullback 26.5% from 1.695"}
 {"ts_utc":"2026-10-31T11:13:00Z","xrp_usdt":1.2588,"xrp_24h_pct":1.861,"sol_usdt":95.50,"sol_24h_pct":-1.709,"source":"binance_spot_api","notes":"XRP recovered to ~1.7% under 200d zone, pullback 25.7% from 1.695"}
+{"ts_utc":"2026-10-31T12:20:00Z","xrp_usdt":1.248,"xrp_24h_pct":-0.5,"sol_usdt":95.72,"sol_24h_pct":-1.70,"source":"binance_spot","notes":"XRP faded to ~2.5% under 200d zone, pullback 26.4% from 1.695"}
