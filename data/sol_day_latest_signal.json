@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-02T20:07:07Z",
+  "ts_utc": "2026-11-02T21:07:30Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.593,
+  "atr_14": 0.559,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~91.93. 15m ATR(14) Wilder ~0.593; 0.6×ATR ~0.356. Bearish Structure Bias + ChoCh from ~94.96 highs breaking prior lows to 90.87. Closest post-ChoCh 15m bear FVGs 0.19-0.27 < threshold. On 5m ATR~0.339 (0.6x~0.203) Bear FVG 92.23-92.45 size 0.220 ≥ threshold, but price currently ~91.93 below the zone — no realistic retrace fill available for short entry. No clean hard requirements + fill. WAIT."
+  "notes": "data-api.binance.vision spot ~91.80. 15m ATR(14) Wilder ~0.559; 0.6×ATR ~0.336. Bearish Structure Bias + ChoCh from ~95.95 highs breaking prior structure to 90.87 low. Closest post-ChoCh 15m bear FVGs 0.19-0.27 < threshold. On 5m ATR~0.325 (0.6x~0.195) Bear FVG 92.23-92.45 size 0.220 ≥ threshold, but price currently ~91.80 below the zone — no realistic retrace fill available for short entry. No clean hard requirements + fill. WAIT."
 }
