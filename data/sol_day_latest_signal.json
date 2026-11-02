@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-02T15:09:44Z",
+  "ts_utc": "2026-11-02T17:08:49Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.359,
+  "atr_14": 0.453,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US spot ~94.54. 15m ATR(14) Wilder ~0.359; 0.6×ATR ~0.216. Structure bias mildly bearish/ranging (lower highs 95.93→94.92→94.61, recent low 93.72). No clear Structure Bias + ChoCh in the same direction followed by first FVG ≥ 0.6×ATR with realistic unfilled/fillable level. Recent FVGs present but lack aligned structure ChoCh. WAIT."
+  "notes": "Binance.US spot ~93.47 (main ~93.2-93.4). 15m ATR(14) Wilder ~0.453; 0.6\u00d7ATR ~0.272. Structure bias bearish (lower highs ~94.94\u219294.83, break of prior low 93.72 to 92.83). No clear first FVG after that ChoCh \u2265 0.6\u00d7ATR with realistic unfilled/fillable level. Closest 15m bear FVG ~0.20 under threshold. WAIT."
 }
