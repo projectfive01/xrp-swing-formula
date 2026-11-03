@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-03T17:07:57Z",
+  "ts_utc": "2026-11-03T18:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.431,
+  "atr_14": 0.375,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~93.56. 15m ATR(14)~0.431; 0.6×ATR~0.259. Recovery from prior lows (~90.87-91.57) into consolidation 93.1-93.9. Recent bull FVGs ~0.17-0.21 (below threshold). No clean Structure Bias + ChoCh in same direction with first FVG ≥0.6×ATR that currently has realistic fill (price near recent highs, no qualifying zone being filled). WAIT."
+  "notes": "OKX/Binance spot ~93.70. 15m ATR(14)~0.375; 0.6×ATR~0.225. Tight consolidation 92.4-93.9. No clear Structure Bias + ChoCh in same direction. Older small bull FVGs below threshold and not first after valid ChoCh. No realistic fill on qualifying zone. WAIT."
 }
