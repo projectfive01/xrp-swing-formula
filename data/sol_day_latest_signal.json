@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-04T19:10:00Z",
+  "ts_utc": "2026-11-04T21:07:22Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.564,
+  "atr_14": 0.358,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US ~95.06 / main Binance ~95.93. 15m ATR(14) ~0.564; 0.6×ATR ~0.338. Structure bullish (HH/HL after impulse to 98.11). No clear recent ChoCh. Qualifying bull FVG 95.64-96.39 (size 0.75) has been entered (price to 95.56) but hard requirements not fully met. WAIT."
+  "notes": "Binance.US live ~94.87. 15m ATR(14)~0.358; 0.6×ATR~0.215. Strong bullish impulse ~14:30-15:15 UTC to 98.11 created large bull FVG ~93.07-94.45. Price has not retraced into it. Recent structure is corrective pullback/consolidation with lower highs/lows after the high. No clear fresh ChoCh + first qualifying FVG with active realistic fill. WAIT."
 }
