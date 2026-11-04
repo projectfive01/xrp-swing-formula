@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-03T21:07:04Z",
+  "ts_utc": "2026-11-04T15:10:26Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.207,
+  "atr_14": 0.732,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US ~93.60 (spot proxy). 15m ATR(14)~0.207; 0.6×ATR~0.124. Range-bound ~93.0-93.92 after recovery from ~91.4 low. Mild higher-low bias but no clear fresh ChoCh. Qualifying FVGs (e.g. recent bear 0.27 size ~93.48-93.75) exist but not first after valid aligned ChoCh with confirmed structure bias and realistic fill setup. WAIT."
+  "notes": "Binance.US ~97.64. 15m ATR(14)~0.732; 0.6×ATR~0.439. Bullish ChoCh confirmed on break of ~94.14 prior swing high during strong impulse (14:30-15:00 candles to 97.55). First qualifying bull FVG after ChoCh ~93.07-94.45 (size 1.38 >=0.439). Price currently well above zone with no retracement into FVG yet — no realistic fill available. Prefer first FVG. WAIT."
 }
