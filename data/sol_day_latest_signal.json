@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-05T20:07:00Z",
+  "ts_utc": "2026-11-05T21:07:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.569,
+  "atr_14": 0.526,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision spot ~89.97. 15m ATR(14) ~0.569; 0.6xATR ~0.341. Bearish Structure Bias + ChoCh intact from breakdown ~95-97 high through 94 → sub-90. Primary first large bearish FVGs after ChoCh (e.g. ~94.0-95.1, ~93.0-94.0) remain unfilled. Price consolidating ~88.8-90.3 with no realistic retracement into those FVGs. No qualifying long setup. WAIT."
+  "notes": "binance.us spot ~89.72. 15m ATR(14) ~0.526; 0.6xATR ~0.315. Bearish Structure Bias intact from earlier ChoCh/breakdown ~95-97 through 94 to sub-90. Large bearish FVGs after ChoCh (e.g. ~94.0-95.2, ~93.0-94.0) already traded through and well below current price. Recent 15m FVGs are small (<0.12) and do not meet size threshold. No realistic fill on a qualifying first FVG after current ChoCh. No long setup. WAIT."
 }
