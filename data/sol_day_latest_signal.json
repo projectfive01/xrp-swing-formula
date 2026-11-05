@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-04T21:07:22Z",
+  "ts_utc": "2026-11-05T15:09:32Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.358,
+  "atr_14": 0.517,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US live ~94.87. 15m ATR(14)~0.358; 0.6×ATR~0.215. Strong bullish impulse ~14:30-15:15 UTC to 98.11 created large bull FVG ~93.07-94.45. Price has not retraced into it. Recent structure is corrective pullback/consolidation with lower highs/lows after the high. No clear fresh ChoCh + first qualifying FVG with active realistic fill. WAIT."
+  "notes": "Binance.US live ~91.68. 15m ATR(14) Wilder ~0.517; 0.6×ATR ~0.310. Strong bearish breakdown 14:30-15:00 UTC from ~95.5 to 91.67 created large bear FVGs (~94.02-95.19 size 1.17, ~93.02-94.05 size 1.03) after downside ChoCh. Price currently at lows with no retracement into the FVGs yet — no realistic fill available. No qualifying long setup. WAIT."
 }
