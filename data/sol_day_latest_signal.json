@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-06T14:12:28Z",
+  "ts_utc": "2026-11-06T15:09:22Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.397,
+  "atr_14": 0.556,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "OKX spot ~90.03. 15m ATR(14) ~0.397; 0.6xATR ~0.238. Bearish Structure Bias intact from earlier ChoCh/breakdown ~95-97 to sub-90. Large prior bearish FVGs already traded through. Recent 15m action is tight range 89.7-90.9; no clear new ChoCh. Recent FVGs small (largest ~0.23 borderline) and no realistic fill on a qualifying first FVG after current structure ChoCh. WAIT."
+  "notes": "data-api.binance.vision spot ~90.45. 15m ATR(14) Wilder ~0.556; 0.6xATR ~0.334. Bearish Structure Bias intact from Nov 5 breakdown (95+ to 88.3). Large prior bearish FVGs (94-95 area) already traded through. Recent 15m range 88.3-91.6, no clear new ChoCh. Recent FVGs small (largest 0.30 < 0.334) with no qualifying first FVG after current structure ChoCh that has realistic fill. WAIT."
 }
