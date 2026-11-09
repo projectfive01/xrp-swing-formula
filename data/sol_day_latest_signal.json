@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-09T17:09:00Z",
+  "ts_utc": "2026-11-09T18:17:19Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.401,
+  "atr_14": 0.405,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.us spot ~86.88. 15m ATR(14) Wilder ~0.401; 0.6xATR ~0.241. Structure ranging/bearish after low ~85.17 (07:00) and bounce to high 88.04 (15:45). No clear ChoCh in same direction + first FVG after that ChoCh ≥ 0.6xATR with realistic fill available. Recent bearish FVGs (e.g. ~87.20-87.74 size 0.54) exist but not post-clear ChoCh with fill setup; price mid-range after pullback. WAIT."
+  "notes": "Binance SOLUSDT spot ~86.72. 15m ATR(14) ~0.405; 0.6xATR ~0.243. Structure after 85.14 low bounce to ~87.69 then choppy/pullback. No clear Structure Bias + ChoCh in same direction with first FVG after that ChoCh ≥ 0.6×ATR that has realistic fill available. Recent price action mid-range, no qualifying setup. WAIT."
 }
