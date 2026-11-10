@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-10T18:08:00Z",
+  "ts_utc": "2026-11-10T19:09:41Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.66,
+  "atr_14": 0.51,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "data-api.binance.vision SOLUSDT ~82.28. 15m ATR(14) Wilder ~0.66; 0.6xATR ~0.40. Bearish Structure Bias continues after LL 81.34 on 15:30 candle (ChoCh/continuation). Bearish FVGs present after the drop (e.g. 82.47-83.60 size 1.13 >= 0.40), but current price ~82.28 has not retraced into the zone. No realistic fill available. No bullish ChoCh. WAIT."
+  "notes": "Binance.US SOLUSDT ~82.85. 15m ATR(14) ~0.51; 0.6xATR ~0.31. Structure Bias remains bearish after sharp LL to 81.36 (15:30 candle). Large bearish FVGs formed during the impulse down (e.g. 82.45-83.64 size 1.19 >= 0.31), but these are not the first FVG after a ChoCh. Minor bounce high to 83.25; small bull FVG 82.50-82.78 size 0.28 < threshold. No clear Structure Bias + ChoCh in same direction with qualifying first FVG and realistic fill. WAIT."
 }
