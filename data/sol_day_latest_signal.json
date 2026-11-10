@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-10T14:15:05Z",
+  "ts_utc": "2026-11-10T15:11:48Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.448,
+  "atr_14": 0.56,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~84.22. 15m ATR(14)~0.448; 0.6xATR~0.269. Clear bearish Structure Bias (LH/LL) culminating in LL 82.73 on 13:30 candle. No bullish or fresh bearish ChoCh with first FVG after that ChoCh ≥ 0.6×ATR that has realistic fill available. Recent price consolidating ~84.0-84.5 after drop; no qualifying setup. WAIT."
+  "notes": "Binance.US SOLUSDT ~84.73. 15m ATR(14)~0.56; 0.6xATR~0.34. Bearish Structure Bias (LH/LL) with LL 82.73 on 13:30 candle. Bounce to 85.09 has not produced a clear ChoCh + first FVG after that ChoCh ≥ 0.6×ATR with realistic fill. No qualifying setup. WAIT."
 }
