@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-10T20:07:24Z",
+  "ts_utc": "2026-11-10T21:10:03Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.48,
+  "atr_14": 0.36,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~82.81. 15m ATR(14) ~0.48; 0.6xATR ~0.29. Structure Bias remains bearish after sharp LL to 81.36. Large bearish FVGs formed during the impulse down (e.g. 82.45-83.64 size 1.19 >= 0.29), but these are not the first FVG after a ChoCh for a fresh setup. Bounce high to 83.25; small bull FVG 82.50-82.78 size 0.28 ~ threshold. No clear Structure Bias + ChoCh in same direction with qualifying first FVG and realistic fill available. WAIT."
+  "notes": "Binance.US SOLUSDT ~83.62. 15m ATR(14) ~0.36; 0.6xATR ~0.22. Structure Bias remains bearish after LL to 81.36 at 15:30 UTC. Large bearish FVGs during impulse (82.45-83.64 size 1.19 >= 0.22) exist but are not first FVG after a fresh ChoCh for new setup. Bounce making HH/HL to 83.66; bull FVGs e.g. 82.50-82.78 size 0.28 and 82.99-83.22 size 0.23 meet size but no clear Structure Bias + ChoCh same direction with preferred first FVG and realistic fill for a clean READY setup. WAIT."
 }
