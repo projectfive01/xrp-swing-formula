@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-11T20:08:41Z",
+  "ts_utc": "2026-11-11T21:06:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.40,
+  "atr_14": 0.36,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live data-api.binance.vision SOLUSDT ~84.89. 15m ATR(14) Wilder ~0.40; 0.6xATR ~0.24. Prior bullish Structure Bias + ChoCh (impulse high 85.85) and large FVG 84.09-84.67 already filled and run (to targets area then pullback). No new ChoCh + first FVG ≥0.6xATR with realistic fill. Recent FVGs undersized (max ~0.13). WAIT."
+  "notes": "Live data-api.binance.vision SOLUSDT ~85.02. 15m ATR(14) Wilder ~0.36; 0.6xATR ~0.22. Prior bullish Structure Bias + ChoCh (impulse high 85.85) and large FVG 84.09-84.67 already filled and run. No new ChoCh + first FVG ≥0.6xATR with realistic fill. Recent FVGs undersized (max ~0.13). WAIT."
 }
