@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-10T21:10:03Z",
+  "ts_utc": "2026-11-11T14:14:36Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.36,
+  "atr_14": 0.68,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Binance.US SOLUSDT ~83.62. 15m ATR(14) ~0.36; 0.6xATR ~0.22. Structure Bias remains bearish after LL to 81.36 at 15:30 UTC. Large bearish FVGs during impulse (82.45-83.64 size 1.19 >= 0.22) exist but are not first FVG after a fresh ChoCh for new setup. Bounce making HH/HL to 83.66; bull FVGs e.g. 82.50-82.78 size 0.28 and 82.99-83.22 size 0.23 meet size but no clear Structure Bias + ChoCh same direction with preferred first FVG and realistic fill for a clean READY setup. WAIT."
+  "notes": "Live Binance SOLUSDT ~83.84-84.16. 15m ATR(14) approx 0.68; 0.6xATR ~0.41. Structure remains bearish overall after LL near 81.34. Bounce producing higher lows/highs but no clear confirmed ChoCh in alignment with Structure Bias plus first FVG >=0.6 ATR with realistic fill available. Hard requirements not met. WAIT."
 }
