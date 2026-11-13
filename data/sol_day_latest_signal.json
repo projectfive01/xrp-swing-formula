@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-13T19:09:11Z",
+  "ts_utc": "2026-11-13T20:08:20Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.46,
+  "atr_14": 0.36,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live data-api.binance.vision SOLUSDT ~80.17. 15m ATR(14)~0.46; 0.6xATR~0.28. Mild bounce from ~79 lows after prior decline, consolidating near 80. Qualifying FVGs exist (e.g. prior bear 80.27-80.70 size 0.43) but no clear current Structure Bias + ChoCh in same direction with first FVG after it that has realistic fill available at current price. No valid setup. WAIT."
+  "notes": "Live data-api.binance.vision SOLUSDT ~80.40. 15m ATR(14)~0.36; 0.6xATR~0.22. Post-drop to 78.92 (15:30 UTC), consolidating/chopping in 79.3-80.5 range with mild upside drift. No clear Structure Bias + ChoCh in the same direction accompanied by a first FVG after it ≥ 0.6×ATR that currently has a realistic fill available. No valid setup. WAIT."
 }
