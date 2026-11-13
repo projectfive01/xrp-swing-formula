@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-13T17:13:10Z",
+  "ts_utc": "2026-11-13T19:09:11Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.67,
+  "atr_14": 0.46,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live Gate.io/KuCoin SOLUSDT ~79.70 (24h range ~77.93-82.37). 15m ATR(14) Wilder ~0.67; 0.6xATR ~0.40. Spike to 82.37 then decline through prior structure. Qualifying FVGs (e.g. bear 80.25-80.70 size 0.45, bull 80.96-81.47 size 0.51) exist but no clear Structure Bias + ChoCh in same direction with first FVG after it that has realistic fill available at current price (~79.6, below recent bear zones, no new bullish ChoCh). No valid setup. WAIT."
+  "notes": "Live data-api.binance.vision SOLUSDT ~80.17. 15m ATR(14)~0.46; 0.6xATR~0.28. Mild bounce from ~79 lows after prior decline, consolidating near 80. Qualifying FVGs exist (e.g. prior bear 80.27-80.70 size 0.43) but no clear current Structure Bias + ChoCh in same direction with first FVG after it that has realistic fill available at current price. No valid setup. WAIT."
 }
