@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-16T16:12:15Z",
+  "ts_utc": "2026-11-16T17:12:32Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.57,
+  "atr_14": 0.414,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live MEXC/CoinGecko SOLUSDT ~70.61 (recent 15m range ~70.00-72.77). 15m ATR(14) Wilder ~0.57; 0.6xATR ~0.34. Bearish structure overall (lower highs/lows, sharp dump from 72.77 spike to 70.00). Large bearish FVG 70.46-71.85 (size 1.39 >= 0.34) on the dump candle, price has entered lower portion (high to 70.96). However, no clear fresh Structure Bias + ChoCh in the same direction; the move is more continuation lower low after failed bounce rather than aligned ChoCh. No valid first-FVG setup with clean realistic fill for entry right now. WAIT."
+  "notes": "Live Binance SOLUSDT ~70.97 (recent 15m range ~70.45-73.28). 15m ATR(14) ~0.414; 0.6xATR ~0.248. Post-spike pullback from ~73.28 high into consolidation ~70.5-72. No clear Structure Bias + ChoCh in the same direction with a first FVG after ChoCh ≥ 0.248 that has a realistic fill available. Recent candles overlapping with small ranges; no valid aligned setup. WAIT."
 }
