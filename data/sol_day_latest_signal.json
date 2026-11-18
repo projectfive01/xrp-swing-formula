@@ -1,7 +1,7 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-18T20:35:00Z",
+  "ts_utc": "2026-11-18T21:05:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "notes": "Live Binance SOLUSDT ~72.51. 15m ATR(14) estimated ~0.55; 0.6×ATR ~0.33. Recent price action shows prior bullish attempt from 72.22 low invalidated as price traded below structural levels to current 72.51. No clear new Structure Bias + ChoCh in either direction with a qualifying first FVG (≥0.6×ATR) that has realistic fill available at current price. Hard requirements not met. WAIT."
+  "notes": "Live Binance SOLUSDT ~72.51. 15m ATR(14) estimated ~0.50; 0.6×ATR ~0.30. Price continues to trade near session lows after prior failed long setup (stopped below 73.25). No new clear Structure Bias + ChoCh in either direction with a qualifying first FVG (≥0.6×ATR) that has realistic fill available at current price. Hard requirements not met. WAIT."
 }
