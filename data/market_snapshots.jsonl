@@ -12,3 +12,4 @@
 {"ts_utc": "2026-11-17T06:13:00Z", "xrp_usdt": 0.9629, "xrp_24h_pct": 1.071, "xrp_high_24h": 0.9769, "xrp_low_24h": 0.9424, "sol_usdt": 72.63, "sol_24h_pct": 2.080, "sol_high_24h": 73.30, "sol_low_24h": 69.93, "source": "binance_spot_api"}
 {"ts_utc": "2026-11-18T04:11:42Z", "xrp_usdt": 0.9807, "xrp_24h_pct": 2.810, "xrp_high_24h": 0.9918, "xrp_low_24h": 0.9456, "sol_usdt": 75.34, "sol_24h_pct": 5.563, "sol_high_24h": 75.78, "sol_low_24h": 71.07, "source": "binance_spot_api"}
 {"ts_utc": "2026-11-18T15:39:00Z", "xrp_usdt": 0.9887, "xrp_24h_pct": 1.135, "xrp_high_24h": 1.0078, "xrp_low_24h": 0.9456, "sol_usdt": 73.78, "sol_24h_pct": -0.189, "sol_high_24h": 75.78, "sol_low_24h": 71.07, "source": "binance_spot_api"}
+{"ts_utc": "2026-11-18T21:10:00Z", "xrp_usdt": 0.9661, "xrp_24h_pct": 0.041, "xrp_high_24h": 1.0078, "xrp_low_24h": 0.9524, "sol_usdt": 73.26, "sol_24h_pct": 0.729, "sol_high_24h": 75.78, "sol_low_24h": 72.05, "source": "binance_spot_api"}
