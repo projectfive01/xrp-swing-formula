@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-19T20:08:09Z",
+  "ts_utc": "2026-11-19T21:12:15Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.51,
+  "atr_14": 0.47,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live OKX SOL-USDT ~73.35. 15m ATR(14)~0.51; 0.6×ATR~0.31. Prior bearish ChoCh + large FVG (from ~15:30 drop after 75.65 high) invalidated by bounce to 74.68 (above prior structural stop ~74.60). No fresh Structure Bias + ChoCh in either direction with first qualifying FVG (≥0.6×ATR) and realistic fill available. Price declining from 18:30 high but has not broken 17:00 low 72.67 for new bearish ChoCh. WAIT for clear setup."
+  "notes": "Live data-api.binance.vision SOLUSDT ~72.83. 15m Wilder ATR(14)~0.47; 0.6×ATR~0.28. Prior bearish ChoCh + large FVG invalidated by bounce to 74.69 (above prior structural stop ~74.60). Price declined and broke prior 17:00 low 72.67 on 20:30 candle (low 72.60). No fresh Structure Bias + ChoCh with first qualifying FVG (≥0.6×ATR) and realistic fill available after the new low break. Recent small FVGs during decline are pre-ChoCh or undersized. WAIT for clear impulsive ChoCh + FVG setup."
 }
