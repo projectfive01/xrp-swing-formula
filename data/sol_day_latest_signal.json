@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-19T21:12:15Z",
+  "ts_utc": "2026-11-20T14:22:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.47,
+  "atr_14": 0.40,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live data-api.binance.vision SOLUSDT ~72.83. 15m Wilder ATR(14)~0.47; 0.6×ATR~0.28. Prior bearish ChoCh + large FVG invalidated by bounce to 74.69 (above prior structural stop ~74.60). Price declined and broke prior 17:00 low 72.67 on 20:30 candle (low 72.60). No fresh Structure Bias + ChoCh with first qualifying FVG (≥0.6×ATR) and realistic fill available after the new low break. Recent small FVGs during decline are pre-ChoCh or undersized. WAIT for clear impulsive ChoCh + FVG setup."
+  "notes": "Live data-api.binance.vision SOLUSDT ~71.42. 15m Wilder ATR(14)~0.40; 0.6×ATR~0.24. Prevailing bearish Structure Bias (LL/LH) continues after prior break of 72.67. Minor bounce from 13:30 low 70.56 created bullish impulse to 71.51 (minor ChoCh of recent swing high ~71.46) with first bullish FVG 70.82-71.25 (size 0.43 ≥ 0.24). Price has traded through the FVG and is currently above it (~71.42); no realistic retrace fill available now. No clear matching Structure Bias + ChoCh with fillable qualifying FVG. WAIT."
 }
