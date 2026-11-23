@@ -1,19 +1,19 @@
 {
   "status": "READY",
-  "ts_utc": "2026-11-23T17:13:55Z",
+  "ts_utc": "2026-11-23T18:10:01Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "long",
   "entry_zone": {
-    "low": 72.65,
-    "high": 75.14,
+    "low": 72.64,
+    "high": 75.15,
     "mid": 73.90
   },
-  "stop": 72.40,
-  "target_3r": 78.40,
-  "target_4r": 79.90,
-  "atr_14": 1.32,
+  "stop": 72.20,
+  "target_3r": 79.00,
+  "target_4r": 80.70,
+  "atr_14": 0.88,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Live api.binance.com SOLUSDT ~75.12. 15m ATR(14) approx 1.32; 0.6×ATR ~0.79. Bullish Structure Bias + ChoCh via large impulse candle (72.62→76.76 high, then to 78.48) breaking prior range. First FVG after ChoCh is large bullish 72.65-75.14 (size 2.49 >> 0.79). Price has retraced deeply into the FVG (lows to 73.75) and is currently near/above upper edge — realistic limit fill available. Structural stop below FVG low + buffer (72.40). 1R ~1.50 from mid. READY long."
+  "notes": "Live Gate.io/Binance proxy SOLUSDT ~73.68. 15m ATR(14)=0.88; 0.6×ATR=0.53. Bullish Structure Bias + ChoCh via impulse 72.6→76.8/78.5 breaking prior range. First FVG after ChoCh: 72.64-75.15 (size 2.51 >> 0.53). Price currently inside FVG (retraced to 73.68) — realistic fill available. Structural stop below impulse low + buffer (72.20). 1R ~1.70 from mid. READY long."
 }
