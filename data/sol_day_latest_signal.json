@@ -1,19 +1,15 @@
 {
-  "status": "READY",
-  "ts_utc": "2026-11-24T14:18:15Z",
+  "status": "WAIT",
+  "ts_utc": "2026-11-24T15:14:52Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
-  "direction": "short",
-  "entry_zone": {
-    "low": 70.17,
-    "high": 70.63,
-    "mid": 70.40
-  },
-  "stop": 71.05,
-  "target_3r": 68.45,
-  "target_4r": 67.80,
-  "atr_14": 0.46,
-  "risk_usd_quarter_kelly": 45,
+  "direction": null,
+  "entry_zone": null,
+  "stop": null,
+  "target_3r": null,
+  "target_4r": null,
+  "atr_14": 0.50,
+  "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live Binance.US SOLUSDT ~70.04. 15m ATR(14)=0.46; 0.6×ATR=0.276. Bearish Structure Bias (sequence of LH/LL). Qualifying first major FVG after continued downside ChoCh: bearish 70.17-70.63 (size 0.46 > 0.276). Price has tagged the FVG low and is limit-fillable into the zone. Structural stop above FVG + buffer at 71.05. 1R ~0.65 from mid. READY short."
+  "notes": "Live Binance.US SOLUSDT ~69.37. 15m ATR(14)=0.50; 0.6×ATR=0.30. Bearish Structure Bias (LH/LL sequence). Prior qualifying FVG 70.17-70.63 has been mitigated (price traded through it and is now well below). No fresh first FVG after ChoCh ≥ 0.6×ATR with realistic unfilled/limit-fillable level currently available. WAIT."
 }
