@@ -1,6 +1,6 @@
 {
   "status": "READY",
-  "ts_utc": "2026-11-24T16:11:05Z",
+  "ts_utc": "2026-11-24T17:35:25Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": "short",
@@ -9,11 +9,11 @@
     "high": 69.69,
     "mid": 69.51
   },
-  "stop": 69.85,
-  "target_3r": 68.49,
-  "target_4r": 68.15,
-  "atr_14": 0.51,
+  "stop": 69.90,
+  "target_3r": 68.34,
+  "target_4r": 67.95,
+  "atr_14": 0.57,
   "risk_usd_quarter_kelly": 45,
   "equity_unit_usd": 1000,
-  "notes": "Live Binance.US SOLUSDT ~69.13. 15m ATR(14)=0.51; 0.6×ATR=0.31. Bearish Structure Bias (LH/LL). First qualifying FVG after downside continuation: bearish 69.33-69.69 (size 0.36 ≥ 0.31). Price has retraced into the zone (high 69.39) — realistic fill available. Structural stop above FVG + buffer at 69.85. 1R ~0.34 from mid. READY short."
+  "notes": "Live Binance.US SOLUSDT ~69.77. 15m ATR(14)=0.57; 0.6×ATR=0.34. Bearish Structure Bias (clear LH/LL). First qualifying FVG after downside impulse/ChoCh continuation: bearish 69.33-69.69 (size 0.36 ≥ 0.34). Price at/near FVG high — realistic limit-fillable level. Structural stop beyond FVG + buffer at 69.90. 1R ~0.39 from mid. READY short."
 }
