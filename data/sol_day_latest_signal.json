@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-24T20:07:00Z",
+  "ts_utc": "2026-11-25T14:16:20Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.32,
+  "atr_14": 0.38,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live Binance.US SOLUSDT ~69.08. 15m ATR(14)≈0.32; 0.6×ATR≈0.19. Bearish structure bias intact, but prior qualifying FVG (69.33-69.69) has been broken below with no realistic fill currently available. No new ChoCh + first FVG ≥0.6×ATR meeting hard requirements with fillable entry. WAIT."
+  "notes": "Live Binance.US SOLUSDT ~67.19. 15m ATR(14)≈0.38; 0.6×ATR≈0.23. Bearish structure bias intact (LH/LL sequence from ~69). Prior 69.33-69.69 FVG broken. Recent qualifying bearish FVGs (e.g. 67.36-67.70 size 0.34, 68.07-68.53 size 0.46) exist but price is below them with no realistic retracement fill currently available. No aligned ChoCh + first FVG ≥0.6×ATR with fillable entry. WAIT."
 }
