@@ -1,6 +1,6 @@
 {
   "status": "WAIT",
-  "ts_utc": "2026-11-26T20:10:00Z",
+  "ts_utc": "2026-11-26T21:10:00Z",
   "symbol": "SOLUSDT",
   "formula_version": "v3",
   "direction": null,
@@ -8,8 +8,8 @@
   "stop": null,
   "target_3r": null,
   "target_4r": null,
-  "atr_14": 0.246,
+  "atr_14": 0.234,
   "risk_usd_quarter_kelly": null,
   "equity_unit_usd": 1000,
-  "notes": "Live Binance SOLUSDT ~71.27. 15m ATR(14)≈0.246; 0.6×ATR≈0.148. Prior short setup (FVG 70.64-71.01, stop 71.30) invalidated by price extension to 71.59. No new clear Structure Bias + ChoCh in same direction with first FVG ≥0.6×ATR and realistic fill available. Price ranging tightly 71.2-71.6 after bounce from 70.45 area. WAIT."
+  "notes": "Live Binance SOLUSDT ~71.30. 15m ATR(14)\u22480.234; 0.6\u00d7ATR\u22480.140. Price consolidating tightly 71.22-71.59 after recovery from 69.71 low. No new clear Structure Bias + ChoCh in same direction with first FVG \u22650.6\u00d7ATR and realistic fill available. Prior short setup invalidated by extension above 71.30. WAIT."
 }
